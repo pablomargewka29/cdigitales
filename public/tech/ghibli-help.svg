@@ -1,0 +1,10 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 520'>
+<rect width='800' height='520' rx='28' fill='#f8fafc'/>
+<g stroke='#0f172a' stroke-width='2' fill='none'>
+  <rect x='120' y='180' width='560' height='200' rx='16' fill='#fff'/>
+  <g transform='translate(180,210)'><circle cx='40' cy='30' r='26' fill='#fff'/><path d='M10,90 Q40,60 70,90 L70,130 L10,130 Z' fill='#f1f5f9'/><path d='M25,30 q15 10 30 0' /></g>
+  <g transform='translate(360,210)'><circle cx='40' cy='30' r='26' fill='#fff'/><path d='M10,90 Q40,60 70,90 L70,130 L10,130 Z' fill='#f1f5f9'/><path d='M25,30 q15 10 30 0' /></g>
+  <g transform='translate(540,210)'><circle cx='40' cy='30' r='26' fill='#fff'/><path d='M10,90 Q40,60 70,90 L70,130 L10,130 Z' fill='#f1f5f9'/><path d='M25,30 q15 10 30 0' /></g>
+</g>
+<text x='400' y='80' font-family='Inter, Arial' font-size='20' text-anchor='middle'>Gente pidiendo ayuda</text>
+</svg>

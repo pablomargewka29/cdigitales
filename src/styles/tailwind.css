@@ -1,0 +1,21 @@
+
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{color-scheme:light} html{scroll-behavior:smooth} body{@apply bg-white text-slate-800 antialiased}
+.container{@apply max-w-7xl mx-auto px-4} .card{@apply rounded-2xl bg-white border border-slate-200 shadow-soft}
+.btn{@apply inline-flex items-center gap-2 rounded-xl px-4 py-2 font-semibold transition}
+.btn-primary{@apply btn bg-brand-600 hover:bg-brand-700 text-white}
+.btn-secondary{@apply btn bg-white border border-slate-300 hover:bg-slate-50 text-slate-700}
+.badge{@apply inline-block text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200}
+.input{@apply w-full rounded-xl bg-white border border-slate-300 px-4 py-2 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400}
+.label{@apply text-sm text-slate-600 mb-1 block} .grid-cards{@apply grid sm:grid-cols-2 lg:grid-cols-3 gap-5}
+.navbar{@apply sticky top-0 z-50 backdrop-blur bg-white/80 border-b} .hero{@apply relative overflow-hidden}
+.hero-gradient{background: radial-gradient(1200px 600px at 30% -10%, rgba(99,102,241,.25), transparent), radial-gradient(1000px 500px at 70% 120%, rgba(20,184,166,.25), transparent)}
+.prose h1{@apply text-3xl md:text-4xl font-bold mb-4} .prose h2{@apply text-2xl font-semibold mt-10 mb-4} .prose h3{@apply text-xl font-semibold mt-6 mb-3}
+.prose p{@apply mb-4} .prose a{@apply text-brand-600 hover:text-brand-700 underline underline-offset-2} .prose img{@apply rounded-2xl border border-slate-200}
+.prose ul{@apply list-disc pl-6} .prose ol{@apply list-decimal pl-6} hr{@apply my-10 border-slate-200}
+
+/* Pills helpers */
+
+.pill{ @apply inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-slate-700 hover:bg-slate-50; }
+.pill-primary{ @apply inline-flex items-center gap-2 rounded-full bg-accent-600 text-white px-4 py-2 hover:opacity-90; }
+

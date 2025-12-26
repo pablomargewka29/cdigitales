@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pago con tarjeta | CuentasDigitales</title>
+    <meta
+      name="description"
+      content="Pagá con tarjeta mediante la compra de un saldo digital. Proceso simple, seguro y automático."
+    />
+
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --primary: #22c55e;
+        --secondary: #38bdf8;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --warning: #facc15;
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Ubuntu, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: radial-gradient(
+            circle at top,
+            rgba(56, 189, 248, 0.18),
+            transparent 45%
+          ),
+          var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 3rem 1.25rem 4rem;
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        margin-bottom: 0.8rem;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        color: var(--muted);
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .price {
+        margin-top: 1.3rem;
+        font-size: 1.7rem;
+        font-weight: 900;
+        color: var(--primary);
+      }
+
+      .note {
+        margin-top: 0.4rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.01)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1.25rem;
+        padding: 2.25rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.75rem;
+      }
+
+      .step h3 {
+        margin: 0 0 0.6rem;
+        font-size: 1.1rem;
+      }
+
+      .step p {
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      .highlight {
+        background: rgba(34, 197, 94, 0.12);
+        border: 1px solid rgba(34, 197, 94, 0.35);
+        border-radius: 1rem;
+        padding: 1.4rem;
+        margin: 2.5rem 0;
+        font-size: 1.05rem;
+      }
+
+      .highlight strong {
+        color: var(--primary);
+      }
+
+      .cta {
+        text-align: center;
+        margin-top: 3.5rem;
+      }
+
+      .cta a {
+        display: inline-block;
+        background: linear-gradient(
+          90deg,
+          var(--primary),
+          var(--secondary)
+        );
+        color: #020617;
+        text-decoration: none;
+        padding: 1.2rem 2.8rem;
+        font-size: 1.25rem;
+        font-weight: 800;
+        border-radius: 999px;
+        box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .cta a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 42px rgba(56, 189, 248, 0.5);
+      }
+
+      .secure {
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 0.95rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .secure span {
+        color: var(--warning);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <h1>💳 Compra con Tarjeta</h1>
+        <p>
+          Para completar tu pedido, el pago se realiza mediante la
+          <strong>compra de un saldo digital</strong>, que luego se envía
+          automáticamente a nuestra <strong>dirección de cobro</strong>,
+          similar a un <strong>CBU o alias</strong>.
+        </p>
+
+        <div id="price" class="price">💵 Monto a pagar: USD …</div>
+        <div id="item" class="note"></div>
+      </section>
+
+      <!-- INSTRUCCIONES -->
+      <section class="card">
+        <div class="steps">
+          <div class="step">
+            <h3>⬇️ Paso previo</h3>
+            <p>
+              Desplazate hacia abajo y presioná el botón
+              <strong>“Continuar al pago seguro”</strong>.
+              Serás dirigido a una <strong>plataforma de pago externa y segura</strong>.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>1️⃣ Monto listo</h3>
+            <p>
+              El importe ya está configurado según tu pedido.
+              No necesitás modificar ni calcular nada.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>2️⃣ Confirmá tu correo</h3>
+            <p>
+              Ingresás tu email y recibís un
+              <strong>código de seguridad</strong> para continuar.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>3️⃣ Completá el pago</h3>
+            <p>
+              Pagás con <strong>tarjeta de débito o crédito</strong>.
+              Recomendamos débito para una acreditación más rápida.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>4️⃣ Envío automático del saldo</h3>
+            <p>
+              Una vez aprobado el pago, el
+              <strong>saldo se envía automáticamente</strong>
+              a nuestra dirección de cobro.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>5️⃣ Pedido en proceso</h3>
+            <p>
+              La confirmación puede demorar entre
+              <strong>5 y 30 minutos</strong>.
+              Tu pedido queda registrado automáticamente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECOMENDACIÓN -->
+      <section class="highlight">
+        💡 <strong>Recomendación:</strong> utilizá
+        <strong>tarjeta de débito</strong>.  
+        Es más rápida y generalmente no requiere verificaciones adicionales.
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <a id="payBtn" href="#" rel="noopener noreferrer">
+          👉 Continuar al pago seguro
+        </a>
+        <div class="note">
+          El monto ya está configurado · Proceso automático · Pago seguro
+        </div>
+      </section>
+
+      <!-- SEGURIDAD -->
+      <section class="secure">
+        🔒 El pago se procesa en una plataforma externa segura.<br />
+        Nosotros <span>no vemos ni almacenamos</span> datos de tu tarjeta.
+      </section>
+    </main>
+
+    <!-- LÓGICA CLIENT-SIDE -->
+    <script>
+      const params = new URLSearchParams(window.location.search);
+
+      const rawPrice = Number(params.get("price"));
+      const finalPrice =
+        Number.isFinite(rawPrice) && rawPrice >= 20 ? rawPrice : 20;
+
+      const item = params.get("item") || "";
+
+      document.getElementById("price").textContent =
+        `💵 Monto a pagar: USD ${finalPrice}`;
+
+      if (item) {
+        document.getElementById("item").textContent = `Producto: ${item}`;
+      }
+
+      const moonpayUrl =
+        "https://buy.moonpay.com?" +
+        "currencyCode=BTC" +
+        "&baseCurrencyCode=USD" +
+        `&baseCurrencyAmount=${finalPrice}` +
+        "&walletAddress=bc1q7qcrhqjjen9g5nrw6xagj05uj2ea8uadlp74hg";
+
+      document.getElementById("payBtn").href = moonpayUrl;
+    </script>
+  </body>
+</html>
+

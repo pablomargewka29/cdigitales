@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Cuentas premium de streaming en Argentina — CuentasDigitales";
+const description =
+  "Cuentas premium y planes prepagos de Netflix, Spotify, Disney+ y otros servicios de streaming, pensados para Argentina. Pagás en pesos, por el tiempo que necesitás, con medios de pago locales.";
+
+const products = [
+  {
+    slug: "netflix-argentina-1-mes",
+    emoji: "🎬",
+    brand: "Netflix",
+    title: "Cuenta Netflix 1 mes en Argentina (prepaga en pesos)",
+    description:
+      "Pagás en pesos por 30 días de Netflix, sin tarjeta internacional ni dólar tarjeta. Modalidad prepaga gestionada por CuentasDigitales.com.ar.",
+    tag: "1 mes prepago",
+    highlight: "Ideal si tu tarjeta falla o no querés pagar en dólares.",
+  },
+  // Cuando sumemos más productos, los agregamos acá:
+  // {
+  //   slug: "netflix-argentina-3-meses",
+  //   emoji: "🎬",
+  //   brand: "Netflix",
+  //   title: "Cuenta Netflix 3 meses en Argentina (prepaga en pesos)",
+  //   description: "Tres meses de Netflix en modalidad prepaga, en pesos y sin tarjeta internacional.",
+  //   tag: "3 meses prepago",
+  //   highlight: "Más conveniente si sabés que vas a usar Netflix varios meses seguidos.",
+  // },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/cuentas-digitales"
+>
+  {/* HERO CUENTAS PREMIUM */}
+  <section class="mb-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900 to-red-700 text-slate-50 px-6 py-8 md:px-10 md:py-10 shadow-lg">
+        <div class="space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-red-400/60 rounded-full px-3 py-1">
+            <span>⭐</span>
+            <span>Cuentas premium y planes prepagos · Argentina</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Cuentas premium de streaming pensadas para Argentina
+          </h1>
+
+          <p class="text-sm md:text-base text-slate-100/90 max-w-2xl">
+            Acá reunimos las cuentas prepagas y planes premium que gestionamos
+            para plataformas como Netflix, Spotify o Disney+. Pagás en pesos,
+            por el tiempo que necesitás, con medios de pago locales, sin drama
+            de dólar tarjeta.
+          </p>
+
+          <ul class="text-xs md:text-sm text-slate-100/90 space-y-1">
+            <li>✅ Modalidad prepaga: pagás por 1 o varios meses definidos.</li>
+            <li>✅ Pagás en pesos, con medios de pago locales.</li>
+            <li>✅ Sin tarjeta internacional ni rechazos por dólar tarjeta.</li>
+            <li>✅ Soporte local si tenés dudas o problemas de acceso.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* LISTADO DE PRODUCTOS */}
+  <section class="max-w-4xl mx-auto pb-16">
+    {products.length === 0 ? (
+      <div class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-8 md:py-9">
+        <p class="text-slate-500 text-sm">
+          Todavía no hay cuentas premium publicadas. Pronto vas a ver acá las
+          opciones de Netflix, Spotify, Disney+ y otros servicios pensadas para
+          Argentina.
+        </p>
+      </div>
+    ) : (
+      <div class="space-y-6">
+        <header class="space-y-2">
+          <h2 class="text-xl md:text-2xl font-semibold text-slate-900">
+            Cuentas premium disponibles
+          </h2>
+          <p class="text-sm text-slate-600">
+            Estas páginas explican en detalle cómo funciona cada cuenta,
+            qué incluye, cómo se paga y en qué casos te conviene elegirla.
+          </p>
+        </header>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          {products.map((prod) => (
+            <a
+              href={`/cuentas-digitales/${prod.slug}`}
+              class="group block rounded-2xl border border-slate-200 bg-white/95 px-5 py-5 hover:border-red-500 hover:shadow-md transition-all duration-150"
+            >
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">
+                  {prod.emoji}
+                </div>
+                <div class="space-y-2">
+                  <div class="flex flex-wrap items-center gap-2 text-[11px] text-slate-500">
+                    <span class="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5">
+                      {prod.brand}
+                    </span>
+                    <span class="inline-flex items-center rounded-full bg-red-50 text-red-700 border border-red-100 px-2 py-0.5">
+                      {prod.tag}
+                    </span>
+                  </div>
+                  <h3 class="text-sm md:text-base font-semibold text-slate-900 group-hover:text-red-600">
+                    {prod.title}
+                  </h3>
+                  <p class="text-xs md:text-sm text-slate-600">
+                    {prod.description}
+                  </p>
+                  {prod.highlight && (
+                    <p class="text-[11px] text-slate-500 mt-1">
+                      💡 {prod.highlight}
+                    </p>
+                  )}
+                  <p class="text-xs text-red-600 font-medium mt-1">
+                    Ver detalles y consultar precio →
+                  </p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+</BaseLayout>

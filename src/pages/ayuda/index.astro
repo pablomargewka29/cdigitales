@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Ayuda para cuentas digitales en Argentina";
+const description =
+  "Centro de ayuda para Netflix, Spotify, Disney+ y otros servicios digitales en Argentina. Guías simples para pagos, cuentas y problemas frecuentes.";
+
+const articles = [
+  {
+    slug: "como-conseguir-cuenta-netflix-argentina",
+    emoji: "🎬",
+    title: "Cómo conseguir una cuenta Netflix en Argentina (2026)",
+    description:
+      "Precios, métodos de pago, qué hacer si tu tarjeta es rechazada y alternativas reales si Netflix se complica.",
+    tag: "Netflix",
+    updated: "Actualizado 24/12/2025",
+  },
+  // Cuando hagamos más artículos, los vas agregando acá
+  // {
+  //   slug: "spotify-pago-rechazado-argentina",
+  //   emoji: "🎵",
+  //   title: "Spotify en Argentina: qué hacer si tu pago es rechazado",
+  //   description: "Guía paso a paso para resolver pagos rechazados en Spotify Argentina.",
+  //   tag: "Spotify",
+  //   updated: "Próximamente",
+  // },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/ayuda"
+>
+  {/* HERO DE AYUDA */}
+  <section class="mb-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 text-slate-50 px-6 py-8 md:px-10 md:py-10 shadow-lg">
+        <div class="space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-slate-600/70 rounded-full px-3 py-1">
+            <span>🛟</span>
+            <span>Centro de ayuda para Argentina · Cuentas digitales</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Ayuda para cuentas digitales y streaming en Argentina
+          </h1>
+
+          <p class="text-sm md:text-base text-slate-100/90 max-w-2xl">
+            Guías claras y en criollo para resolver problemas con Netflix, Spotify,
+            Disney+ y otros servicios: pagos rechazados, cuentas, suscripciones y más.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* LISTADO DE ARTÍCULOS */}
+  <section class="max-w-4xl mx-auto pb-16">
+    {articles.length === 0 ? (
+      <p class="text-slate-500 text-sm">
+        Todavía no hay artículos publicados en la sección de ayuda. Pronto vas a ver
+        acá todas las guías para servicios digitales en Argentina.
+      </p>
+    ) : (
+      <div class="space-y-6">
+        <h2 class="text-xl md:text-2xl font-semibold text-slate-900">
+          Artículos de ayuda publicados
+        </h2>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          {articles.map((art) => (
+            <a
+              href={`/ayuda/${art.slug}`}
+              class="group block rounded-2xl border border-slate-200 bg-white/95 px-5 py-5 hover:border-indigo-400 hover:shadow-md transition-all duration-150"
+            >
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">
+                  {art.emoji}
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-xs text-slate-500">
+                    <span class="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5">
+                      {art.tag}
+                    </span>
+                    <span>· {art.updated}</span>
+                  </div>
+                  <h3 class="text-sm md:text-base font-semibold text-slate-900 group-hover:text-indigo-700">
+                    {art.title}
+                  </h3>
+                  <p class="text-xs md:text-sm text-slate-600">
+                    {art.description}
+                  </p>
+                  <p class="text-xs text-indigo-700 font-medium mt-1">
+                    Leer guía completa →
+                  </p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+</BaseLayout>

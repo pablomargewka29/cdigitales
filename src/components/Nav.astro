@@ -1,0 +1,23 @@
+---
+const nav = [
+  { label: "Inicio", href: "/" },
+  { label: "Ayuda", href: "/ayuda/" },
+  { label: "Cuentas Premium", href: "/cuentas-digitales/" },
+  { label: "Opiniones", href: "/opiniones" },
+  { label: "Acerca de", href: "/acerca" },
+  { label: "Contacto", href: "/contacto" },
+];
+---
+<header class="navbar sticky top-0 z-40 backdrop-blur bg-white/70 shadow-sm">
+  <div class="container h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/logo.svg" width="28" height="28" alt="CuentasDigitales" />
+      <span class="font-bold">CuentasDigitales</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-slate-700">
+      {nav.map((i) => (
+        <a href={i.href} class="hover:text-brand-700">{i.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

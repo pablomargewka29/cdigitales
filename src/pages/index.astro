@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="CuentasDigitales — Cuentas premium y ayuda en Argentina"
+  description="Cuentas premium de Netflix, Spotify, Disney+ y más, junto con guías de ayuda para servicios digitales en Argentina."
+>
+  {/* HERO PRINCIPAL */}
+  <section class="hero hero-gradient">
+    <div class="container py-14 grid lg:grid-cols-[1.3fr,1fr] gap-10 items-center">
+      {/* Columna izquierda: título y texto */}
+      <div>
+        <span class="badge">Argentina · Streaming y servicios digitales</span>
+
+        <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
+          Cuentas digitales y ayuda en Argentina
+        </h1>
+
+        <p class="mt-3 text-sm text-slate-500">
+          CuentasDigitales.com.ar
+        </p>
+
+        <p class="mt-5 text-slate-600 text-lg">
+          Centralizá todo lo que necesitás para tus servicios digitales:
+          <strong> cuentas premium</strong> de streaming y
+          <strong> guías simples</strong> para resolver problemas de pago,
+          acceso y suscripciones en Argentina.
+        </p>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a class="pill-primary" href="/cuentas-digitales/">
+            💳 Ver cuentas premium
+          </a>
+          <a class="pill" href="/ayuda/">
+            🛟 Ver artículos de ayuda
+          </a>
+        </div>
+
+        {/* Badges de plataformas */}
+        <div class="mt-8 flex flex-wrap gap-2 text-xs text-slate-600">
+          <span class="inline-flex items-center rounded-full bg-white/80 px-3 py-1 border border-slate-200">
+            🎬 Netflix
+          </span>
+          <span class="inline-flex items-center rounded-full bg-white/80 px-3 py-1 border border-slate-200">
+            🎵 Spotify
+          </span>
+          <span class="inline-flex items-center rounded-full bg-white/80 px-3 py-1 border border-slate-200">
+            🧙‍♂️ Disney+
+          </span>
+          <span class="inline-flex items-center rounded-full bg-white/80 px-3 py-1 border border-slate-200">
+            ▶️ YouTube Premium
+          </span>
+        </div>
+      </div>
+
+      {/* Columna derecha: card destacada */}
+      <div class="card p-6 bg-white/90 shadow-lg border border-slate-100">
+        <h2 class="text-lg font-semibold text-slate-900">
+          ¿Por qué usar CuentasDigitales?
+        </h2>
+        <ul class="mt-4 space-y-3 text-sm text-slate-700">
+          <li class="flex gap-2">
+            <span class="mt-1">✅</span>
+            <span>
+              <strong>Cuentas premium explicadas en lenguaje simple</strong>:
+              qué incluyen, cómo se pagan y qué tener en cuenta en Argentina.
+            </span>
+          </li>
+          <li class="flex gap-2">
+            <span class="mt-1">✅</span>
+            <span>
+              <strong>Guías de ayuda</strong> para cuando tu tarjeta es rechazada,
+              no te deja ingresar o querés cancelar sin complicarte.
+            </span>
+          </li>
+          <li class="flex gap-2">
+            <span class="mt-1">✅</span>
+            <span>
+              Todo el contenido está pensado únicamente para
+              <strong> usuarios de Argentina</strong>, con ejemplos reales.
+            </span>
+          </li>
+        </ul>
+        <p class="mt-5 text-xs text-slate-500">
+          Explora las cuentas premium disponibles o revisa las guías
+          de ayuda. Si tenes consultas, podes contactarnos y te responderemos a la brevedad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* SECCIÓN DESTACADOS */}
+  <section class="container py-10 grid gap-8 lg:grid-cols-[1.1fr,1.1fr]">
+    {/* Bloque Cuentas Premium */}
+    <article class="card p-6 hover:shadow-lg transition-shadow bg-white/90">
+      <span class="badge mb-2">Cuentas Premium</span>
+      <h2 class="text-2xl font-semibold text-slate-900">
+        Cuentas premium de streaming en Argentina
+      </h2>
+      <p class="mt-2 text-sm md:text-base text-slate-600">
+        En <strong>CuentasDigitales</strong> vas a encontrar explicaciones claras
+        sobre cuentas premium de Netflix, Spotify, Disney+ y otros servicios:
+        qué incluyen, cuánto salen y cómo contratar sin volverte loco con los
+        métodos de pago.
+      </p>
+
+      <ul class="mt-4 text-sm text-slate-700 space-y-2">
+        <li>• Cuentas premium explicadas paso a paso.</li>
+        <li>• Enfoque 100% en Argentina (ARS, tarjetas locales, prepago).</li>
+        <li>• Consejos para elegir el plan que más te conviene.</li>
+      </ul>
+
+      <a
+        href="/cuentas-digitales/"
+        class="mt-5 inline-flex items-center text-sm font-medium text-brand-700"
+      >
+        Ver cuentas premium →
+      </a>
+    </article>
+
+    {/* Bloque Ayuda */}
+    <article class="card p-6 hover:shadow-lg transition-shadow bg-white/90">
+      <span class="badge mb-2">Ayuda</span>
+      <h2 class="text-2xl font-semibold text-slate-900">
+        Ayuda para servicios digitales
+      </h2>
+      <p class="mt-2 text-sm md:text-base text-slate-600">
+        También vas a tener guías de ayuda pensadas para problemas reales:
+        pagos rechazados, errores al iniciar sesión, cancelaciones y dudas
+        típicas con las plataformas más usadas en Argentina.
+      </p>
+
+      <ul class="mt-4 text-sm text-slate-700 space-y-2">
+        <li>• Cómo cancelar servicios sin perder nada importante.</li>
+        <li>• Qué hacer cuando una app no acepta tu tarjeta.</li>
+        <li>• Guías escritas en lenguaje simple, sin tecnicismos.</li>
+      </ul>
+
+      <a
+        href="/ayuda/"
+        class="mt-5 inline-flex items-center text-sm font-medium text-brand-700"
+      >
+        Ver artículos de ayuda →
+      </a>
+    </article>
+  </section>
+</BaseLayout>

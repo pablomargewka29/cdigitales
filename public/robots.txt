@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Evitar indexar pasos de checkout
+Disallow: /gift-cards/checkout/
+
+# Tu sitemap principal
+Sitemap: https://soporte24hs.com/sitemap.xml

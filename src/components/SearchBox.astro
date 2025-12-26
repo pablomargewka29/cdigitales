@@ -1,0 +1,20 @@
+
+---
+export interface Props { placeholder?: string }
+const { placeholder = 'Buscar artículos…' } = Astro.props;
+---
+<div class="card p-4">
+  <input id="search" type="search" class="input" placeholder={placeholder} aria-label="Buscar" />
+  <p class="text-xs text-slate-500 mt-2">Filtra por título o etiquetas.</p>
+</div>
+<script>
+  const input = document.getElementById('search');
+  input?.addEventListener('input', () => {
+    const q = input.value.toLowerCase().trim();
+    for (const card of document.querySelectorAll('[data-search-item]')) {
+      const hay = (card.getAttribute('data-title')||'').toLowerCase();
+      const tags = (card.getAttribute('data-tags')||'').toLowerCase();
+      card.classList.toggle('hidden', !(hay.includes(q) || tags.includes(q)));
+    }
+  });
+</script>

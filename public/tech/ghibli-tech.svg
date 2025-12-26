@@ -1,0 +1,13 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 520'>
+<defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#eef2ff'/><stop offset='1' stop-color='#f0fdf4'/></linearGradient></defs>
+<rect width='800' height='520' rx='28' fill='url(#g)'/>
+<g stroke='#0f172a' stroke-width='2' fill='none' opacity='0.95'>
+  <rect x='120' y='160' width='560' height='220' rx='16' fill='#ffffff'/>
+  <rect x='160' y='190' width='160' height='120' rx='10'/>
+  <rect x='360' y='190' width='160' height='120' rx='10'/>
+  <rect x='560' y='190' width='80' height='120' rx='10'/>
+  <circle cx='240' cy='250' r='10' fill='#0f172a'/>
+  <circle cx='440' cy='250' r='10' fill='#0f172a'/>
+</g>
+<text x='400' y='80' font-family='Inter, Arial' font-size='20' text-anchor='middle'>Tecnología</text>
+</svg>

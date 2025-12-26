@@ -1,0 +1,10 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 520'>
+<rect width='800' height='520' rx='28' fill='#ecfeff'/>
+<g stroke='#0f172a' stroke-width='2' fill='none'>
+  <rect x='120' y='320' width='560' height='80' rx='14' fill='#fff'/>
+  <g transform='translate(200,180)'><circle cx='40' cy='30' r='26' fill='#fff'/><path d='M15,34 l-14,10' stroke-width='3'/><path d='M10,90 Q40,60 70,90 L70,140 L10,140 Z' fill='#f8fafc'/></g>
+  <g transform='translate(360,180)'><circle cx='40' cy='30' r='26' fill='#fff'/><path d='M60,34 l14,10' stroke-width='3'/><path d='M10,90 Q40,60 70,90 L70,140 L10,140 Z' fill='#f8fafc'/></g>
+  <g transform='translate(520,180)'><circle cx='40' cy='30' r='26' fill='#fff'/><path d='M60,34 l14,10' stroke-width='3'/><path d='M10,90 Q40,60 70,90 L70,140 L10,140 Z' fill='#f8fafc'/></g>
+</g>
+<text x='400' y='80' font-family='Inter, Arial' font-size='20' text-anchor='middle'>Call center</text>
+</svg>
