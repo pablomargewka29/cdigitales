@@ -154,70 +154,54 @@ const url =
   {/* CONTENIDO DEL ARTÍCULO */}
   <section class="max-w-3xl mx-auto pb-16 space-y-10">
     {/* BLOQUE 1: PRECIOS */}
-    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-8 md:py-9 space-y-5">
-      <header class="space-y-2">
-        <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
-          <span>💰</span>
-          <span>1) Precios de Netflix en Argentina (2026)</span>
-        </h2>
-        <p class="text-sm text-slate-500">
-          Entender cómo se cobra Netflix en Argentina es clave para comparar la
-          suscripción oficial con las cuentas prepagas.
-        </p>
-      </header>
+<section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-8 md:py-9 space-y-5">
+  <header class="space-y-2">
+    <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+      <span>💰</span>
+      <span>1) ¿Cómo se cobran hoy los planes de Netflix en Argentina?</span>
+    </h2>
+    <p class="text-sm text-slate-500">
+      El precio final puede variar según la forma de pago, el banco y la normativa vigente.
+    </p>
+  </header>
 
-      <div class="space-y-4 text-slate-700 text-[15px] leading-relaxed">
-        <p>
-          Netflix ya no cobra en pesos argentinos: los cargos se hacen en{" "}
-          <strong>USD</strong> y tu banco convierte el consumo sumando los{" "}
-          <strong>impuestos al dólar</strong> (PAIS, percepciones, etc.). Por eso
-          el precio final depende de:
-        </p>
+  <div class="space-y-4 text-slate-700 text-[15px] leading-relaxed">
+    <p>
+      En Argentina, el costo de Netflix <strong>no es fijo en pesos</strong>. El monto final
+      depende de cómo se facture el servicio y de cómo tu banco procese el pago.
+    </p>
 
-        <ul class="space-y-1 list-disc list-inside">
-          <li>La cotización del dólar que usa tu banco.</li>
-          <li>Los impuestos vigentes al momento del consumo.</li>
-          <li>Si tenés o no tope de dólar tarjeta agotado.</li>
-        </ul>
+    <p>
+      En la práctica, pueden darse dos situaciones:
+    </p>
 
-        <div class="mt-3 overflow-x-auto rounded-2xl border border-slate-200 bg-slate-50">
-          <table class="min-w-full text-sm">
-            <thead class="bg-slate-100/80">
-              <tr class="text-left">
-                <th class="p-3 border-b">Plan</th>
-                <th class="p-3 border-b">Precio base (USD)</th>
-                <th class="p-3 border-b">Notas para Argentina</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b last:border-b-0">
-                <td class="p-3 align-top">Estándar</td>
-                <td class="p-3 align-top">$9.99 USD</td>
-                <td class="p-3 text-slate-700">
-                  Cargo en dólares sobre tu tarjeta. El total en ARS depende de
-                  impuestos y cotización del dólar tarjeta.
-                </td>
-              </tr>
-              <tr class="border-b last:border-b-0">
-                <td class="p-3 align-top">Premium</td>
-                <td class="p-3 align-top">$13.99 USD</td>
-                <td class="p-3 text-slate-700">
-                  Misma lógica: dólar tarjeta + impuestos. Puede estirarse
-                  bastante según el mes y los cambios de normativa.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <ul class="space-y-1 list-disc list-inside">
+      <li>
+        El cargo se procesa como consumo internacional (por ejemplo, en USD) y el banco
+        realiza la conversión a pesos aplicando los impuestos o recargos vigentes.
+      </li>
+      <li>
+        El cargo se muestra en pesos, pero el valor puede ajustarse según cambios
+        regulatorios o condiciones del medio de pago.
+      </li>
+    </ul>
 
-        <p class="text-xs text-slate-500">
-          Los valores son aproximados y pueden cambiar. Lo importante es que
-          entiendas la lógica: la suscripción oficial siempre se siente como
-          consumo en dólares. Las cuentas prepagas, en cambio, te permiten ver un
-          precio cerrado en pesos por el tiempo que querés usar.
-        </p>
-      </div>
-    </section>
+    <p>
+      Por este motivo, <strong>el total en pesos puede variar mes a mes</strong>, incluso
+      manteniendo el mismo plan. Esto es una de las principales razones por las que muchos
+      usuarios en Argentina buscan alternativas con <strong>precio cerrado</strong>.
+    </p>
+
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-sm">
+      <p>
+        👉 <strong>Importante:</strong> Netflix puede actualizar precios y condiciones en
+        cualquier momento. Para ver los valores oficiales vigentes, siempre conviene
+        consultar la página de ayuda o el proceso de alta directamente en el sitio de Netflix.
+      </p>
+    </div>
+  </div>
+</section>
+
 
     {/* BLOQUE 2: FORMAS DE CONSEGUIR CUENTA */}
     <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-8 md:py-9 space-y-6">
@@ -364,11 +348,20 @@ const url =
             <span>🔹</span>
             <span>C) Grupo familiar (mismo hogar)</span>
           </h3>
-          <p class="text-slate-700 text-sm md:text-[15px] leading-relaxed">
-            Si alguien de tu familia ya paga Netflix, puede agregarte como miembro
-            del hogar. Netflix valida que compartan la misma{" "}
-            <strong>ubicación principal</strong> (red WiFi, IP, etc.).
-          </p>
+<p class="text-slate-700 text-sm md:text-[15px] leading-relaxed">
+  Netflix define que una cuenta está pensada para usarse dentro de un mismo
+  <strong>hogar</strong>, es decir, personas que viven juntas en la misma ubicación
+  principal. La plataforma puede validar esto mediante la red de internet, el
+  dispositivo y otros controles periódicos.
+</p>
+<div class="rounded-2xl bg-white/70 border border-slate-200 px-4 py-3 text-xs md:text-sm text-slate-800">
+  <p>
+    <strong>Aclaración:</strong> si una persona no forma parte del mismo hogar,
+    Netflix puede solicitar verificaciones adicionales o indicar que esa persona
+    tenga su propia suscripción.
+  </p>
+</div>
+
           <div class="grid gap-4 md:grid-cols-2 text-sm">
             <div class="space-y-1">
               <h4 class="font-semibold text-slate-800">Cuándo conviene ✅</h4>
