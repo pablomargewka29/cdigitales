@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://soporte24hs.com',
+  site: "https://cuentasdigitales.com.ar",
   integrations: [
     tailwind({ applyBaseStyles: false }),
     sitemap()

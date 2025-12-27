@@ -19,6 +19,11 @@ const {
 
 const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
 const url = site ? `${site}${canonical}` : canonical;
+
+// Si ogImage viene relativo ("/og-default.png"), lo convertimos a absoluto cuando hay site.
+// (No es obligatorio, pero ayuda a OG/Twitter)
+const ogImageUrl =
+  site && ogImage?.startsWith("/") ? `${site}${ogImage}` : ogImage;
 ---
 
 <title>{title}</title>
@@ -33,15 +38,19 @@ const url = site ? `${site}${canonical}` : canonical;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={url} />
-<meta property="og:image" content={ogImage} />
+<meta property="og:image" content={ogImageUrl} />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image" content={ogImageUrl} />
 
-{schema.map((s) => (
-  <script type="application/ld+json">{JSON.stringify(s)}</script>
+{schema?.map((s) => (
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(s)}
+  />
 ))}
 
 <link rel="stylesheet" href="/fonts/inter.css" />
+
