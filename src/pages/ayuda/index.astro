@@ -7,15 +7,6 @@ const description =
 
 const articles = [
   {
-    slug: "como-conseguir-cuenta-netflix-argentina",
-    emoji: "🎬",
-    title: "Cómo conseguir una cuenta Netflix en Argentina (2026)",
-    description:
-      "Precios, métodos de pago, qué hacer si tu tarjeta es rechazada y alternativas reales si Netflix se complica.",
-    tag: "Netflix",
-    updated: "Actualizado 24/12/2025",
-  },
-  {
     slug: "netflix-no-acepta-tarjeta-argentina",
     emoji: "💳",
     title: "Netflix no acepta mi tarjeta en Argentina (2026): qué hacer",
@@ -24,14 +15,28 @@ const articles = [
     tag: "Netflix",
     updated: "Actualizado 25/12/2025",
   },
+  {
+    slug: "pagar-netflix-sin-tarjeta-argentina",
+    emoji: "💰",
+    title: "Cómo pagar Netflix sin tarjeta en Argentina (2026): opciones reales",
+    description:
+      "Opciones reales para pagar Netflix sin tarjeta en Argentina: qué funciona, qué no, y cómo tener Netflix activo sin depender del banco ni del dólar tarjeta.",
+    tag: "Netflix",
+    updated: "Actualizado 26/12/2025",
+  },
+  {
+    slug: "como-conseguir-cuenta-netflix-argentina",
+    emoji: "🎬",
+    title: "Cómo conseguir una cuenta Netflix en Argentina (2026)",
+    description:
+      "Precios, métodos de pago, qué hacer si tu tarjeta es rechazada y alternativas reales si Netflix se complica.",
+    tag: "Netflix",
+    updated: "Actualizado 24/12/2025",
+  },
 ];
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  canonical="/ayuda"
->
+<BaseLayout title={title} description={description} canonical="/ayuda">
   {/* HERO DE AYUDA */}
   <section class="mb-10">
     <div class="max-w-4xl mx-auto">
@@ -47,8 +52,9 @@ const articles = [
           </h1>
 
           <p class="text-sm md:text-base text-slate-100/90 max-w-2xl">
-            Guías claras y en criollo para resolver problemas con Netflix, Spotify,
-            Disney+ y otros servicios: pagos rechazados, cuentas, suscripciones y más.
+            Guías claras y en criollo para resolver problemas con Netflix,
+            Spotify, Disney+ y otros servicios: pagos rechazados, cuentas,
+            suscripciones y más.
           </p>
         </div>
       </div>
@@ -59,8 +65,8 @@ const articles = [
   <section class="max-w-4xl mx-auto pb-16">
     {articles.length === 0 ? (
       <p class="text-slate-500 text-sm">
-        Todavía no hay artículos publicados en la sección de ayuda. Pronto vas a ver
-        acá todas las guías para servicios digitales en Argentina.
+        Todavía no hay artículos publicados en la sección de ayuda. Pronto vas a
+        ver acá todas las guías para servicios digitales en Argentina.
       </p>
     ) : (
       <div class="space-y-6">
@@ -75,9 +81,7 @@ const articles = [
               class="group block rounded-2xl border border-slate-200 bg-white/95 px-5 py-5 hover:border-indigo-400 hover:shadow-md transition-all duration-150"
             >
               <div class="flex items-start gap-3">
-                <div class="text-2xl">
-                  {art.emoji}
-                </div>
+                <div class="text-2xl">{art.emoji}</div>
                 <div class="space-y-2">
                   <div class="flex items-center gap-2 text-xs text-slate-500">
                     <span class="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5">
@@ -85,12 +89,13 @@ const articles = [
                     </span>
                     <span>· {art.updated}</span>
                   </div>
+
                   <h3 class="text-sm md:text-base font-semibold text-slate-900 group-hover:text-indigo-700">
                     {art.title}
                   </h3>
-                  <p class="text-xs md:text-sm text-slate-600">
-                    {art.description}
-                  </p>
+
+                  <p class="text-xs md:text-sm text-slate-600">{art.description}</p>
+
                   <p class="text-xs text-indigo-700 font-medium mt-1">
                     Leer guía completa →
                   </p>
