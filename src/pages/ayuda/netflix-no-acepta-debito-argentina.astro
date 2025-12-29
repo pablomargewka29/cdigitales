@@ -1,0 +1,489 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix no acepta débito en Argentina (2026): por qué pasa y cómo solucionarlo";
+
+const description =
+  "¿Netflix no te deja pagar con débito en Argentina? Te explicamos por qué pasa en 2026, qué revisar en tu banco, qué errores son comunes y alternativas reales para tener Netflix activo sin vueltas.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-no-acepta-debito-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-no-acepta-debito-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2025-12-29",
+      dateModified: "2025-12-29",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Netflix acepta tarjeta de débito en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "A veces sí, a veces no. Depende del banco, de si la tarjeta está habilitada para compras online e internacionales y de los controles antifraude. Por eso, es común que Netflix rechace débito aunque haya saldo.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué Netflix rechaza mi débito si tengo plata?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Puede pasar por bloqueo preventivo del banco, límites para consumos al exterior, falta de habilitación para compras internacionales, o validaciones de seguridad del comercio. No siempre es un problema de saldo.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Netflix acepta transferencia o Mercado Pago sin tarjeta?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "No de forma directa. Netflix no acepta transferencia CBU/alias como método directo, y Mercado Pago solo sirve si está asociado a una tarjeta habilitada para pagos online e internacionales.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué hago si Netflix no me deja pagar con débito?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Probá habilitar compras internacionales/online, revisar límites, autorizar el pago desde el banco y volver a intentar. Si sigue fallando, una alternativa común son cuentas prepagas gestionadas: un tercero realiza el pago internacional y vos abonás en pesos por un período definido.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Puedo tener Netflix activo en Argentina sin débito?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. Si tu débito no funciona o preferís no depender del banco, existen alternativas como cuentas prepagas gestionadas, con precio claro en pesos y período de uso definido.",
+          },
+        },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-indigo-700 via-indigo-600 to-sky-500 text-indigo-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-indigo-900/30 border border-indigo-300/40 rounded-full px-3 py-1">
+            <span>💳</span>
+            <span>Guía práctica Argentina · Actualizada 2026</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix no acepta débito en Argentina
+          </h1>
+
+          <p class="text-sm md:text-base text-indigo-100/90">
+            Te pasa a vos y a miles: tenés plata, la tarjeta funciona para otras cosas,
+            pero Netflix te tira “pago rechazado”. Acá te explico por qué pasa en 2026,
+            qué revisar paso a paso y qué alternativas reales tenés para activar Netflix 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        Netflix <strong>puede aceptar débito</strong>, pero en Argentina depende del banco y de la
+        habilitación para compras online/internacionales. Si tu débito se rechaza, primero
+        revisá habilitaciones y límites; si seguís con problemas, una salida práctica son las
+        <strong> cuentas prepagas gestionadas</strong>, donde un tercero paga Netflix y vos abonás en pesos
+        por un período definido.
+      </p>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+    {/* BLOQUE 0: NAVEGACIÓN / INTENCIONES */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">🧭 Elegí tu caso (así vas al grano)</h2>
+
+      <div class="grid gap-3 md:grid-cols-3 text-sm">
+        <a
+          href="#por-que-falla"
+          class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-indigo-400 hover:shadow-sm transition"
+        >
+          <p class="font-semibold text-slate-900">🧩 ¿Por qué falla?</p>
+          <p class="text-slate-600 text-xs mt-1">
+            Causas reales (no es solo saldo).
+          </p>
+        </a>
+
+        <a
+          href="#paso-a-paso"
+          class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-indigo-400 hover:shadow-sm transition"
+        >
+          <p class="font-semibold text-slate-900">🛠️ Quiero solucionarlo</p>
+          <p class="text-slate-600 text-xs mt-1">
+            Checklist de 2 minutos.
+          </p>
+        </a>
+
+        <a
+          href="#alternativa"
+          class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-indigo-400 hover:shadow-sm transition"
+        >
+          <p class="font-semibold text-slate-900">⚡ Quiero Netflix ya</p>
+          <p class="text-slate-600 text-xs mt-1">
+            Alternativas en pesos.
+          </p>
+        </a>
+      </div>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Si el error te aparece con cualquier tarjeta (no solo débito), mirá esta guía:
+        <a
+          href="/ayuda/netflix-no-acepta-tarjeta-argentina"
+          class="text-indigo-700 underline font-medium"
+        >
+          {" "}
+          Netflix no acepta mi tarjeta en Argentina
+        </a>
+        .
+      </p>
+    </section>
+
+    {/* BLOQUE 1: POR QUÉ FALLA */}
+    <section
+      id="por-que-falla"
+      class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4 scroll-mt-24"
+    >
+      <h2 class="text-2xl font-bold text-slate-900">
+        🧩 ¿Por qué Netflix rechaza débito en Argentina (aunque tengas plata)?
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Este es el punto clave: en Netflix, el rechazo de débito <strong>no siempre significa falta de saldo</strong>.
+        Lo más común es que falle por temas de habilitación, límites o seguridad.
+      </p>
+
+      <ul class="list-disc list-inside space-y-1 text-slate-700">
+        <li>
+          <strong>Compras internacionales desactivadas:</strong> muchas tarjetas de débito vienen “cerradas” para consumos al exterior.
+        </li>
+        <li>
+          <strong>Compras online desactivadas:</strong> aunque uses la tarjeta en el súper, online puede estar bloqueada.
+        </li>
+        <li>
+          <strong>Límites o cupos:</strong> algunos bancos aplican límites diarios/mensuales para consumos internacionales.
+        </li>
+        <li>
+          <strong>Antifraude del banco:</strong> Netflix a veces dispara validaciones y el banco frena el pago automáticamente.
+        </li>
+        <li>
+          <strong>Datos de facturación:</strong> dirección / código postal no coinciden (pasa más de lo que parece).
+        </li>
+      </ul>
+
+      <p class="text-slate-700 text-[15px]">
+        Si querés entender el tema “sin tarjeta”, también te puede servir esta guía:
+        <a
+          href="/ayuda/pagar-netflix-sin-tarjeta-argentina"
+          class="text-indigo-700 underline font-medium"
+        >
+          {" "}
+          Cómo pagar Netflix sin tarjeta en Argentina
+        </a>
+        .
+      </p>
+    </section>
+
+    {/* BLOQUE 2: PASO A PASO */}
+    <section
+      id="paso-a-paso"
+      class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4 scroll-mt-24"
+    >
+      <h2 class="text-2xl font-bold text-slate-900">
+        🛠️ Checklist rápido (lo que de verdad suele arreglarlo)
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Hacé esto en orden. Son pasos cortos y suelen resolver la mayoría de los casos.
+      </p>
+
+      <ol class="list-decimal list-inside space-y-2 text-slate-700 text-[15px]">
+        <li>
+          <strong>Activá compras online</strong> y <strong>compras internacionales</strong> en tu homebanking/app.
+        </li>
+        <li>
+          <strong>Revisá límites</strong> (internacional/online) y que no tengas topes diarios.
+        </li>
+        <li>
+          Mirá si tu banco tiene una opción tipo <strong>“autorizar compra”</strong> o “avisar viaje/uso”.
+        </li>
+        <li>
+          Probá cargar la tarjeta desde <strong>otro navegador</strong> o modo incógnito (a veces es cache/sesión).
+        </li>
+        <li>
+          Verificá <strong>nombre, DNI y dirección</strong> (si ponés un CP cualquiera, algunos bancos lo frenan).
+        </li>
+        <li>
+          Si el banco te manda alerta, <strong>confirmá</strong> la operación y volvé a intentar.
+        </li>
+      </ol>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-sm text-slate-800">
+        <p class="font-semibold mb-1">💡 Tip que salva</p>
+        <p>
+          Si Netflix te da un mensaje tipo “no se pudo procesar el pago” o “tarjeta rechazada”, revisá también esta guía
+          (sirve para débito y crédito):
+          <a
+            href="/ayuda/netflix-no-acepta-tarjeta-argentina"
+            class="text-indigo-700 underline font-medium"
+          >
+            {" "}
+            Netflix no acepta mi tarjeta
+          </a>
+          .
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE 3: LO QUE NO FUNCIONA */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🚫 “Atajos” que la gente prueba y casi nunca sirven
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Para que no pierdas tiempo, estas opciones suelen ser la primera idea… pero no resuelven si no hay una tarjeta válida detrás:
+      </p>
+
+      <ul class="list-disc list-inside space-y-1 text-slate-700">
+        <li>
+          <strong>Transferencia (CBU/alias):</strong> Netflix no acepta transferencia directa.
+        </li>
+        <li>
+          <strong>Mercado Pago “solo”:</strong> si no hay tarjeta habilitada asociada, no reemplaza débito.
+        </li>
+        <li>
+          <strong>Efectivo (Rapipago/Pago Fácil):</strong> no es un método directo disponible para Netflix.
+        </li>
+        <li>
+          <strong>Billeteras virtuales:</strong> funcionan solo si operan como “tarjeta” real habilitada para internacional.
+        </li>
+      </ul>
+
+      <p class="text-slate-700 text-[15px]">
+        Si tu objetivo es <strong>no depender del banco</strong>, la alternativa más usada es pagar en pesos con un servicio que gestione el pago internacional.
+      </p>
+    </section>
+
+    {/* BLOQUE 4: COMPARATIVA */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        📊 Comparativa rápida: débito vs alternativas (Argentina)
+      </h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-slate-200 rounded-2xl overflow-hidden">
+          <thead class="bg-slate-50">
+            <tr class="text-left">
+              <th class="p-3 font-semibold text-slate-700">Opción</th>
+              <th class="p-3 font-semibold text-slate-700">¿Funciona?</th>
+              <th class="p-3 font-semibold text-slate-700">Problema típico</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Débito</td>
+              <td class="p-3 text-slate-700">A veces</td>
+              <td class="p-3 text-slate-700">Depende del banco / habilitación internacional</td>
+            </tr>
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Crédito</td>
+              <td class="p-3 text-slate-700">A veces</td>
+              <td class="p-3 text-slate-700">Rechazos / impuestos / monto variable</td>
+            </tr>
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Transferencia</td>
+              <td class="p-3 text-slate-700">No</td>
+              <td class="p-3 text-slate-700">Netflix no acepta CBU/alias directo</td>
+            </tr>
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Mercado Pago sin tarjeta</td>
+              <td class="p-3 text-slate-700">No</td>
+              <td class="p-3 text-slate-700">No es método directo sin tarjeta detrás</td>
+            </tr>
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Prepaga gestionada</td>
+              <td class="p-3 text-slate-700">Sí</td>
+              <td class="p-3 text-slate-700">Período fijo + leer qué incluye</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Si querés una guía más general con opciones, mirá:
+        <a
+          href="/ayuda/como-conseguir-cuenta-netflix-argentina"
+          class="text-indigo-700 underline font-medium"
+        >
+          {" "}
+          Cómo conseguir una cuenta Netflix en Argentina
+        </a>
+        .
+      </p>
+    </section>
+
+    {/* BLOQUE 5: ALTERNATIVA PRINCIPAL */}
+    <section
+      id="alternativa"
+      class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6 scroll-mt-24"
+    >
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>Alternativa real si débito no funciona: cuentas prepagas gestionadas</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Si tu débito se rechaza una y otra vez (o querés evitar bancos, límites y rechazos),
+        una alternativa común en Argentina son las <strong>cuentas prepagas gestionadas</strong>.
+      </p>
+
+      <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4 space-y-2 text-sm text-slate-800">
+        <p class="font-semibold flex items-center gap-2">
+          <span>🔍</span>
+          <span>¿Qué significa “prepaga gestionada”?</span>
+        </p>
+        <p>
+          Significa que <strong>un tercero se encarga del pago internacional</strong> de Netflix.
+          Vos no cargás tu tarjeta ni dependés del banco: pagás en pesos por un período definido
+          (por ejemplo, 1 mes) y listo.
+        </p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 flex items-center gap-2 mb-2">
+            <span>✅</span>
+            <span>Ventajas (por qué se elige)</span>
+          </h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-700">
+            <li>No dependés de habilitaciones del banco.</li>
+            <li>Pagás en pesos con precio claro.</li>
+            <li>Evita rechazos, límites y bloqueos antifraude.</li>
+            <li>Período definido: sabés cuánto dura.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 flex items-center gap-2 mb-2">
+            <span>⚠️</span>
+            <span>A tener en cuenta</span>
+          </h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-700">
+            <li>No es Netflix oficial ni un socio comercial.</li>
+            <li>Conviene usar servicios claros y con soporte.</li>
+            <li>Leer bien qué incluye cada plan y su duración.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> ofrecemos opciones para tener
+            <strong> Netflix activo en Argentina</strong> con precio claro en pesos y soporte local
+            durante el período contratado.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE 6: FAQ EN CUERPO */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">❓ Preguntas comunes (sin vueltas)</h2>
+
+      <div class="space-y-3 text-[15px] text-slate-700">
+        <p>
+          <strong>¿Netflix acepta débito Visa y Mastercard?</strong><br />
+          Puede funcionar, pero depende de tu banco y de si la tarjeta está habilitada para compras online/internacionales.
+          Si se rechaza, casi siempre es habilitación, límite o antifraude.
+        </p>
+
+        <p>
+          <strong>¿Por qué con crédito sí y con débito no?</strong><br />
+          Porque algunos bancos manejan reglas distintas para débito en consumos internacionales, y a veces el débito se bloquea por seguridad aunque haya saldo.
+        </p>
+
+        <p>
+          <strong>¿Puedo pagar Netflix con Mercado Pago?</strong><br />
+          Solo si está asociado a una tarjeta habilitada. Mercado Pago por sí solo no reemplaza una tarjeta válida para Netflix.
+        </p>
+
+        <p>
+          <strong>¿Puedo pagar Netflix con transferencia?</strong><br />
+          No de forma directa. Netflix no acepta CBU/alias como método directo en Argentina.
+        </p>
+      </div>
+    </section>
+
+    {/* CTA FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎬 ¿Querés Netflix funcionando aunque tu débito falle?</h2>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si tu tarjeta de débito no pasa, no querés renegar con el banco o buscás una opción simple,
+        existen alternativas para tener Netflix activo en Argentina con
+        <strong> precio claro en pesos</strong> y sin vueltas.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-3 md:items-center">
+        <a
+          href="/cuentas-digitales/netflix-argentina-1-mes"
+          class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+        >
+          Ver opciones de Netflix disponibles
+        </a>
+
+        <a
+          href="/contacto"
+          class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 transition px-5 py-3 text-sm font-semibold text-white"
+        >
+          Consultar mi caso
+        </a>
+      </div>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece
+        soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+  </section>
+</BaseLayout>

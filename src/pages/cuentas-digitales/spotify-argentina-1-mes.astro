@@ -1,0 +1,348 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Spotify 1 mes prepago en Argentina (2026) — Suscripción activa en pesos, sin renovación";
+const description =
+  "Spotify por 1 mes en Argentina con modalidad prepaga: pagás en pesos, sin renovación automática. Alternativa simple si tu tarjeta falla o no querés consumo en dólares. Soporte local.";
+
+const url =
+  "https://cuentasdigitales.com.ar/cuentas-digitales/spotify-argentina-1-mes";
+
+// ✅ Si tenés precio fijo hoy, ponelo acá. Si varía, dejá null y ajustamos schema a "PriceSpecification" sin precio.
+const priceARS = 20000; // <-- ajustá si cambia
+const priceCurrency = "ARS";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/spotify-argentina-1-mes"
+  schema={[
+    // ✅ WebPage helps IA + Google entender que es landing comercial (no post)
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url,
+      inLanguage: "es-AR",
+    },
+
+    // ✅ Product schema limpio (sin ratings falsos, sin "Consultar")
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Spotify 1 mes prepago en Argentina (suscripción activa)",
+      description,
+      brand: { "@type": "Organization", name: "Spotify" },
+      url,
+      category: "Suscripciones digitales",
+      image: [
+        "https://cuentasdigitales.com.ar/images/spotify-prepago-argentina.jpg",
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+      },
+      // ✅ Nota: No incluimos AggregateRating si no hay reviews verificables.
+    },
+
+    // ✅ FAQPage (muy bueno para IA)
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué es Spotify 1 mes prepago en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Es una modalidad prepaga por tiempo fijo (1 mes). Pagás por adelantado, en pesos, y no hay renovaciones automáticas. Cuando termina el período, se corta y solo se reactiva si elegís renovar.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué conviene la modalidad prepaga en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Porque te permite evitar consumo variable en dólares, tener precio claro en pesos y resolver casos donde la tarjeta falla. Es una alternativa simple con soporte local.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Se usa en la app oficial de Spotify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. Se utiliza en la app oficial de Spotify como siempre. CuentasDigitales.com.ar no es Spotify ni está afiliado a la marca; ofrece una modalidad de pago gestionada para facilitar el acceso en Argentina.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué medios de pago aceptan en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Según disponibilidad, se puede pagar en pesos con transferencia, billeteras virtuales locales o tarjeta emitida en Argentina. Las opciones se confirman al momento de la consulta.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Se renueva automáticamente?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "No. La modalidad prepaga por 1 mes no se renueva sola. Cuando termina el período, se corta y solo continúa si elegís contratar otro mes.",
+          },
+        },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-slate-900 text-slate-50 shadow-xl overflow-hidden grid md:grid-cols-2">
+        {/* LADO IZQUIERDO - TEXTO */}
+        <div class="p-7 md:p-10 flex flex-col justify-center space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-emerald-400/60 rounded-full px-3 py-1 w-fit">
+            <span>🎧</span>
+            <span>Spotify prepago · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Spotify 1 mes prepago en Argentina
+          </h1>
+
+          {/* ✅ Resumen visible */}
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Resumen rápido</p>
+            <p>
+              Suscripción activa por 30 días, modalidad prepaga: pagás en{" "}
+              <strong>pesos</strong>, sin renovación automática. Ideal si tu
+              tarjeta falla o no querés consumo en dólares.
+            </p>
+          </div>
+
+          <p class="text-sm md:text-base text-slate-200/90">
+            Una forma simple de acceder a Spotify por un mes: pagás solo el
+            tiempo que necesitás, en pesos argentinos, con métodos locales según
+            disponibilidad. Al terminar, no se renueva sola.
+          </p>
+
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-2">
+            <li>✅ 1 mes fijo (prepago) · sin cargos sorpresa.</li>
+            <li>✅ Precio claro en ARS · evitás consumo variable en USD.</li>
+            <li>✅ Sin renovación automática.</li>
+            <li>✅ Soporte local para Argentina.</li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a
+              href="/contacto"
+              class="inline-flex items-center justify-center rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+            >
+              Consultar / Comprar →
+            </a>
+
+            <a
+              href="/ayuda/ayuda-spotify-argentina"
+              class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+            >
+              Leer guía de ayuda
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-400 pt-2">
+            Precio de referencia hoy:{" "}
+            <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar
+            según disponibilidad).
+          </p>
+        </div>
+
+        {/* LADO DERECHO - IMAGEN */}
+        <div class="relative flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 p-4 md:p-6">
+          <img
+            src="/images/spotify-prepago-argentina.jpg"
+            alt="Spotify 1 mes prepago en Argentina (suscripción activa)"
+            class="max-h-72 md:max-h-[430px] w-auto object-contain rounded-2xl shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+    {/* BLOQUE 1 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🎟️</span>
+        <span>¿Qué es exactamente Spotify 1 mes prepago?</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La modalidad <strong>prepaga</strong> funciona así:{" "}
+        <strong>pagás primero, usás después</strong>. En vez de una suscripción que
+        se renueva cada mes, tenés:
+      </p>
+
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li>Un período definido (1 mes completo / 30 días).</li>
+        <li>Un precio claro en pesos por ese tiempo.</li>
+        <li>La libertad de renovar o cortar cuando termina.</li>
+      </ul>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Es ideal si querés escuchar música sin quedar atado, usar Spotify por un
+        mes puntual o evitar renovaciones automáticas. Cuando termina, se corta.
+      </p>
+    </section>
+
+    {/* BLOQUE 2 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona la suscripción activa por 1 mes</span>
+      </h2>
+
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li>
+          <strong>Consultás disponibilidad</strong> desde{" "}
+          <a href="/contacto" class="text-brand-700 underline">contacto</a>.
+        </li>
+        <li>
+          Te confirmamos <strong>precio en pesos</strong> y métodos de pago activos.
+        </li>
+        <li>
+          <strong>Pagás en ARS</strong> (transferencia, billetera o tarjeta, según disponibilidad).
+        </li>
+        <li>
+          <strong>Te dejamos el acceso activo</strong> y te guiamos para entrar a la app oficial.
+        </li>
+        <li>
+          Usás Spotify por 30 días. Si querés seguir, renovás manualmente.
+        </li>
+      </ol>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-xs md:text-sm text-slate-700">
+        <p>
+          No hay “renovación automática”. Si no renovás, se termina el período y listo.
+          Esto te da <strong>control total</strong> del gasto.
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE 3 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>✨</span>
+        <span>Ventajas frente a la suscripción clásica</span>
+      </h2>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">✅ Pagás solo un mes</h3>
+          <p class="text-slate-700">
+            No quedás atado. Si querés Spotify por un tiempo puntual, esta modalidad es ideal.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">✅ ARS + métodos locales</h3>
+          <p class="text-slate-700">
+            Alternativa práctica si tu tarjeta falla o no querés consumo variable en dólares.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">✅ Sin cobros sorpresa</h3>
+          <p class="text-slate-700">
+            Termina el período y se corta. Renovás solo si querés.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">✅ Soporte local</h3>
+          <p class="text-slate-700">
+            Te guiamos para entrar y resolver dudas típicas de Argentina.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* BLOQUE 4 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>💳</span>
+        <span>Medios de pago en Argentina</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Podés pagar en pesos con métodos locales (según disponibilidad al momento):
+      </p>
+
+      <ul class="list-disc list-inside text-sm text-slate-700 space-y-1">
+        <li><strong>Transferencia bancaria</strong> en ARS.</li>
+        <li><strong>Billeteras virtuales</strong> locales.</li>
+        <li><strong>Tarjeta emitida en Argentina</strong> (si está disponible).</li>
+      </ul>
+
+      <p class="text-xs md:text-sm text-slate-600">
+        Te confirmamos opciones exactas cuando nos escribís, para que elijas lo más cómodo.
+      </p>
+    </section>
+
+    {/* BLOQUE 5 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>📱</span>
+        <span>¿Dónde se usa Spotify?</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Spotify se usa en la <strong>app oficial</strong> o web (celular, PC, tablet, smart TV).
+        No hay apps raras: entrás como siempre.
+      </p>
+
+      <p class="text-xs md:text-[11px] text-slate-500">
+        CuentasDigitales.com.ar no es Spotify ni está afiliado a la marca; ofrece una modalidad de pago gestionada para facilitar el acceso en Argentina.
+      </p>
+    </section>
+
+    {/* CTA FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 md:px-7 md:py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Comprar Spotify 1 mes prepago en Argentina</span>
+      </h2>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si querés Spotify por 30 días con modalidad prepaga (sin renovación automática),
+        escribinos y te confirmamos disponibilidad, precio en ARS y medios de pago activos.
+      </p>
+
+      <a
+        href="/contacto"
+        class="inline-flex items-center justify-center rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+      >
+        Consultar / Comprar →
+      </a>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        Esta página es informativa para usuarios de Argentina. El objetivo es explicar la modalidad prepaga de forma clara para que decidas si encaja con lo que necesitás hoy.
+      </p>
+    </section>
+  </section>
+</BaseLayout>

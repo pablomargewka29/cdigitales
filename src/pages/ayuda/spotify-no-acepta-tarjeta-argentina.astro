@@ -1,0 +1,407 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Spotify no acepta mi tarjeta en Argentina (2026): qué hacer";
+const description =
+  "¿Spotify no acepta tu tarjeta en Argentina? Te explicamos por qué pasa en 2026, qué revisar en el banco, errores típicos y alternativas reales para tener Spotify activo sin vueltas.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/spotify-no-acepta-tarjeta-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/spotify-no-acepta-tarjeta-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      publisher: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      datePublished: "2025-12-29",
+      dateModified: "2025-12-29",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Spotify acepta tarjetas en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí, Spotify acepta tarjetas, pero en Argentina la aprobación depende del banco, de si la tarjeta está habilitada para compras online e internacionales y de controles de seguridad (antifraude).",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué Spotify rechaza mi tarjeta si tengo saldo?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Porque muchos rechazos no son por saldo, sino por bloqueo del banco, tarjeta sin habilitación internacional, límites para consumos al exterior o datos de facturación inconsistentes.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Spotify acepta débito en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "A veces sí, a veces no. Depende del banco y de si la tarjeta de débito está habilitada para pagos online e internacionales. Si te la rechaza, probá habilitar compras internacionales o usar otra tarjeta/banco.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Puedo pagar Spotify con Mercado Pago o transferencia?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Spotify no acepta transferencias bancarias directas. Mercado Pago solo funciona si está asociado a una tarjeta habilitada para pagos online; Mercado Pago por sí solo no reemplaza una tarjeta válida.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Hay una alternativa para tener Spotify sin depender del banco?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. Una alternativa habitual en Argentina es una modalidad prepaga gestionada por período (por ejemplo, 1 mes), donde pagás en pesos y un tercero se encarga del pago internacional.",
+          },
+        },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-700 text-slate-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-emerald-300/40 rounded-full px-3 py-1">
+            <span>🎧</span>
+            <span>Guía práctica Argentina · Actualizada 2026</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Spotify no acepta mi tarjeta en Argentina
+          </h1>
+
+          <p class="text-sm md:text-base text-slate-100/90">
+            Tenés tarjeta, tenés saldo… y Spotify igual te rechaza el pago. Acá te
+            explico <strong>por qué pasa en Argentina</strong>, qué revisar paso a paso
+            y qué alternativa real tenés si no querés depender del banco 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        La mayoría de los rechazos de Spotify en Argentina no son “porque no tenés plata”,
+        sino por <strong>habilitación internacional</strong>, bloqueos del banco o
+        controles antifraude. Si tu tarjeta falla, una alternativa común es usar una
+        <strong> modalidad prepaga por 1 mes</strong> pagando en pesos.
+      </p>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+    {/* NAVEGACIÓN */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">🧭 Elegí tu caso</h2>
+
+      <div class="grid gap-3 md:grid-cols-3 text-sm">
+        <a
+          href="#motivos"
+          class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-emerald-400 hover:shadow-sm transition"
+        >
+          <p class="font-semibold text-slate-900">❓ Motivos del rechazo</p>
+          <p class="text-slate-600 text-xs mt-1">Lo más común en Argentina.</p>
+        </a>
+
+        <a
+          href="#checklist"
+          class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-emerald-400 hover:shadow-sm transition"
+        >
+          <p class="font-semibold text-slate-900">🛠️ Checklist</p>
+          <p class="text-slate-600 text-xs mt-1">Pasos concretos para destrabar.</p>
+        </a>
+
+        <a
+          href="#alternativa"
+          class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-emerald-400 hover:shadow-sm transition"
+        >
+          <p class="font-semibold text-slate-900">⚡ Alternativa en pesos</p>
+          <p class="text-slate-600 text-xs mt-1">Si querés Spotify activo ya.</p>
+        </a>
+      </div>
+    </section>
+
+    {/* BLOQUE 1: MOTIVOS */}
+    <section
+      id="motivos"
+      class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4 scroll-mt-24"
+    >
+      <h2 class="text-2xl font-bold text-slate-900">
+        ❓ Por qué Spotify puede rechazar tu tarjeta en Argentina
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Estos son los motivos más comunes (y casi siempre son del banco, no de Spotify):
+      </p>
+
+      <ul class="list-disc list-inside space-y-1 text-slate-700 text-[15px]">
+        <li>
+          <strong>Tarjeta sin habilitación internacional:</strong> muchos bancos bloquean por defecto compras afuera.
+        </li>
+        <li>
+          <strong>Bloqueo antifraude:</strong> el banco ve el cobro como “riesgoso” y lo frena.
+        </li>
+        <li>
+          <strong>Límites/cupos:</strong> si el banco te limita consumos al exterior, puede rebotar aunque haya saldo.
+        </li>
+        <li>
+          <strong>Datos inconsistentes:</strong> nombre, dirección, zip/código postal o país que no coincide.
+        </li>
+        <li>
+          <strong>Débito “a medias”:</strong> algunas tarjetas débito funcionan solo local, no para suscripciones.
+        </li>
+      </ul>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-sm text-slate-800">
+        <p class="font-semibold mb-1">💡 Pista clave</p>
+        <p>
+          Si el error aparece <strong>al instante</strong>, suele ser bloqueo del banco.
+          Si aparece “después de intentar” un rato, suele ser antifraude / validación.
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE 2: ERRORES TÍPICOS */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🧾 Errores típicos que ve la gente (y qué significan)
+      </h2>
+
+      <div class="space-y-3 text-[15px] text-slate-700">
+        <p>
+          <strong>“No pudimos procesar tu pago”</strong><br />
+          Generalmente bloqueo del banco o habilitación internacional desactivada.
+        </p>
+
+        <p>
+          <strong>“Tu método de pago fue rechazado”</strong><br />
+          Puede ser por límites/cupos o porque el banco frenó por seguridad.
+        </p>
+
+        <p>
+          <strong>“Hubo un problema con tu tarjeta”</strong><br />
+          Puede ser datos de facturación o tarjeta no apta para suscripciones.
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE 3: CHECKLIST */}
+    <section
+      id="checklist"
+      class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4 scroll-mt-24"
+    >
+      <h2 class="text-2xl font-bold text-slate-900">
+        🛠️ Checklist para solucionarlo (paso a paso)
+      </h2>
+
+      <ol class="list-decimal list-inside space-y-2 text-slate-700 text-[15px]">
+        <li>
+          <strong>Habilitá compras online e internacionales</strong> en tu homebanking/app del banco.
+        </li>
+        <li>
+          Revisá <strong>límite de compra</strong> y si tenés bloqueado “consumos al exterior”.
+        </li>
+        <li>
+          Activá <strong>notificaciones</strong> del banco y revisá si te pide aprobar la operación.
+        </li>
+        <li>
+          Probá <strong>otra tarjeta</strong> o incluso otro banco (a veces cambia todo).
+        </li>
+        <li>
+          Reintentá en <strong>modo incógnito</strong> o desde otro dispositivo (evita cookies/validaciones raras).
+        </li>
+        <li>
+          Si es débito, confirmá que sea una tarjeta que permita <strong>suscripciones internacionales</strong>.
+        </li>
+      </ol>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-sm text-slate-800">
+        <p class="font-semibold mb-1">📌 Mini tip</p>
+        <p>
+          Si el banco lo bloquea, a veces se arregla con una sola opción:
+          <strong> “permitir compras internacionales”</strong> o “compras en el exterior”.
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE 4: QUÉ NO SIRVE */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🚫 Métodos que NO sirven (o casi nunca) si querés pagar sin tarjeta
+      </h2>
+
+      <ul class="list-disc list-inside space-y-1 text-slate-700 text-[15px]">
+        <li><strong>Transferencia bancaria:</strong> Spotify no acepta CBU/alias directo.</li>
+        <li><strong>Mercado Pago “solo”:</strong> si no hay tarjeta detrás, no reemplaza una tarjeta válida.</li>
+        <li><strong>Efectivo:</strong> no es un método directo dentro de Spotify.</li>
+      </ul>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Si tu objetivo es <strong>no depender del banco</strong>, te conviene ir a una alternativa
+        donde pagás en pesos y listo.
+      </p>
+    </section>
+
+    {/* BLOQUE 5: COMPARATIVA */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">📊 Comparativa rápida</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-slate-200 rounded-2xl overflow-hidden">
+          <thead class="bg-slate-50">
+            <tr class="text-left">
+              <th class="p-3 font-semibold text-slate-700">Método</th>
+              <th class="p-3 font-semibold text-slate-700">¿Funciona?</th>
+              <th class="p-3 font-semibold text-slate-700">Problema típico</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Crédito</td>
+              <td class="p-3 text-slate-700">A veces</td>
+              <td class="p-3 text-slate-700">Rechazos / bloqueo banco / límites</td>
+            </tr>
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Débito</td>
+              <td class="p-3 text-slate-700">A veces</td>
+              <td class="p-3 text-slate-700">Depende del banco y habilitación internacional</td>
+            </tr>
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Transferencia</td>
+              <td class="p-3 text-slate-700">No</td>
+              <td class="p-3 text-slate-700">Spotify no acepta CBU/alias directo</td>
+            </tr>
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Mercado Pago sin tarjeta</td>
+              <td class="p-3 text-slate-700">No</td>
+              <td class="p-3 text-slate-700">No reemplaza tarjeta válida</td>
+            </tr>
+            <tr class="border-t border-slate-200">
+              <td class="p-3 text-slate-700">Prepaga gestionada</td>
+              <td class="p-3 text-slate-700">Sí</td>
+              <td class="p-3 text-slate-700">Período fijo + leer qué incluye</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* BLOQUE 6: ALTERNATIVA */}
+    <section
+      id="alternativa"
+      class="rounded-3xl bg-emerald-50 border border-emerald-100 px-6 py-8 space-y-6 scroll-mt-24"
+    >
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>Alternativa real: Spotify 1 mes prepago en pesos</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Si ya probaste y tu tarjeta sigue fallando, podés resolverlo con una modalidad
+        <strong> prepaga por 1 mes</strong>: pagás en pesos, sin renovación automática,
+        y te queda activo el período.
+      </p>
+
+      <div class="rounded-2xl bg-white border border-emerald-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>👉</span>
+          <span>
+            Mirá cómo funciona acá:
+            <a
+              href="/cuentas-digitales/spotify-argentina-1-mes"
+              class="text-emerald-700 underline font-medium ml-1"
+            >
+              Spotify 1 mes prepago en Argentina
+            </a>
+          </span>
+        </p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-emerald-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 flex items-center gap-2 mb-2">
+            <span>✅</span>
+            <span>Por qué se elige</span>
+          </h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-700">
+            <li>No dependés del banco.</li>
+            <li>Pagás en pesos con medios locales.</li>
+            <li>Tenés período fijo (1 mes).</li>
+            <li>Sin renovación automática.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl bg-white/70 border border-emerald-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 flex items-center gap-2 mb-2">
+            <span>⚠️</span>
+            <span>A tener en cuenta</span>
+          </h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-700">
+            <li>No es Spotify oficial ni afiliado.</li>
+            <li>Conviene usar servicios claros y con soporte.</li>
+            <li>Leer qué incluye y la duración exacta.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* CTA FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎧 ¿Querés Spotify funcionando sin renegar?</h2>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si tu tarjeta se rechaza o querés algo más simple, existe una alternativa
+        para tener Spotify activo en Argentina con <strong>precio claro en pesos</strong>.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-3 md:items-center">
+        <a
+          href="/cuentas-digitales/spotify-argentina-1-mes"
+          class="inline-flex items-center justify-center rounded-xl bg-emerald-600 hover:bg-emerald-500 transition px-5 py-3 text-sm font-semibold text-white"
+        >
+          Ver Spotify 1 mes disponible →
+        </a>
+
+        <a
+          href="/contacto"
+          class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 transition px-5 py-3 text-sm font-semibold text-white"
+        >
+          Consultar mi caso
+        </a>
+      </div>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Spotify ni está afiliado a la marca. Ofrece
+        soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+  </section>
+</BaseLayout>

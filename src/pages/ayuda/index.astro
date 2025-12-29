@@ -16,6 +16,16 @@ const articles = [
     updated: "Actualizado 25/12/2025",
   },
   {
+    slug: "netflix-no-acepta-debito-argentina",
+    emoji: "💳",
+    title:
+      "Netflix no acepta débito en Argentina (2026): por qué pasa y cómo solucionarlo",
+    description:
+      "Por qué Netflix puede rechazar tarjetas de débito en Argentina, qué revisar en tu banco y qué alternativas reales existen para activar Netflix sin vueltas.",
+    tag: "Netflix",
+    updated: "Actualizado 29/12/2025",
+  },
+  {
     slug: "cuanto-cuesta-netflix-argentina",
     emoji: "💰",
     title: "Cuánto cuesta Netflix en Argentina (2026): precio final en pesos",
@@ -42,8 +52,21 @@ const articles = [
     tag: "Netflix",
     updated: "Actualizado 24/12/2025",
   },
+
+  // ✅ NUEVO: SPOTIFY
+  {
+    slug: "spotify-no-acepta-tarjeta-argentina",
+    emoji: "🎧",
+    title: "Spotify no acepta mi tarjeta en Argentina (2026): qué hacer",
+    description:
+      "Por qué Spotify rechaza tarjetas en Argentina, qué revisar en el banco y alternativas reales para tener Spotify activo sin vueltas.",
+    tag: "Spotify",
+    updated: "Actualizado 29/12/2025",
+  },
 ];
 
+// ✅ Anti-bugs: asegura que el slug no rompa la URL si viene con "/" al inicio
+const safeHref = (slug) => `/ayuda/${String(slug).replace(/^\/+/, "")}`;
 ---
 
 <BaseLayout title={title} description={description} canonical="/ayuda">
@@ -87,7 +110,7 @@ const articles = [
         <div class="grid gap-5 md:grid-cols-2">
           {articles.map((art) => (
             <a
-              href={`/ayuda/${art.slug}`}
+              href={safeHref(art.slug)}
               class="group block rounded-2xl border border-slate-200 bg-white/95 px-5 py-5 hover:border-indigo-400 hover:shadow-md transition-all duration-150"
             >
               <div class="flex items-start gap-3">
@@ -104,7 +127,9 @@ const articles = [
                     {art.title}
                   </h3>
 
-                  <p class="text-xs md:text-sm text-slate-600">{art.description}</p>
+                  <p class="text-xs md:text-sm text-slate-600">
+                    {art.description}
+                  </p>
 
                   <p class="text-xs text-indigo-700 font-medium mt-1">
                     Leer guía completa →
