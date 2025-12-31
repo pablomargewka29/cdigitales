@@ -1,0 +1,265 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "¿Se puede pagar Netflix con Mercado Pago en Argentina? (2026)";
+const description =
+  "Te explicamos si se puede pagar Netflix con Mercado Pago en Argentina, cuándo funciona, por qué suele fallar y qué alternativas reales existen para tener Netflix activo sin rechazos.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-mercado-pago";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-mercado-pago"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url,
+      inLanguage: "es-AR",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Netflix acepta Mercado Pago en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix no acepta Mercado Pago como medio de pago directo. En algunos casos puede funcionar la tarjeta prepaga de Mercado Pago, pero no es estable y suele ser rechazada.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué Netflix rechaza Mercado Pago?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Los rechazos se deben a validaciones internacionales, al uso de tarjetas prepagas, límites automáticos o políticas del emisor.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuál es la alternativa más confiable?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Las alternativas más estables son usar saldo mediante gift card o una suscripción activa por tiempo fijo, sin depender de Mercado Pago.",
+          },
+        },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-slate-900 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-indigo-400/60 rounded-full px-3 py-1 w-fit">
+            <span>💳</span>
+            <span>Netflix + Mercado Pago · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            ¿Se puede pagar Netflix con Mercado Pago en Argentina?
+          </h1>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Resumen rápido</p>
+            <p>
+              Netflix <strong>no acepta Mercado Pago de forma directa</strong>.
+              Algunos usuarios intentan pagar con saldo de Mercado Pago o con la
+              tarjeta MP, pero es una opción <strong>inestable</strong> y suele
+              fallar. Más abajo te contamos qué conviene hacer.
+            </p>
+          </div>
+
+          <p class="text-sm md:text-base text-slate-200/90">
+            En Argentina es muy común que Netflix rechace pagos hechos con
+            billeteras virtuales como Mercado Pago, incluso cuando hay saldo
+            disponible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+{/* IMAGEN ILUSTRATIVA – MISMO ANCHO QUE EL HERO */}
+<div class="max-w-5xl mx-auto px-4 my-10">
+  <img
+    src="/images/netflix-mercado-pago.png"
+    alt="Pagar Netflix con Mercado Pago en Argentina"
+    class="w-full max-h-80 object-cover rounded-2xl"
+    loading="lazy"
+    decoding="async"
+  />
+</div>
+
+
+
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+    {/* BLOQUE 1 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900">
+        ❌ Netflix no acepta Mercado Pago como medio oficial
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Actualmente, Netflix <strong>no permite pagar con Mercado Pago</strong>
+        como opción directa en Argentina. No existe un botón ni una integración
+        oficial para usar saldo de MP dentro de la plataforma.
+      </p>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La confusión surge porque Mercado Pago ofrece una
+        <strong>tarjeta prepaga</strong>, y muchos usuarios intentan usarla como
+        si fuera una tarjeta de crédito tradicional.
+      </p>
+    </section>
+
+    {/* BLOQUE 2 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900">
+        ⚠️ ¿Funciona la tarjeta de Mercado Pago con Netflix?
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        <strong>A veces sí, muchas veces no.</strong> En la práctica, la tarjeta
+        Mercado Pago suele ser rechazada.
+      </p>
+
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li>Netflix aplica validaciones internacionales.</li>
+        <li>Las tarjetas prepagas tienen más rechazos.</li>
+        <li>Puede funcionar un mes y fallar al siguiente.</li>
+        <li>El soporte ante rechazos es limitado.</li>
+      </ul>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Esto genera frustración porque el pago parece correcto, pero Netflix lo
+        rechaza igual.
+      </p>
+    </section>
+
+    {/* BLOQUE 3 – ERRORES COMUNES */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900">
+        ❗ Errores comunes al intentar pagar Netflix con Mercado Pago
+      </h2>
+
+      <ul class="list-disc list-inside text-slate-700 text-[15px] space-y-1">
+        <li>Usar la tarjeta MP sin saldo suficiente.</li>
+        <li>Intentar pagar varias veces seguidas y que Netflix bloquee el intento.</li>
+        <li>Creer que Mercado Pago es un medio oficial de Netflix.</li>
+        <li>No habilitar compras internacionales.</li>
+        <li>Usar la tarjeta virtual en lugar de la física.</li>
+      </ul>
+    </section>
+
+    {/* BLOQUE 4 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900">
+        🤔 ¿Conviene pagar Netflix con Mercado Pago?
+      </h2>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+          <h3 class="font-semibold text-slate-900 mb-1">✔️ Conviene si:</h3>
+          <ul class="list-disc list-inside text-slate-700">
+            <li>Querés probar de forma puntual.</li>
+            <li>Tenés saldo disponible y tiempo para intentar.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+          <h3 class="font-semibold text-slate-900 mb-1">❌ No conviene si:</h3>
+          <ul class="list-disc list-inside text-slate-700">
+            <li>Buscás algo estable.</li>
+            <li>Ya te rechazó el pago.</li>
+            <li>No querés perder tiempo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* BLOQUE 5 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900">
+        ✅ Alternativa estable para Argentina
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Cuando Mercado Pago falla, muchos usuarios optan por alternativas más
+        confiables como las que ofrece
+        <strong> CuentasDigitales.com.ar</strong>.
+      </p>
+
+      <ul class="list-disc list-inside text-slate-700 text-[15px] space-y-1">
+        <li>Sin rechazos de tarjeta.</li>
+        <li>Pago por tiempo fijo.</li>
+        <li>Mayor control del gasto.</li>
+        <li>Soporte local.</li>
+      </ul>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Según disponibilidad, se entrega
+        <strong> gift card</strong> o
+        <strong> suscripción activa</strong>, siempre para que Netflix quede
+        funcionando sin vueltas.
+      </p>
+
+      <p class="text-sm">
+        👉 También podés leer:{" "}
+        <a
+          href="/ayuda/netflix-gift-card-argentina"
+          class="text-indigo-700 underline"
+        >
+          Netflix Gift Card en Argentina
+        </a>
+      </p>
+    </section>
+
+    {/* CTA FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-5 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold">
+        🚀 Netflix activo sin rechazos ni Mercado Pago
+      </h2>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si querés Netflix funcionando sin depender de Mercado Pago ni tarjetas
+        inestables, podés elegir una modalidad alternativa por tiempo fijo.
+      </p>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <a
+          href="/cuentas-digitales/netflix-argentina-1-mes"
+          class="inline-flex items-center justify-center rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+        >
+          Netflix 1 mes →
+        </a>
+
+        <a
+          href="/cuentas-digitales/netflix-argentina-3-meses"
+          class="inline-flex items-center justify-center rounded-xl bg-red-400 hover:bg-red-500 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+        >
+          Netflix 3 meses →
+        </a>
+      </div>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        En caso de no haber stock de gift card, se entrega una suscripción activa
+        por el período elegido. Artículo informativo para usuarios de Argentina.
+      </p>
+    </section>
+  </section>
+</BaseLayout>
