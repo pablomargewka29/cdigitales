@@ -1,0 +1,378 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix Gift Card en Argentina (2026): qué es, cómo funciona y cuándo conviene";
+const description =
+  "Guía completa de Netflix Gift Card en Argentina: para qué sirve, ventajas reales, cómo canjearla paso a paso, errores comunes y tips. Al final podés elegir opciones de 1 o 3 meses.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-gift-card-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-gift-card-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url,
+      inLanguage: "es-AR",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué es una Netflix Gift Card?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Es un código de saldo para Netflix. Al canjearlo, el saldo se acredita en la cuenta y Netflix descuenta el plan desde ese saldo.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Para qué sirve una Netflix Gift Card en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sirve para pagar Netflix cuando el banco rechaza la tarjeta, cuando no querés asociar tarjeta bancaria o cuando buscás controlar el gasto.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cómo se canjea la Netflix Gift Card?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Entrás a tu cuenta Netflix, vas a canjear/códigos, pegás el código y el saldo queda acreditado. Netflix descuenta el plan desde ese saldo.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué ofrece CuentasDigitales.com.ar?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Según disponibilidad, CuentasDigitales.com.ar ofrece gift cards (saldo) o una alternativa de suscripción activa por un período elegido.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué pasa si no hay stock de Gift Card?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Si no hay stock de gift card, se entrega una suscripción activa directamente en la plataforma por el mismo período elegido, según disponibilidad.",
+          },
+        },
+      ],
+    },
+  ]}
+>
+  {/* HERO (compacto, informativo, con vida) */}
+  <section class="mb-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-slate-900 text-slate-50 shadow-xl overflow-hidden grid md:grid-cols-2">
+        {/* TEXTO */}
+        <div class="p-7 md:p-10 flex flex-col justify-center space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-red-400/60 rounded-full px-3 py-1 w-fit">
+            <span>🎁</span>
+            <span>Guía Netflix Gift Card · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix Gift Card en Argentina
+          </h1>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90 space-y-2">
+            <p class="font-semibold text-slate-100">👉 ¿Qué es?</p>
+            <p>
+              La <strong>Netflix Gift Card</strong> es un <strong>código de saldo</strong>{" "}
+              para Netflix. Ese saldo se carga en tu cuenta y Netflix descuenta el
+              plan desde ahí (ideal cuando la tarjeta falla 😵‍💫).
+            </p>
+          </div>
+
+          <p class="text-[11px] text-slate-400">
+            Netflix es una marca registrada. Esta página es informativa para usuarios en Argentina.
+          </p>
+        </div>
+
+        {/* IMAGEN */}
+        <div class="relative flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 p-4 md:p-6">
+          <img
+            src="/images/netflix-gift-card-argentina.png"
+            alt="Netflix Gift Card Argentina (saldo para Netflix)"
+            class="max-h-72 md:max-h-[430px] w-auto object-contain rounded-2xl shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* INTRO FUERA DEL HERO (vida + checks) */}
+  <section class="max-w-3xl mx-auto pb-6">
+    <div class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-4">
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Acá va la posta 🧉: si Netflix te rechaza la tarjeta, te cobra raro o no querés
+        asociar un plástico, la <strong>Gift Card</strong> suele ser la salida más simple.
+        En esta guía te dejamos todo explicado en criollo:{" "}
+        <strong>para qué sirve</strong>, <strong>ventajas</strong>, <strong>cómo canjear</strong>{" "}
+        y <strong>qué hacer si aparece un error</strong>.
+      </p>
+
+      <div class="flex flex-wrap gap-2 text-xs md:text-sm">
+        <span class="rounded-full bg-slate-100 border border-slate-200 px-3 py-1 text-slate-700">
+          ✅ Alternativa cuando rechaza el banco
+        </span>
+        <span class="rounded-full bg-slate-100 border border-slate-200 px-3 py-1 text-slate-700">
+          ✅ Control del gasto (sin sorpresas)
+        </span>
+        <span class="rounded-full bg-slate-100 border border-slate-200 px-3 py-1 text-slate-700">
+          ✅ Canje simple (copiar/pegar y listo)
+        </span>
+      </div>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-xs md:text-sm text-slate-700">
+        <p>
+          ℹ️ <strong>Dato importante:</strong> según disponibilidad,{" "}
+          <strong>CuentasDigitales.com.ar</strong> ofrece <strong>Gift Cards (saldo)</strong>{" "}
+          o una <strong>alternativa de suscripción activa</strong>. Las opciones para elegir
+          aparecen al final, cuando ya entendiste todo 🙌
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+    {/* BLOQUE: PARA QUÉ SIRVE */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧠</span>
+        <span>¿Para qué sirve una Netflix Gift Card en Argentina?</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        En Argentina es re común: ponés la tarjeta y Netflix te tira rechazo 😤. Puede ser
+        por validación del banco, límite, compra internacional o “algo” que nadie explica.
+        La Gift Card sirve para que Netflix se cobre desde un <strong>saldo</strong> que ya quedó cargado
+        en la cuenta.
+      </p>
+
+      <ul class="list-disc list-inside text-slate-700 text-[15px] space-y-1">
+        <li>Si Netflix no te toma crédito o débito.</li>
+        <li>Si no querés asociar tarjeta bancaria a la cuenta.</li>
+        <li>Si querés controlar cuánto gastás (sin renovaciones sorpresa).</li>
+        <li>Si querés resolverlo rápido y sin vueltas.</li>
+      </ul>
+    </section>
+
+    {/* BLOQUE: VENTAJAS */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>✨</span>
+        <span>Ventajas reales (las que importan)</span>
+      </h2>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">🔒 Menos rechazos</h3>
+          <p class="text-slate-700">
+            Te saca del loop “probá otra tarjeta / llamá al banco / reintentá mañana”.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">🎯 Gasto controlado</h3>
+          <p class="text-slate-700">
+            Cargás saldo y listo. No queda nada “enganchado” si no querés.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">⚡ Canje simple</h3>
+          <p class="text-slate-700">
+            Copiás/pegás el código y se acredita. Netflix descuenta automáticamente.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">🧾 Sin tarjeta asociada</h3>
+          <p class="text-slate-700">
+            Ideal si preferís no dejar datos bancarios guardados en la cuenta.
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-xs md:text-sm text-slate-700">
+        <p>
+          💡 Tip: la Gift Card no cambia Netflix ni el contenido. Netflix se ve en la app oficial (TV, celular, PC, consola) como siempre.
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE: CÓMO CANJEAR */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>Cómo canjear la Netflix Gift Card (paso a paso)</span>
+      </h2>
+
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li>Recibís tu <strong>código</strong> de Gift Card.</li>
+        <li>Entrás a Netflix (app o web oficial) con tu cuenta.</li>
+        <li>Vas a la parte de <strong>canje</strong> (códigos / gift card).</li>
+        <li>Pegás el código y confirmás.</li>
+        <li>Listo: el <strong>saldo</strong> queda acreditado y Netflix descuenta el plan desde ahí.</li>
+      </ol>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-xs md:text-sm text-slate-700">
+        <p>
+          ✅ Si tu objetivo es “que Netflix me quede activo sin pelearme con el banco”, esto suele ser lo más directo.
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE: ERRORES COMUNES */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧯</span>
+        <span>Errores comunes al canjear (y cómo solucionarlos)</span>
+      </h2>
+
+      <div class="space-y-3 text-slate-700 text-[15px] leading-relaxed">
+        <p>
+          <strong>• “Código inválido”</strong>: 9 de 10 veces es un error de tipeo. Copiá/pegá y revisá letras/números.
+        </p>
+        <p>
+          <strong>• “No se puede canjear en tu región”</strong>: puede ser un tema de compatibilidad del saldo. Se revisa y se corrige.
+        </p>
+        <p>
+          <strong>• “Ya fue canjeado”</strong>: no sigas probando. Se verifica el estado y se te guía con el siguiente paso.
+        </p>
+      </div>
+
+      <p class="text-xs md:text-sm text-slate-600">
+        Tranquilo: si aparece un error, se resuelve. Lo importante es no quemar intentos al azar.
+      </p>
+    </section>
+
+    {/* BLOQUE: FAQ con más vida */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>❓</span>
+        <span>Preguntas frecuentes (Argentina)</span>
+      </h2>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">🕒 ¿Cuánto tarda?</h3>
+          <p class="text-slate-700">
+            Una vez que tenés el código, el canje suele ser rápido. Si surge algo, te guiamos.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">📺 ¿Dónde se ve Netflix?</h3>
+          <p class="text-slate-700">
+            En la app o web oficial, como siempre (TV, celu, PC, consola).
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">💳 ¿Sirve si mi tarjeta falla?</h3>
+          <p class="text-slate-700">
+            Sí, justamente. La idea es que Netflix se cobre desde saldo y no desde la tarjeta.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">🧾 ¿Qué ofrece CuentasDigitales.com.ar?</h3>
+          <p class="text-slate-700">
+            Según disponibilidad, Gift Cards (saldo) o alternativa de suscripción activa por período elegido.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* CTA FINAL estilo HERO (recién acá aparecen 1/3 meses) */}
+    <section
+      id="planes"
+      class="scroll-mt-24 rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 md:px-10 md:py-10 space-y-6 shadow-sm"
+    >
+      <div class="space-y-3">
+        <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-slate-600/70 rounded-full px-3 py-1 w-fit">
+          <span>🛒</span>
+          <span>Opciones · Netflix Argentina</span>
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-extrabold leading-snug">
+          Elegí tu opción (1 o 3 meses)
+        </h2>
+
+        <p class="text-sm md:text-[15px] text-slate-100/90 max-w-2xl">
+          Ahora que ya entendés cómo funciona la Gift Card, elegí el período que necesitás.
+          Te confirmamos disponibilidad y te guiamos para que quede activo sin vueltas.
+        </p>
+      </div>
+
+      <div class="rounded-2xl bg-white/10 border border-white/20 px-4 py-3 text-xs md:text-sm text-slate-100/90">
+        <p>
+          ℹ️ <strong>Tip:</strong> si no hay stock de Gift Card, se entrega una{" "}
+          <strong>suscripción activa directamente en la plataforma</strong> por el
+          mismo período elegido, según disponibilidad.
+        </p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <a
+          href="/contacto?producto=netflix&plan=1-mes"
+          class="block rounded-2xl bg-white/10 border border-white/15 p-5 hover:bg-white/15 transition"
+        >
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">🎬 1 mes</h3>
+            <span class="text-xs bg-white/10 border border-white/15 rounded-full px-3 py-1">
+              Para probar
+            </span>
+          </div>
+          <p class="text-sm text-slate-100/90 mt-2">
+            Ideal si querés Netflix un mes. Te guiamos con canje/activación.
+          </p>
+          <p class="text-xs text-slate-200/80 mt-2">Continuar →</p>
+        </a>
+
+        <a
+          href="/contacto?producto=netflix&plan=3-meses"
+          class="block rounded-2xl bg-white/10 border border-white/15 p-5 hover:bg-white/15 transition"
+        >
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">🍿 3 meses</h3>
+            <span class="text-xs bg-white/10 border border-white/15 rounded-full px-3 py-1">
+              Más cómodo
+            </span>
+          </div>
+          <p class="text-sm text-slate-100/90 mt-2">
+            Ideal si querés olvidarte 3 meses. Menos gestiones, más simple.
+          </p>
+          <p class="text-xs text-slate-200/80 mt-2">Continuar →</p>
+        </a>
+      </div>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        Netflix es una marca registrada. Esta página es informativa y ofrece alternativas según disponibilidad para usuarios en Argentina.
+      </p>
+    </section>
+  </section>
+</BaseLayout>
