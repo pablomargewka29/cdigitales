@@ -1,0 +1,266 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Impuestos de Netflix en Argentina (2026): cuánto se paga realmente y por qué cambia el precio";
+const description =
+  "Netflix en Argentina tiene impuestos y recargos que afectan el precio final. Te explicamos cuánto se paga realmente, por qué cambia mes a mes y cómo evitar sorpresas.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/impuestos-netflix-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/impuestos-netflix-argentina"
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-slate-900 text-slate-50 shadow-xl overflow-hidden grid md:grid-cols-2">
+        {/* TEXTO */}
+        <div class="p-7 md:p-10 flex flex-col justify-center space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-red-400/60 rounded-full px-3 py-1 w-fit">
+            <span>💸</span>
+            <span>Netflix · Impuestos en Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Impuestos de Netflix en Argentina
+          </h1>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Resumen rápido</p>
+            <p>
+              En Argentina, el precio que muestra Netflix <strong>no suele ser el final</strong>.
+              Al pagar, se aplican impuestos y recargos que hacen que el monto sea mayor
+              y que incluso <strong>cambie mes a mes</strong>.
+            </p>
+          </div>
+
+          <p class="text-sm md:text-base text-slate-200/90">
+            Si alguna vez pensaste <em>“Netflix me cobra más de lo que dice”</em>,
+            no sos el único. Acá te explicamos <strong>por qué pasa</strong>,
+            <strong>cuánto se paga realmente</strong> y qué alternativas existen
+            para evitar sorpresas.
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="inline-flex text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">
+              💰 Precio final variable
+            </span>
+            <span class="inline-flex text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">
+              📉 Impuestos incluidos en el cobro
+            </span>
+            <span class="inline-flex text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">
+              ⚠️ Cambios mes a mes
+            </span>
+          </div>
+        </div>
+
+        {/* IMAGEN */}
+        <div class="relative flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 p-4 md:p-6">
+          <img
+            src="/images/netflix-prepago-argentina.jpg"
+            alt="Impuestos de Netflix en Argentina y precio final en pesos"
+            class="max-h-72 md:max-h-[430px] w-auto object-contain rounded-2xl shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-9 px-4">
+
+    {/* BLOQUE 1 */}
+    <section class="rounded-3xl bg-white/95 border border-slate-200 shadow-sm px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        🤔 ¿Netflix cobra impuestos en Argentina?
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Sí. Netflix muestra un <strong>precio base</strong>, pero cuando pagás desde Argentina
+        el sistema de cobro suma impuestos y recargos asociados a servicios digitales.
+      </p>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Por eso, el monto que termina apareciendo en tu tarjeta o billetera
+        <strong>no coincide exactamente</strong> con el precio que viste al contratar.
+      </p>
+    </section>
+
+    {/* BLOQUE 2 */}
+    <section class="rounded-3xl bg-white/95 border border-slate-200 shadow-sm px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        🧾 ¿Qué impuestos se aplican a Netflix?
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Sin entrar en leyes ni nombres técnicos, el cobro final suele incluir:
+      </p>
+
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li>Impuestos a servicios digitales.</li>
+        <li>Percepciones aplicadas por el medio de pago.</li>
+        <li>Ajustes del banco o billetera.</li>
+      </ul>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-slate-700">
+        💡 Resultado: dos personas con el mismo plan pueden pagar montos distintos.
+      </div>
+    </section>
+
+    {/* BLOQUE 3 */}
+    <section class="rounded-3xl bg-white/95 border border-slate-200 shadow-sm px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        💸 Ejemplo real: cuánto termina saliendo Netflix
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Netflix muestra un precio, pero al momento del cobro el monto final
+        puede ser mayor por los impuestos aplicados automáticamente.
+      </p>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-slate-700">
+        📌 De ahí la frase clásica:
+        <em>“Netflix me cobró más de lo que decía”</em>.
+      </div>
+    </section>
+
+    {/* BLOQUE 4 */}
+    <section class="rounded-3xl bg-white/95 border border-slate-200 shadow-sm px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        🔄 ¿Por qué el precio cambia mes a mes?
+      </h2>
+
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li>Cambios en impuestos o percepciones.</li>
+        <li>Diferencias entre bancos y billeteras.</li>
+        <li>Redondeos automáticos.</li>
+      </ul>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Esto hace que muchos usuarios sientan que Netflix
+        <strong>cobra distinto todos los meses</strong>.
+      </p>
+    </section>
+
+    {/* BLOQUE 5 */}
+    <section class="rounded-3xl bg-white/95 border border-slate-200 shadow-sm px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        ⚠️ Problemas frecuentes por los impuestos
+      </h2>
+
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li>Precio final más alto de lo esperado.</li>
+        <li>Rechazos de tarjeta.</li>
+        <li>Débito que no pasa aunque haya saldo.</li>
+        <li>Diferencias entre meses.</li>
+      </ul>
+    </section>
+
+        {/* BLOQUE 6 - SOLUCIÓN */}
+    <section class="rounded-3xl bg-slate-50 border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        ✅ ¿Cuál es la opción más recomendable en Argentina?
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Cuando se paga Netflix de forma directa desde Argentina, el problema no suele ser Netflix en sí,
+        sino el <strong>precio final</strong>: impuestos, recargos y variaciones que aparecen al momento del cobro.
+      </p>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Por eso, para muchos usuarios la opción más recomendable es usar una
+        <strong> cuenta Netflix pensada para Argentina</strong>, donde:
+      </p>
+
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li>Te dicen el <strong>precio final en pesos</strong> desde el inicio.</li>
+        <li>Los <strong>impuestos ya están incluidos</strong>.</li>
+        <li>No hay sorpresas en el resumen.</li>
+        <li>Tenés <strong>soporte local</strong> si algo no funciona.</li>
+      </ul>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Podés ver cómo funciona esta alternativa acá:
+        <a
+          href="/cuentas-digitales/cuenta-netflix-argentina"
+          class="text-red-600 font-medium hover:underline"
+        >
+          Cuenta Netflix Argentina
+        </a>.
+      </p>
+    </section>
+
+    {/* CTA FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold">
+        Netflix en Argentina con precio claro y sin sorpresas
+      </h2>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si tu prioridad es saber <strong>cuánto vas a pagar realmente</strong>,
+        evitar variaciones por impuestos y tener un monto final en ARS desde el inicio,
+        la alternativa más práctica suele ser una <strong>cuenta Netflix pensada para Argentina</strong>.
+      </p>
+
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina"
+        class="inline-flex items-center justify-center rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+      >
+        Ver opción recomendada →
+      </a>
+
+      <p class="text-[11px] text-slate-400">
+        Artículo informativo para usuarios de Argentina. No estamos afiliados a Netflix.
+      </p>
+    </section>
+
+    {/* TAMBIÉN TE PUEDE INTERESAR */}
+    <section class="rounded-3xl bg-white/95 border border-slate-200 shadow-sm px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        📌 También te puede interesar
+      </h2>
+
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-2">
+        <li>
+          <a
+            href="/cuentas-digitales/cuenta-netflix-argentina"
+            class="text-brand-700 hover:underline"
+          >
+            Cuenta Netflix Argentina: premium, precio final en pesos e impuestos incluidos
+          </a>
+        </li>
+        <li>
+          <a
+            href="/ayuda/netflix-no-acepta-tarjeta-argentina"
+            class="text-brand-700 hover:underline"
+          >
+            Netflix no acepta mi tarjeta en Argentina: causas y soluciones
+          </a>
+        </li>
+        <li>
+          <a
+            href="/ayuda/netflix-mercado-pago"
+            class="text-brand-700 hover:underline"
+          >
+            Netflix y Mercado Pago en Argentina: cuándo funciona y por qué suele fallar
+          </a>
+        </li>
+        <li>
+          <a
+            href="/ayuda/precio-netflix-argentina"
+            class="text-brand-700 hover:underline"
+          >
+            Precio de Netflix en Argentina: cuánto cuesta realmente al final
+          </a>
+        </li>
+      </ul>
+    </section>
