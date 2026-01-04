@@ -1,0 +1,436 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Cuenta Netflix Argentina (2026) — Premium, económica y con impuestos incluidos";
+const description =
+  "Cuenta Netflix en Argentina: opción premium y económica con precio final en pesos. Impuestos incluidos (nos hacemos cargo) y soporte local. Activación simple y guía paso a paso.";
+
+const url =
+  "https://cuentasdigitales.com.ar/cuentas-digitales/cuenta-netflix-argentina";
+
+// Precio de referencia (si cambia, ajustá o poné null)
+const priceARS = 20000; // <-- ajustá o poné null si varía mucho
+const priceCurrency = "ARS";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/cuenta-netflix-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url,
+      inLanguage: "es-AR",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Cuenta Netflix Argentina (premium, económica, precio final en ARS)",
+      description,
+      brand: { "@type": "Organization", name: "Netflix" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/netflix-prepago-argentina.jpg"],
+      offers:
+        priceARS
+          ? {
+              "@type": "Offer",
+              url,
+              priceCurrency,
+              price: String(priceARS),
+              availability: "https://schema.org/InStock",
+              itemCondition: "https://schema.org/NewCondition",
+            }
+          : {
+              "@type": "Offer",
+              url,
+              priceCurrency,
+              availability: "https://schema.org/InStock",
+              itemCondition: "https://schema.org/NewCondition",
+            },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué es 'Cuenta Netflix Argentina'?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Es una opción de acceso a Netflix pensada para Argentina, con precio final en pesos y soporte local. La idea es simplificar el pago y evitar sorpresas con impuestos o rechazos de tarjeta.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿El precio ya incluye impuestos?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. Te pasamos un precio final en ARS con impuestos incluidos, y nos ocupamos de la gestión para que no tengas que preocuparte por recargos o cálculos extra.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué es una opción económica en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Porque buscás un precio final claro en pesos y evitás variaciones por impuestos o bloqueos del banco. Es ideal si querés resolverlo rápido sin vueltas.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Se ve en la app oficial de Netflix?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. Se usa Netflix desde la app y web oficial como siempre (TV, celular, PC o consola).",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué medios de pago hay en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Según disponibilidad, podés pagar en pesos con transferencia, billeteras virtuales locales o tarjeta emitida en Argentina. Te confirmamos opciones al consultar.",
+          },
+        },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-slate-900 text-slate-50 shadow-xl overflow-hidden grid md:grid-cols-2">
+        {/* LADO IZQUIERDO */}
+        <div class="p-7 md:p-10 flex flex-col justify-center space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-red-400/60 rounded-full px-3 py-1 w-fit">
+            <span>🎬</span>
+            <span>Netflix premium · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Cuenta Netflix Argentina
+          </h1>
+
+
+          <p class="text-sm md:text-base text-slate-200/90">
+            Si querés Netflix funcionando sin complicarte, esta alternativa apunta a lo que más importa en Argentina:
+            <strong> precio final en ARS</strong>, con impuestos ya contemplados y acompañamiento para dejar todo listo.
+          </p>
+
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-2">
+            <li>✅ Premium · experiencia completa y estable.</li>
+            <li>✅ Económico · precio final en ARS.</li>
+            <li>✅ Impuestos incluidos (nos hacemos cargo).</li>
+            <li>✅ Soporte local + guía paso a paso.</li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a
+              href="/contacto"
+              class="inline-flex items-center justify-center rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+            >
+              Consultar / Comprar →
+            </a>
+
+            <a
+              href="/cuentas-digitales/netflix-argentina-1-mes"
+              class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+            >
+              Ver opción 1 mes
+            </a>
+          </div>
+
+          {priceARS ? (
+            <p class="text-xs text-slate-400 pt-2">
+              Precio de referencia hoy (final en ARS):{" "}
+              <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).
+            </p>
+          ) : (
+            <p class="text-xs text-slate-400 pt-2">
+              Te confirmamos un precio final en ARS (impuestos incluidos) al consultar.
+            </p>
+          )}
+        </div>
+
+        {/* LADO DERECHO */}
+        <div class="relative flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 p-4 md:p-6">
+          <img
+            src="/images/netflix-prepago-argentina.jpg"
+            alt="Cuenta Netflix Argentina premium con precio final en pesos e impuestos incluidos"
+            class="max-h-72 md:max-h-[430px] w-auto object-contain rounded-2xl shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+    {/* BLOQUE 1 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>¿Qué estás comprando cuando decís “Cuenta Netflix Argentina”?</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        En Argentina, la mayoría busca lo mismo: Netflix funcionando con un <strong>precio final claro</strong>.
+        Acá la propuesta es simple: te pasamos un monto final en ARS y nos ocupamos de la parte “engorrosa”
+        (impuestos / recargos / diferencias), para que no tengas que calcular nada.
+      </p>
+
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li><strong>Precio final en ARS</strong> (monto claro desde el inicio).</li>
+        <li><strong>Impuestos incluidos</strong> (nos hacemos cargo).</li>
+        <li><strong>Soporte local</strong> y guía paso a paso.</li>
+      </ul>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-xs md:text-sm text-slate-700">
+        <p>
+          💡 Si tu prioridad es no renegar con pagos y saber el monto final, esta es una opción pensada para eso.
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE 2 */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>💰</span>
+        <span>Precio final en pesos (impuestos incluidos)</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        En vez de que el precio final cambie por impuestos o recargos, te pasamos un
+        <strong> monto final en pesos</strong>. Ese precio ya contempla los costos para que lo veas claro desde el inicio.
+      </p>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-xs md:text-sm text-slate-700">
+        <p>
+          ✅ Precio final en ARS <br />
+          ✅ Impuestos incluidos (nos hacemos cargo) <br />
+          ✅ Sin cálculos ni diferencias después
+        </p>
+      </div>
+
+      <p class="text-xs md:text-sm text-slate-600">
+        El monto puede variar según disponibilidad, pero siempre te confirmamos el <strong>precio final</strong> antes de pagar.
+      </p>
+    </section>
+
+    {/* BLOQUE 3 - QUÉ NECESITÁS */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧾</span>
+        <span>Qué necesitás para activarlo</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Para dejar Netflix listo, normalmente te pedimos lo mínimo:
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">📧 Email de contacto</h3>
+          <p class="text-slate-700">
+            Para enviarte los pasos y ayudarte con el acceso si hace falta.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">📱 Dispositivo</h3>
+          <p class="text-slate-700">
+            TV, celular, PC o consola. Te guiamos según dónde lo uses.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">🧠 Datos básicos</h3>
+          <p class="text-slate-700">
+            Nombre y país (Argentina) para dejar todo ordenado.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">💳 Pago en ARS</h3>
+          <p class="text-slate-700">
+            Transferencia / billetera / tarjeta (según disponibilidad).
+          </p>
+        </div>
+      </div>
+
+      <p class="text-xs md:text-sm text-slate-600">
+        Si ya tenés Netflix instalado, mejor. Si no, también te guiamos para instalarlo.
+      </p>
+    </section>
+
+    {/* BLOQUE 4 - POR QUÉ ES MÁS ECONÓMICO */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>📉</span>
+        <span>Por qué puede ser más económico que pagar directo</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        En Argentina, pagar servicios digitales “directo” a veces termina siendo un dolor de cabeza por:
+        impuestos, recargos, validaciones del banco o cambios en el monto final.
+        Acá la diferencia es que te damos un <strong>precio final</strong> y nos ocupamos de la gestión.
+      </p>
+
+      <ul class="list-disc list-inside text-sm text-slate-700 space-y-1">
+        <li><strong>Precio final en ARS</strong> desde el inicio.</li>
+        <li><strong>Impuestos incluidos</strong> (nos hacemos cargo).</li>
+        <li>Soporte local para resolver rápido cualquier traba.</li>
+      </ul>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-xs md:text-sm text-slate-700">
+        <p>
+          💡 Si tu prioridad es no renegarte con pagos y saber el monto final, esta es una opción pensada para eso.
+        </p>
+      </div>
+    </section>
+
+    {/* BLOQUE 5 - SOPORTE Y GARANTÍA */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🛡️</span>
+        <span>Soporte y garantía</span>
+      </h2>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">✅ Soporte local</h3>
+          <p class="text-slate-700">
+            Te ayudamos si te trabás en TV, celular, PC o consola. Paso a paso.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">✅ Garantía de asistencia</h3>
+          <p class="text-slate-700">
+            Si surge un problema de acceso al inicio, te ayudamos a resolverlo. La idea es que quede funcionando.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">✅ Respuesta rápida</h3>
+          <p class="text-slate-700">
+            En la mayoría de los casos se resuelve en el día según disponibilidad.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-900">✅ Trato simple</h3>
+          <p class="text-slate-700">
+            Sin vueltas: precio final, pasos claros y acompañamiento.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-xs md:text-sm text-slate-600">
+        Si querés, antes de pagar te explicamos cómo queda y qué incluye. Sin compromiso.
+      </p>
+    </section>
+
+    {/* BLOQUE 6 - ARTÍCULOS */}
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 md:px-7 md:py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>📌</span>
+        <span>Artículos útiles (para leer después)</span>
+      </h2>
+
+      <ul class="list-disc list-inside text-sm text-slate-700 space-y-1">
+        <li>
+          <a href="/ayuda/netflix-no-acepta-tarjeta-argentina" class="text-brand-700 underline">
+            Netflix no acepta mi tarjeta en Argentina: qué hacer
+          </a>
+        </li>
+        <li>
+          <a href="/ayuda/precio-netflix-argentina" class="text-brand-700 underline">
+            Precio de Netflix en Argentina: por qué cambia el final
+          </a>
+        </li>
+        <li>
+          <a href="/cuentas-digitales/netflix-argentina-1-mes" class="text-brand-700 underline">
+            Netflix 1 mes en Argentina: opción premium por tiempo
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    {/* MINI BLOQUE "QUÉ INCLUYE" + CTA FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 md:px-7 md:py-7 space-y-5 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Comprar cuenta Netflix Argentina (precio final en ARS)</span>
+      </h2>
+
+      {/* Badges dentro del CTA */}
+      <div class="flex flex-wrap gap-2">
+        <span class="inline-flex items-center text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">
+          ✅ Precio final ARS
+        </span>
+        <span class="inline-flex items-center text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">
+          ✅ Impuestos incluidos
+        </span>
+        <span class="inline-flex items-center text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">
+          ✅ Soporte local
+        </span>
+        <span class="inline-flex items-center text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">
+          ✅ Activación guiada
+        </span>
+      </div>
+
+      {/* Qué incluye */}
+      <div class="rounded-2xl bg-white/5 border border-white/10 p-4 space-y-2">
+        <p class="font-semibold text-slate-100">📦 Qué incluye</p>
+        <ul class="text-sm text-slate-100/90 space-y-1">
+          <li>• Confirmación de disponibilidad + <strong>precio final en ARS</strong> (impuestos incluidos).</li>
+          <li>• Guía de activación y acceso para tu dispositivo (TV / celular / PC / consola).</li>
+          <li>• Soporte si te trabás al inicio (te ayudamos a dejarlo funcionando).</li>
+        </ul>
+      </div>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Te confirmamos un <strong>precio final en pesos</strong> con <strong>impuestos incluidos</strong> (nos hacemos cargo),
+        y te guiamos para dejar Netflix funcionando.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a
+          href="/contacto"
+          class="inline-flex items-center justify-center rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+        >
+          Consultar / Comprar →
+        </a>
+
+        <a
+          href="/cuentas-digitales/netflix-argentina-1-mes"
+          class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+        >
+          Ver opción 1 mes
+        </a>
+      </div>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Esta página es informativa y describe una opción de acceso/pago gestionada para usuarios de Argentina.
+      </p>
+    </section>
+  </section>
+</BaseLayout>
+
+</BaseLayout>
