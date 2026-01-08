@@ -1,0 +1,411 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix no acepta Tarjeta Naranja en Argentina (2026): qué hacer y soluciones reales";
+
+const description =
+  "¿Netflix no te acepta Tarjeta Naranja en Argentina? Te explicamos por qué pasa en 2026, qué revisar en Naranja X/banco y la alternativa más simple si falla siempre.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-no-acepta-tarjeta-naranja-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-no-acepta-tarjeta-naranja-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      publisher: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      datePublished: "2026-01-08",
+      dateModified: "2026-01-08",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Por qué Netflix no acepta Tarjeta Naranja en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix puede no aceptar Tarjeta Naranja en Argentina por bloqueos de compra internacional, controles antifraude, límites/cupo, configuración de la tarjeta o porque el tipo de tarjeta no permite pagos recurrentes.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Naranja X funciona para pagar Netflix?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "A veces. Depende de si la tarjeta está habilitada para compras internacionales y suscripciones recurrentes, y de que el pago sea autorizado por el sistema antifraude.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué hago si Netflix siempre rechaza Naranja?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Si el rechazo se repite, lo más práctico es usar una alternativa que no dependa de la tarjeta, como una suscripción prepaga gestionada en pesos.",
+          },
+        },
+      ],
+    },
+  ]}
+>
+  {/* HERO (con más vida) */}
+  <section class="mb-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-600 via-amber-500 to-yellow-400 text-slate-900 px-6 py-9 md:px-10 md:py-12 shadow-2xl">
+        <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-white/55 border border-white/80 rounded-full px-4 py-1 mb-4">
+          <span>🟧</span>
+          <span>Tarjeta Naranja / Naranja X · Argentina</span>
+        </p>
+
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight max-w-2xl">
+          Netflix no acepta Tarjeta Naranja
+        </h1>
+
+        <p class="mt-3 text-sm md:text-base text-slate-900/85 max-w-2xl">
+          Querés pagar Netflix con Naranja, ponés los datos, y pum 💥:
+          <strong> “método de pago rechazado”</strong>. En Argentina pasa un montón.
+          La buena noticia: suele tener solución 😌🇦🇷
+        </p>
+
+        <div class="mt-6 grid gap-3 md:grid-cols-3 text-sm">
+          <div class="rounded-2xl bg-white/50 border border-white/70 px-4 py-3">
+            <p class="font-semibold">🌍 Compra internacional</p>
+            <p class="text-xs text-slate-800/80 mt-1">
+              Netflix cobra como pago internacional.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/50 border border-white/70 px-4 py-3">
+            <p class="font-semibold">⚠️ Antifraude</p>
+            <p class="text-xs text-slate-800/80 mt-1">
+              Puede frenar el cobro mensual.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/50 border border-white/70 px-4 py-3">
+            <p class="font-semibold">📉 Límite/cupo</p>
+            <p class="text-xs text-slate-800/80 mt-1">
+              Si está al límite, rebota.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 rounded-2xl bg-white/55 border border-white/80 px-4 py-3 text-sm text-slate-900/90 max-w-2xl">
+          ✅ Te dejamos el <strong>paso a paso</strong> para que Netflix acepte Naranja
+          y, si no hay caso, la alternativa más simple para tener Netflix funcionando.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA DIRECTA */}
+  <section class="max-w-3xl mx-auto mb-6">
+    <p class="text-slate-700 text-[15px] font-medium">
+      Netflix puede no aceptar Tarjeta Naranja en Argentina cuando el sistema detecta un cobro internacional
+      o recurrente y el emisor lo bloquea (por seguridad, cupo, configuración o antifraude), incluso si hay saldo.
+    </p>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        Si Netflix no acepta Naranja, revisá: <strong>compras internacionales</strong>,
+        <strong>límite/cupo</strong>, <strong>autorizaciones</strong> en la app y que tu tarjeta permita
+        <strong>pagos recurrentes</strong>. Si el rechazo se repite, conviene usar una alternativa sin tarjeta.
+      </p>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    {/* NAVEGACIÓN + LINKS */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">🧭 Ir directo a lo importante</h2>
+
+      <div class="grid gap-3 md:grid-cols-3 text-sm">
+        <a href="#checklist" class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-amber-400 transition">
+          <p class="font-semibold">🛠️ Checklist</p>
+          <p class="text-xs text-slate-600 mt-1">Solución paso a paso.</p>
+        </a>
+        <a href="#causas" class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-amber-400 transition">
+          <p class="font-semibold">❓ Causas</p>
+          <p class="text-xs text-slate-600 mt-1">Por qué pasa.</p>
+        </a>
+        <a href="#alternativa" class="rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3 hover:border-amber-400 transition">
+          <p class="font-semibold">⚡ Alternativa</p>
+          <p class="text-xs text-slate-600 mt-1">Sin depender de Naranja.</p>
+        </a>
+      </div>
+
+      <p class="text-slate-700 text-[15px]">
+        Guías relacionadas:
+        <a href="/ayuda/netflix-error-pago-argentina" class="text-amber-700 underline font-medium">
+          {" "}Netflix error de pago
+        </a>
+        {" · "}
+        <a href="/ayuda/pagar-netflix-sin-tarjeta-argentina" class="text-amber-700 underline font-medium">
+          Pagar Netflix sin tarjeta
+        </a>
+        {" · "}
+        <a href="/ayuda/netflix-rechaza-tarjeta-visa-argentina" class="text-amber-700 underline font-medium">
+          Netflix rechaza Visa
+        </a>
+      </p>
+    </section>
+
+    {/* CHECKLIST (bien específico) */}
+    <section id="checklist" class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🛠️ Checklist para que Netflix acepte Tarjeta Naranja
+      </h2>
+
+      <ol class="list-decimal list-inside space-y-2 text-slate-700 text-[15px]">
+        <li>
+          Entrá a tu app (Naranja X / homebanking) y activá <strong>compras online e internacionales</strong>.
+        </li>
+        <li>
+          Revisá <strong>límite/cupo disponible</strong> (si está justo, Netflix suele rebotar).
+        </li>
+        <li>
+          Buscá <strong>notificaciones de seguridad</strong> y autorizá el pago si aparece.
+        </li>
+        <li>
+          Verificá datos de facturación coherentes: <strong>Argentina</strong> + datos correctos (CP incluido).
+        </li>
+        <li>
+          Probá cargar la tarjeta desde <strong>modo incógnito</strong> o desde otro dispositivo.
+        </li>
+        <li>
+          Si sigue fallando, probá una tarjeta distinta (otra marca/banco) o pasá a una alternativa.
+        </li>
+      </ol>
+
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-4 text-sm text-slate-800">
+        <p class="font-semibold mb-1">🎯 Tip realista</p>
+        <p>
+          No intentes 20 veces seguidas. Eso activa antifraude y después te lo bloquea más.
+          Probá 1–2 intentos, esperá un rato y volvé.
+        </p>
+      </div>
+    </section>
+
+    {/* ERRORES COMUNES */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        ⚠️ Mensajes típicos cuando Netflix no acepta Naranja
+      </h2>
+
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <p>
+          <strong>“No se pudo procesar el pago”</strong><br />
+          <span class="text-slate-600 text-sm">
+            Compras internacionales desactivadas o bloqueo del emisor.
+          </span>
+        </p>
+
+        <p>
+          <strong>“Hubo un problema con tu método de pago”</strong><br />
+          <span class="text-slate-600 text-sm">
+            Antifraude / límite / validación automática.
+          </span>
+        </p>
+
+        <p>
+          <strong>“Actualizá tu información de pago”</strong><br />
+          <span class="text-slate-600 text-sm">
+            Datos inconsistentes o tarjeta no apta para suscripciones.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    {/* CAUSAS (más completo) */}
+    <section id="causas" class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        ❓ Por qué Netflix puede rechazar Tarjeta Naranja
+      </h2>
+
+      <ul class="list-disc list-inside space-y-2 text-slate-700 text-[15px]">
+        <li>
+          🌍 <strong>Netflix cobra como operación internacional</strong><br />
+          <span class="text-slate-600 text-sm">
+            Si la compra internacional está apagada, el cobro rebota.
+          </span>
+        </li>
+
+        <li>
+          🔒 <strong>Bloqueo por seguridad</strong><br />
+          <span class="text-slate-600 text-sm">
+            El emisor puede frenar Netflix por “cobro recurrente” o “riesgo”.
+          </span>
+        </li>
+
+        <li>
+          📉 <strong>Límite o cupo sin margen</strong><br />
+          <span class="text-slate-600 text-sm">
+            Cuando estás justo, muchos pagos internacionales fallan.
+          </span>
+        </li>
+
+        <li>
+          🧾 <strong>Datos de facturación inconsistentes</strong><br />
+          <span class="text-slate-600 text-sm">
+            País/CP/dirección raros pueden disparar validaciones.
+          </span>
+        </li>
+
+        <li>
+          💳 <strong>Tarjeta no apta para pagos recurrentes</strong><br />
+          <span class="text-slate-600 text-sm">
+            Algunas tarjetas funcionan para compras sueltas pero no para suscripciones.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    {/* CUÁNDO DEJAR DE INTENTAR */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">
+        ⏱️ ¿Cuándo conviene dejar de intentar con Naranja?
+      </h2>
+
+      <p class="text-slate-700 text-[15px]">
+        Si ya hiciste el checklist y el rechazo vuelve siempre (o todos los meses),
+        insistir suele ser perder tiempo. En esos casos, lo más práctico es una opción que
+        <strong>no dependa de la tarjeta</strong>.
+      </p>
+    </section>
+
+    {/* TABLA */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">📊 Naranja y Netflix: qué esperar</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-slate-200 rounded-2xl overflow-hidden">
+          <thead class="bg-slate-50">
+            <tr>
+              <th class="p-3 text-left">Opción</th>
+              <th class="p-3 text-left">¿Funciona?</th>
+              <th class="p-3 text-left">Problema común</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="p-3">Naranja crédito</td>
+              <td class="p-3">A veces</td>
+              <td class="p-3">Antifraude / internacional / cupo</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-3">Naranja débito</td>
+              <td class="p-3">Depende</td>
+              <td class="p-3">Suscripciones recurrentes / bloqueo</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-3">Alternativa sin tarjeta</td>
+              <td class="p-3">Sí</td>
+              <td class="p-3">Duración definida</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {/* ALTERNATIVA */}
+    <section id="alternativa" class="rounded-3xl bg-amber-50 border border-amber-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🧩 Alternativa cuando Netflix no acepta Naranja
+      </h2>
+
+      <p class="text-slate-700 text-[15px]">
+        Si Netflix te rebota Naranja una y otra vez, muchos usuarios eligen una
+        <strong> suscripción prepaga gestionada</strong>: pagás en pesos y evitás el bloqueo del banco.
+      </p>
+
+      <ul class="list-disc list-inside space-y-2 text-slate-700 text-[15px]">
+        <li>💸 Pagás en pesos (precio claro).</li>
+        <li>🚫 No cargás tu tarjeta en Netflix.</li>
+        <li>🧠 Evitás rechazos, cupos y antifraude.</li>
+        <li>📅 Duración definida (por ejemplo 1 mes).</li>
+      </ul>
+
+      <div class="rounded-2xl bg-white border border-amber-200 px-5 py-4 text-sm">
+        <p class="text-slate-800">
+          En <strong>CuentasDigitales.com.ar</strong> ofrecemos
+          <strong> suscripciones de Netflix en Argentina</strong>
+          con soporte local durante el período contratado.
+        </p>
+      </div>
+    </section>
+
+    {/* CTA FINAL (bien vendedor) */}
+    <section class="rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950 text-white px-6 py-9 md:px-10 md:py-10 shadow-2xl space-y-6">
+      <div class="space-y-3">
+        <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-white/10 border border-white/15 rounded-full px-4 py-1">
+          <span>🚀</span>
+          <span>Si Naranja falla: solución directa</span>
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-extrabold leading-tight">
+          🎬 Netflix funcionando hoy, sin renegar con Tarjeta Naranja
+        </h2>
+
+        <p class="text-sm md:text-base text-white/85 max-w-2xl">
+          Si Netflix no te acepta Naranja, te damos una salida simple:
+          <strong> suscripción en pesos</strong>, duración definida y soporte local.
+          Vos disfrutás Netflix, nosotros te evitamos el quilombo 😄🧡
+        </p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-4">
+          <p class="text-sm font-semibold">⚡ Rápido</p>
+          <p class="text-xs text-white/75 mt-1">Sin vueltas, sin rechazos.</p>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-4">
+          <p class="text-sm font-semibold">💸 En pesos</p>
+          <p class="text-xs text-white/75 mt-1">Precio claro, sin sorpresas.</p>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-4">
+          <p class="text-sm font-semibold">🧑‍💻 Soporte</p>
+          <p class="text-xs text-white/75 mt-1">Te acompañamos si hay dudas.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-3">
+        <a
+          href="/cuentas-digitales/netflix-argentina-1-mes"
+          class="inline-flex items-center justify-center rounded-xl bg-amber-500 hover:bg-amber-400 transition px-5 py-3 text-sm font-semibold text-slate-900"
+        >
+          ✅ Ver Netflix 1 mes (recomendado)
+        </a>
+
+        <a
+          href="/cuentas-digitales/netflix-argentina"
+          class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 transition px-5 py-3 text-sm font-semibold text-white"
+        >
+          📦 Ver todas las opciones disponibles
+        </a>
+      </div>
+
+      <p class="text-[11px] text-white/55 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.
+      </p>
+    </section>
+  </section>
+</BaseLayout>
