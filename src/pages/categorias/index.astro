@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Gift Cards — País y plataforma" description="Elegí un país para ver categorías.">
+  <h1 class="text-3xl font-bold">Gift Cards</h1>
+  <div class="grid md:grid-cols-3 gap-6 mt-6">
+    <a class="card p-6" href="/ar/categorias/"><span class="badge">AR</span><h3 class="text-xl font-semibold mt-1">Argentina</h3></a>
+    <a class="card p-6" href="/mx/categorias/"><span class="badge">MX</span><h3 class="text-xl font-semibold mt-1">México</h3></a>
+    <a class="card p-6" href="/es/categorias/"><span class="badge">ES</span><h3 class="text-xl font-semibold mt-1">España</h3></a>
+  </div>
+</BaseLayout>

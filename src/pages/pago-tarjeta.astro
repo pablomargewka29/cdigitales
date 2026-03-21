@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Pago con tarjeta — CuentasDigitales.com.ar"
+  description="Completá tu pago con tarjeta de débito o crédito de forma segura a través de nuestra plataforma de pago externa."
+>
+  <section class="mx-auto max-w-3xl px-4 py-10">
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900">
+        Compra con tarjeta
+      </h1>
+      <p class="mt-2 text-slate-600">
+        El pago se realiza mediante la compra de un saldo digital que se envía automáticamente a nuestra dirección de cobro, similar a un CBU o alias.
+      </p>
+
+      <div class="mt-4 rounded-xl bg-slate-50 border border-slate-200 p-4">
+        <p class="text-xs uppercase tracking-wide text-slate-500">Monto a pagar</p>
+        <p id="price" class="mt-1 text-2xl font-extrabold text-slate-900">USD …</p>
+        <p id="item" class="mt-1 text-sm text-slate-500"></p>
+      </div>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        <div class="rounded-xl border border-slate-200 p-4">
+          <p class="font-semibold text-slate-900">1. Monto listo</p>
+          <p class="mt-1 text-sm text-slate-600">El importe ya está configurado. No necesitás modificar nada.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4">
+          <p class="font-semibold text-slate-900">2. Confirmá tu correo</p>
+          <p class="mt-1 text-sm text-slate-600">Ingresás tu email y recibís un código de seguridad.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4">
+          <p class="font-semibold text-slate-900">3. Completá el pago</p>
+          <p class="mt-1 text-sm text-slate-600">Pagás con tarjeta de débito o crédito.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4">
+          <p class="font-semibold text-slate-900">4. Acreditación</p>
+          <p class="mt-1 text-sm text-slate-600">En la mayoría de los casos se confirma en menos de 30 minutos.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-sm text-emerald-800">
+        <strong>Recomendación:</strong> usá tarjeta de débito. Es más rápida y generalmente no requiere verificaciones adicionales.
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a id="payBtn" href="#" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 transition-colors">
+          Continuar al pago seguro →
+        </a>
+        <a href="/" class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-900 font-semibold px-6 py-3 transition-colors">
+          Volver al inicio
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-slate-500">
+        🔒 El pago se procesa en plataforma externa segura. No vemos ni almacenamos datos de tu tarjeta.
+      </p>
+    </div>
+  </section>
+
+  <script is:inline>
+    const params = new URLSearchParams(window.location.search);
+    const rawPrice = Number(params.get("price"));
+    const finalPrice = Number.isFinite(rawPrice) && rawPrice >= 20 ? rawPrice : 20;
+    const item = params.get("item") || "";
+    document.getElementById("price").textContent = "USD " + finalPrice;
+    if (item) document.getElementById("item").textContent = "Producto: " + item;
+    const moonpayUrl = "https://buy.moonpay.com?currencyCode=BTC&baseCurrencyCode=USD&baseCurrencyAmount=" + finalPrice + "&walletAddress=bc1q7qcrhqjjen9g5nrw6xagj05uj2ea8uadlp74hg";
+    document.getElementById("payBtn").href = moonpayUrl;
+  </script>
+</BaseLayout>

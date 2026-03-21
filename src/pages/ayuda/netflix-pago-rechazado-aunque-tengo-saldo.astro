@@ -1,0 +1,383 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix pago rechazado aunque tengo saldo (2026): por qué pasa y cómo solucionarlo";
+
+const description =
+  "¿Netflix rechaza el pago aunque tengas saldo? Te explicamos por qué pasa en Argentina en 2026 y qué hacer cuando la tarjeta funciona para todo menos Netflix.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-pago-rechazado-aunque-tengo-saldo";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-pago-rechazado-aunque-tengo-saldo"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      publisher: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      datePublished: "2026-01-12",
+      dateModified: "2026-01-12",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Por qué Netflix rechaza el pago aunque tenga saldo?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Porque el saldo no es el único requisito. Netflix puede rechazar el pago por bloqueos del banco, controles antifraude, límites mensuales o porque el monto final con impuestos supera tu saldo disponible.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Puede ser que no alcance el saldo por impuestos?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. En Argentina el cobro puede incluir impuestos y percepciones, por lo que el monto final puede ser mayor al precio base y superar el saldo disponible.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿El problema es Netflix o el banco?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "En la mayoría de los casos es el banco o el medio de pago, no Netflix.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué hago si el pago se rechaza todos los meses?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Cuando el problema se repite, una alternativa estable es usar una suscripción prepaga gestionada sin cargar la tarjeta en Netflix.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-800 via-blue-700 to-sky-600 text-white px-6 py-10 md:px-10 md:py-14 shadow-2xl">
+        <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/25 border border-white/30 rounded-full px-4 py-1 mb-5">
+          <span>💳</span>
+          <span>Pago rechazado · Netflix Argentina</span>
+        </p>
+
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight max-w-3xl">
+          Netflix rechaza el pago aunque tengas saldo
+        </h1>
+
+        <p class="mt-4 text-sm md:text-base text-white/90 max-w-3xl">
+          La tarjeta tiene plata, paga otras cosas… pero Netflix dice que no 😑
+          <strong> En Argentina es un problema súper común</strong>, y no siempre
+          significa que “no tenés saldo”.
+        </p>
+
+        <ul class="mt-6 space-y-2 text-sm md:text-base text-white/95 max-w-3xl">
+          <li class="flex items-start gap-2">
+            <span>💸</span>
+            <span>
+              Tener saldo <strong>no garantiza</strong> que Netflix pueda cobrar
+            </span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span>🧾</span>
+            <span>
+              El monto final puede subir por <strong>impuestos/percepciones</strong>
+            </span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span>🏦</span>
+            <span>El banco puede frenar el pago sin avisar</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span>🔁</span>
+            <span>El rechazo puede repetirse mes a mes</span>
+          </li>
+        </ul>
+
+        <div class="mt-6 rounded-2xl bg-white/10 border border-white/20 px-4 py-3 text-sm text-white/90 max-w-3xl">
+          👉 En esta guía te explicamos <strong>por qué pasa</strong>, qué revisar
+          en 5 minutos y qué opción usar cuando Netflix nunca acepta el cobro.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA DIRECTA */}
+  <section class="max-w-3xl mx-auto mb-6">
+    <p class="text-slate-800 text-[15px] font-medium">
+      Netflix puede rechazar el pago aunque tengas saldo porque el banco,
+      la tarjeta o el sistema antifraude bloquean la operación, o porque
+      el <strong>monto final</strong> (con impuestos/percepciones) supera tu saldo disponible.
+    </p>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        El saldo disponible no alcanza si el cobro entra como pago internacional
+        y se aplica el total con impuestos/percepciones, o si el banco bloquea
+        el pago automático de Netflix.
+      </p>
+    </div>
+  </section>
+
+  {/* CAUSAS */}
+  <section class="max-w-3xl mx-auto mb-10 rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+    <h2 class="text-2xl font-bold text-slate-900">
+      ❓ Por qué Netflix rechaza el pago aunque tengas plata
+    </h2>
+
+    <ul class="space-y-3 text-slate-700 text-[15px]">
+      <li>
+        🧾 <strong>El monto final es mayor por impuestos/percepciones</strong><br />
+        <span class="text-slate-600 text-sm">
+          En Argentina, el cobro puede incluir impuestos/percepciones. Si mirás solo el “precio base”
+          pero el débito intenta pasar por un monto mayor, puede quedar “sin saldo” aunque vos creas que alcanza.
+        </span>
+      </li>
+
+      <li>
+        🛡️ <strong>Antifraude del banco</strong><br />
+        <span class="text-slate-600 text-sm">
+          El banco considera riesgoso el cobro recurrente y lo rechaza.
+        </span>
+      </li>
+
+      <li>
+        🌍 <strong>Compras internacionales bloqueadas</strong><br />
+        <span class="text-slate-600 text-sm">
+          Muchas tarjetas vienen desactivadas por defecto.
+        </span>
+      </li>
+
+      <li>
+        📉 <strong>Límites/cupos</strong><br />
+        <span class="text-slate-600 text-sm">
+          Puede haber saldo, pero el límite mensual o el cupo ya se usó.
+        </span>
+      </li>
+
+      <li>
+        💳 <strong>Tarjeta no apta para suscripciones</strong><br />
+        <span class="text-slate-600 text-sm">
+          Algunas débito o prepagas no aceptan cobros automáticos mensuales.
+        </span>
+      </li>
+
+      <li>
+        🔁 <strong>Reintentos automáticos</strong><br />
+        <span class="text-slate-600 text-sm">
+          Netflix vuelve a intentar cobrar y el banco vuelve a rechazar.
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  {/* CHECKLIST */}
+  <section class="max-w-3xl mx-auto mb-10 rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+    <h2 class="text-2xl font-bold text-slate-900">
+      🛠️ Qué revisar cuando tenés saldo pero Netflix no cobra
+    </h2>
+
+    <ol class="list-decimal list-inside space-y-2 text-slate-700 text-[15px]">
+      <li>
+        Revisá si el cobro puede ser <strong>más alto por impuestos/percepciones</strong> (dejá margen).
+      </li>
+      <li>Activá compras internacionales en la app del banco.</li>
+      <li>Revisá límites y cupos del mes.</li>
+      <li>Autorizá el pago si tu banco lo pide.</li>
+      <li>Probá con otra tarjeta/banco.</li>
+      <li>Esperá 24 hs y reintentá.</li>
+    </ol>
+  </section>
+  {/* SEMÁFORO: SALDO VS BANCO */}
+<section class="max-w-3xl mx-auto mb-10 rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+  <h2 class="text-2xl font-bold text-slate-900">
+    🚦 ¿El problema es saldo o el banco? Cómo saberlo rápido
+  </h2>
+
+  <p class="text-slate-700 text-[15px]">
+    Antes de cambiar de tarjeta o resignarte, podés identificar el problema
+    en un minuto con estas señales.
+  </p>
+
+  <ul class="space-y-4 text-slate-700 text-[15px]">
+    <li>
+      🟢 <strong>Probablemente es saldo / impuestos</strong><br />
+      <span class="text-slate-600 text-sm">
+        El cobro falla solo en Netflix, el precio base parece bajo pero
+        no consideraste impuestos/percepciones y el banco no muestra bloqueos.
+      </span>
+    </li>
+
+    <li>
+      🟡 <strong>Puede ser límite o configuración</strong><br />
+      <span class="text-slate-600 text-sm">
+        Tenés saldo, pero el cupo mensual está justo o las compras
+        internacionales están desactivadas.
+      </span>
+    </li>
+
+    <li>
+      🔴 <strong>Es el banco o la tarjeta</strong><br />
+      <span class="text-slate-600 text-sm">
+        Netflix intenta cobrar varias veces, otras suscripciones también fallan
+        o el banco marca el pago como rechazado/antifraude.
+      </span>
+    </li>
+  </ul>
+
+  <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+    👉 Si estás en amarillo o rojo y el problema se repite, cambiar de tarjeta
+    suele ser un parche. En esos casos, conviene usar Netflix
+    <strong>sin depender del cobro automático</strong>.
+  </div>
+</section>
+
+
+  {/* CUANDO YA CANSÓ */}
+  <section class="max-w-3xl mx-auto mb-10 rounded-3xl bg-blue-50 border border-blue-100 px-6 py-8 space-y-4">
+    <h2 class="text-2xl font-bold text-slate-900">
+      😩 Cuando el rechazo se repite todos los meses
+    </h2>
+
+    <p class="text-slate-700 text-[15px]">
+      Cambiar de tarjeta puede funcionar… o no.
+      Si te pasa seguido, la salida más simple suele ser
+      usar Netflix <strong>sin depender del cobro automático</strong>.
+    </p>
+  </section>
+
+  {/* ALTERNATIVA */}
+  <section class="max-w-3xl mx-auto mb-10 rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">
+      🧩 Alternativa estable cuando el saldo “no alcanza”
+    </h2>
+
+    <p class="text-slate-700 text-[15px]">
+      Una solución simple es usar una
+      <strong> suscripción prepaga gestionada</strong>,
+      sin cargar tu tarjeta en Netflix.
+    </p>
+
+    <ul class="list-disc list-inside space-y-2 text-slate-700 text-[15px]">
+      <li>Pagás en pesos.</li>
+      <li>No dependés del banco.</li>
+      <li>Evitás rechazos automáticos.</li>
+    </ul>
+
+    <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm">
+      <p>
+        En <strong>CuentasDigitales.com.ar</strong> ofrecemos
+        <strong> Netflix activo en Argentina</strong>
+        sin depender del método de pago.
+      </p>
+    </div>
+  </section>
+
+  {/* CTA FINAL */}
+  <section class="max-w-3xl mx-auto rounded-3xl bg-slate-900 text-white px-6 py-9 space-y-6 shadow-2xl">
+    <h2 class="text-2xl md:text-3xl font-extrabold">
+      🎬 Netflix sin rechazos de pago
+    </h2>
+
+    <p class="text-sm md:text-base text-white/85 max-w-2xl">
+      Si tenés saldo pero Netflix igual rechaza el cobro (por banco, límites o impuestos),
+      la suscripción prepaga es la forma más tranquila de seguir mirando
+      <strong>sin peleas cada mes</strong>.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-3">
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-500 hover:bg-indigo-400 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        ✅ Ver Netflix 1 mes
+      </a>
+
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina"
+        class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        📦 Ver todas las opciones
+      </a>
+    </div>
+
+    <p class="text-[11px] text-slate-400 pt-2">
+      CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.
+    </p>
+  </section>
+
+  {/* INTERLINKING (DESPUÉS DEL CTA FINAL) */}
+  <section class="max-w-3xl mx-auto mt-10 pb-16 rounded-3xl bg-slate-50 border border-slate-200 px-6 py-7 space-y-4">
+    <h2 class="text-xl font-bold text-slate-900">
+      🔗 También te puede interesar
+    </h2>
+
+    <ul class="list-disc list-inside text-slate-700 text-[15px] space-y-1">
+      <li>
+        <a
+          href="/ayuda/netflix-no-puede-procesar-el-pago-argentina"
+          class="text-indigo-700 underline font-medium"
+        >
+          Netflix no puede procesar el pago
+        </a>
+      </li>
+      <li>
+        <a
+          href="/ayuda/impuestos-netflix-argentina"
+          class="text-indigo-700 underline font-medium"
+        >
+          Impuestos de Netflix en Argentina: cuánto se paga realmente
+        </a>
+      </li>
+      <li>
+        <a
+          href="/ayuda/pagar-netflix-sin-tarjeta-argentina"
+          class="text-indigo-700 underline font-medium"
+        >
+          Cómo pagar Netflix sin tarjeta
+        </a>
+      </li>
+      <li>
+        <a
+          href="/ayuda/netflix-rechaza-tarjeta-visa-argentina"
+          class="text-indigo-700 underline font-medium"
+        >
+          Netflix rechaza tarjeta Visa
+        </a>
+      </li>
+    </ul>
+  </section>
+</BaseLayout>

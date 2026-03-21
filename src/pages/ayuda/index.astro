@@ -1,0 +1,264 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Ayuda para cuentas digitales en Argentina";
+const description =
+  "Centro de ayuda para Netflix, Spotify, Disney+ y otros servicios digitales en Argentina. Guías simples para pagos, cuentas y problemas frecuentes.";
+
+const articles = [
+  {
+    slug: "netflix-no-acepta-tarjeta-argentina",
+    emoji: "💳",
+    title: "Netflix no acepta mi tarjeta en Argentina (2026): qué hacer",
+    description:
+      "Por qué Netflix rechaza tarjetas en Argentina, qué revisar paso a paso y qué alternativas existen para tener Netflix funcionando.",
+    tag: "Netflix",
+    updated: "Actualizado 25/12/2025",
+  },
+  {
+    slug: "netflix-no-acepta-debito-argentina",
+    emoji: "💳",
+    title:
+      "Netflix no acepta débito en Argentina (2026): por qué pasa y cómo solucionarlo",
+    description:
+      "Por qué Netflix puede rechazar tarjetas de débito en Argentina, qué revisar en tu banco y qué alternativas reales existen para activar Netflix sin vueltas.",
+    tag: "Netflix",
+    updated: "Actualizado 29/12/2025",
+  },
+  {
+    slug: "cuanto-cuesta-netflix-argentina",
+    emoji: "💰",
+    title: "Cuánto cuesta Netflix en Argentina (2026): precio final en pesos",
+    description:
+      "Cómo se calcula el precio real de Netflix en Argentina, impuestos incluidos, y por qué el monto puede variar mes a mes.",
+    tag: "Netflix",
+    updated: "Actualizado 27/12/2025",
+  },
+  {
+    slug: "pagar-netflix-sin-tarjeta-argentina",
+    emoji: "💳",
+    title: "Cómo pagar Netflix sin tarjeta en Argentina (2026): opciones reales",
+    description:
+      "Opciones reales para pagar Netflix sin tarjeta en Argentina y evitar rechazos del banco o el dólar tarjeta.",
+    tag: "Netflix",
+    updated: "Actualizado 26/12/2025",
+  },
+  {
+  slug: "netflix-error-pago-argentina",
+  emoji: "❌",
+  title: "Netflix error de pago en Argentina (2026): qué significa y cómo solucionarlo",
+  description:
+    "Qué significa el “error de pago” de Netflix en Argentina, por qué aparece aunque tengas saldo y el paso a paso para solucionarlo sin vueltas.",
+  tag: "Netflix",
+  updated: "Actualizado 08/01/2026",
+},
+{
+  slug: "netflix-rechaza-tarjeta-visa-argentina",
+  emoji: "💳",
+  title:
+    "Netflix rechaza tarjeta Visa en Argentina (2026): causas y cómo solucionarlo",
+  description:
+    "Por qué Netflix puede rechazar tarjetas Visa en Argentina aunque tengas saldo, qué revisar en tu banco y las opciones reales para activar Netflix.",
+  tag: "Netflix",
+  updated: "Actualizado 08/01/2026",
+},
+{
+  slug: "netflix-rechaza-tarjeta-mastercard-argentina",
+  emoji: "💳",
+  title:
+    "Netflix rechaza tarjeta Mastercard en Argentina (2026): causas y solución",
+  description:
+    "Por qué Netflix puede rechazar Mastercard en Argentina aunque tengas saldo, qué revisar en tu banco y la alternativa más simple si falla siempre.",
+  tag: "Netflix",
+  updated: "Actualizado 08/01/2026",
+},
+{
+  slug: "netflix-no-acepta-tarjeta-naranja-argentina",
+  emoji: "🟧",
+  title:
+    "Netflix no acepta Tarjeta Naranja en Argentina (2026): qué hacer",
+  description:
+    "Por qué Netflix puede rechazar Tarjeta Naranja en Argentina, qué revisar en Naranja X y la alternativa más simple si falla siempre.",
+  tag: "Netflix",
+  updated: "Actualizado 08/01/2026",
+},
+  {
+    slug: "como-conseguir-cuenta-netflix-argentina",
+    emoji: "🎬",
+    title: "Cómo conseguir una cuenta Netflix en Argentina (2026)",
+    description:
+      "Todas las formas reales de tener Netflix en Argentina: precios, métodos de pago y alternativas cuando se complica.",
+    tag: "Netflix",
+    updated: "Actualizado 24/12/2025",
+  },
+    {
+    slug: "netflix-gift-card-argentina",
+    emoji: "🎁",
+    title:
+      "Netflix Gift Card en Argentina (2026): cómo funciona y para qué sirve",
+    description:
+      "Qué es la Netflix Gift Card, cómo usarla en Argentina y cuándo conviene como alternativa para pagar Netflix sin tarjeta.",
+    tag: "Netflix",
+    updated: "Actualizado 29/12/2025",
+  },
+  {
+  slug: "netflix-mercado-pago",
+  emoji: "💳",
+  title:
+    "¿Se puede pagar Netflix con Mercado Pago en Argentina? (2026)",
+  description:
+    "Te explicamos si Netflix acepta Mercado Pago en Argentina, cuándo puede funcionar, por qué suele fallar y qué alternativas reales existen.",
+  tag: "Netflix",
+  updated: "Actualizado 31/12/2025",
+},
+{
+  slug: "impuestos-netflix-argentina",
+  emoji: "💸",
+  title:
+    "Impuestos de Netflix en Argentina: cuánto se paga realmente (2026)",
+  description:
+    "Te explicamos qué impuestos se aplican a Netflix en Argentina, por qué el precio final suele ser más alto de lo esperado, por qué puede cambiar mes a mes y cómo evitar sorpresas.",
+  tag: "Impuestos y pagos",
+  updated: "Actualizado 02/01/2026",
+},
+{
+  slug: "pagar-netflix-en-efectivo-argentina",
+  emoji: "💵",
+  title:
+    "Pagar Netflix en efectivo en Argentina (2026): ¿se puede?",
+  description:
+    "Si se puede pagar Netflix en efectivo en Argentina, por qué no existe esa opción oficial y cuál es la alternativa real en pesos.",
+  tag: "Netflix",
+  updated: "Actualizado 09/01/2026",
+},
+{
+  slug: "netflix-rapipago-pagofacil-argentina",
+  emoji: "🏪",
+  title:
+    "Pagar Netflix con Rapipago o PagoFácil en Argentina (2026): ¿se puede?",
+  description:
+    "Si Netflix acepta Rapipago o PagoFácil en Argentina, por qué no existe esa opción oficial y cuál es la alternativa real en pesos.",
+  tag: "Netflix",
+  updated: "Actualizado 09/01/2026",
+},
+
+{
+  slug: "pagar-netflix-por-transferencia-argentina",
+  emoji: "🏦",
+  title:
+    "Pagar Netflix por transferencia bancaria en Argentina (2026): ¿se puede?",
+  description:
+    "Si Netflix acepta transferencia bancaria en Argentina, por qué no existe esa opción oficial y cómo pagar Netflix en pesos.",
+  tag: "Netflix",
+  updated: "Actualizado 10/01/2026",
+},
+{
+  slug: "netflix-pago-rechazado-aunque-tengo-saldo",
+  emoji: "💸",
+  title:
+    "Netflix pago rechazado aunque tengo saldo (2026): qué hacer",
+  description:
+    "Por qué Netflix rechaza el pago aunque tengas saldo disponible y qué soluciones reales existen en Argentina.",
+  tag: "Netflix",
+  updated: "Actualizado 12/01/2026",
+},
+{
+  slug: "netflix-no-puede-procesar-el-pago-argentina",
+  emoji: "❌",
+  title:
+    "Netflix no puede procesar el pago en Argentina (2026): qué hacer",
+  description:
+    "Qué significa el error “Netflix no puede procesar el pago”, por qué aparece aunque tengas saldo y cómo solucionarlo en Argentina.",
+  tag: "Netflix",
+  updated: "Actualizado 11/01/2026",
+},
+  // ✅ NUEVO: SPOTIFY
+  {
+    slug: "spotify-no-acepta-tarjeta-argentina",
+    emoji: "🎧",
+    title: "Spotify no acepta mi tarjeta en Argentina (2026): qué hacer",
+    description:
+      "Por qué Spotify rechaza tarjetas en Argentina, qué revisar en el banco y alternativas reales para tener Spotify activo sin vueltas.",
+    tag: "Spotify",
+    updated: "Actualizado 29/12/2025",
+  },
+];
+
+// ✅ Anti-bugs: asegura que el slug no rompa la URL si viene con "/" al inicio
+const safeHref = (slug) => `/ayuda/${String(slug).replace(/^\/+/, "")}`;
+---
+
+<BaseLayout title={title} description={description} canonical="/ayuda">
+  {/* HERO DE AYUDA */}
+  <section class="mb-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 text-slate-50 px-6 py-8 md:px-10 md:py-10 shadow-lg">
+        <div class="space-y-4">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-slate-600/70 rounded-full px-3 py-1">
+            <span>🛟</span>
+            <span>Centro de ayuda para Argentina · Cuentas digitales</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Ayuda para cuentas digitales y streaming en Argentina
+          </h1>
+
+          <p class="text-sm md:text-base text-slate-100/90 max-w-2xl">
+            Guías claras y en criollo para resolver problemas con Netflix,
+            Spotify, Disney+ y otros servicios: pagos rechazados, cuentas,
+            suscripciones y más.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* LISTADO DE ARTÍCULOS */}
+  <section class="max-w-4xl mx-auto pb-16">
+    {articles.length === 0 ? (
+      <p class="text-slate-500 text-sm">
+        Todavía no hay artículos publicados en la sección de ayuda. Pronto vas a
+        ver acá todas las guías para servicios digitales en Argentina.
+      </p>
+    ) : (
+      <div class="space-y-6">
+        <h2 class="text-xl md:text-2xl font-semibold text-slate-900">
+          Artículos de ayuda publicados
+        </h2>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          {articles.map((art) => (
+            <a
+              href={safeHref(art.slug)}
+              class="group block rounded-2xl border border-slate-200 bg-white/95 px-5 py-5 hover:border-indigo-400 hover:shadow-md transition-all duration-150"
+            >
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">{art.emoji}</div>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-xs text-slate-500">
+                    <span class="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5">
+                      {art.tag}
+                    </span>
+                    <span>· {art.updated}</span>
+                  </div>
+
+                  <h3 class="text-sm md:text-base font-semibold text-slate-900 group-hover:text-indigo-700">
+                    {art.title}
+                  </h3>
+
+                  <p class="text-xs md:text-sm text-slate-600">
+                    {art.description}
+                  </p>
+
+                  <p class="text-xs text-indigo-700 font-medium mt-1">
+                    Leer guía completa →
+                  </p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+</BaseLayout>

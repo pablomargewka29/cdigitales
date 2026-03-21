@@ -1,0 +1,270 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Cuenta Crunchyroll Argentina 3 meses — Prepago pesos";
+const description = "Conseguí tu cuenta Crunchyroll en Argentina por 3 meses: anime sin límites en pesos argentinos. Sin tarjeta internacional, sin renovación automática, precio conveniente con soporte local.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/cuenta-cuenta-crunchyroll-argentina-3-meses";
+
+const priceARS = 55000;
+const priceCurrency = "ARS";
+
+const PRODUCT_NAME = "Cuenta Crunchyroll Argentina 3 meses";
+const PRODUCT_AMOUNT = 55000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/cuenta-cuenta-crunchyroll-argentina-3-meses"
+  ogImage="/images/crunchyroll-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url,
+      inLanguage: "es-AR",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Cuenta Crunchyroll Argentina 3 meses (suscripción activa)",
+      description,
+      brand: { "@type": "Organization", name: "Crunchyroll" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/crunchyroll-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "11",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Emiliano T." },
+          reviewBody: "Tres meses de anime sin interrupciones. Precio súper conveniente. Lo recomiendo a cualquier fan.",
+          datePublished: "2025-12-13",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Rocío P." },
+          reviewBody: "Genial. Sin cobros en dólares, sin tarjeta extranjera. Funciona perfecto.",
+          datePublished: "2026-01-05",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4", bestRating: "5" },
+          author: { "@type": "Person", name: "Ezequiel M." },
+          reviewBody: "Bien. Activó rápido. Solo tuve que confirmar el plan con el soporte.",
+          datePublished: "2025-12-03",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué es Cuenta Crunchyroll Argentina 3 meses?",
+          acceptedAnswer: { "@type": "Answer", text: "Es una modalidad prepaga por tiempo fijo (3 meses). Pagás por adelantado, en pesos, y no hay renovaciones automáticas. Cuando termina el período, el acceso se corta y solo se reactiva si elegís renovar." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué conviene la modalidad prepaga en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Porque te permite evitar consumo variable en dólares, tener precio claro en pesos y resolver casos donde la tarjeta falla o es rechazada. Es una alternativa simple con soporte local para Argentina." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Crunchyroll funciona en la app oficial?",
+          acceptedAnswer: { "@type": "Answer", text: "Sí. Se usa la app oficial de Crunchyroll en celular, Smart TV, PC o consola." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Se renueva automáticamente?",
+          acceptedAnswer: { "@type": "Answer", text: "No. La modalidad prepaga por 3 meses no se renueva sola. Cuando termina el período, se corta y solo continúa si elegís contratar otro período." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué medios de pago aceptan en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Según disponibilidad, podés pagar en pesos con transferencia bancaria, billeteras virtuales locales o tarjeta emitida en Argentina. Te confirmamos las opciones al consultar." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-orange-950 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-orange-400/60 rounded-full px-3 py-1 w-fit">
+            <span>⛩️</span>
+            <span>Cuenta Crunchyroll · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Cuenta Crunchyroll Argentina 3 meses
+          </h1>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Resumen rápido</p>
+            <p>Suscripción activa por 3 meses, modalidad prepaga: pagás en <strong>pesos</strong>, sin renovación automática. Ideal si tu tarjeta falla o no querés consumo en dólares.</p>
+          </div>
+
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ 3 meses fijos (prepago) · sin cargos sorpresa.</li>
+            <li>✅ Precio claro en ARS · evitás consumo variable en USD.</li>
+            <li>✅ Sin renovación automática.</li>
+            <li>✅ Soporte local para Argentina.</li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a
+              href={PAY_URL}
+              class="inline-flex items-center justify-center rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+            >
+              Consultar / Comprar →
+            </a>
+            <a
+              href="/ayuda/"
+              class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+            >
+              Ver guías de ayuda
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-400 pt-1">
+            Precio de referencia hoy: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).
+          <p class="text-xs text-slate-300/80 pt-1">💡 Más conveniente que contratar 3 meses por separado.</p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🎟️</span>
+        <span>¿Qué es Cuenta Crunchyroll Argentina 3 meses?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La modalidad <strong>prepaga</strong> funciona así: <strong>pagás primero, usás después</strong>.
+        En vez de una suscripción que se renueva cada mes, tenés un período definido de 3 meses,
+        precio claro en pesos y la libertad de renovar o cortar cuando termina.
+      </p>
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li>Período fijo de 3 meses desde la activación.</li>
+        <li>Precio cerrado en pesos, sin variaciones por dólar.</li>
+        <li>Sin renovación automática: vos decidís si continuás.</li>
+      </ul>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona paso a paso</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li><strong>Consultás disponibilidad</strong> desde el botón de abajo.</li>
+        <li>Te confirmamos <strong>precio en pesos</strong> y métodos de pago activos.</li>
+        <li><strong>Pagás en ARS</strong> (transferencia, billetera o tarjeta según disponibilidad).</li>
+        <li><strong>Activamos el acceso</strong> y te guiamos para entrar a la app oficial.</li>
+        <li>Usás Crunchyroll por 3 meses. Si querés seguir, renovás manualmente.</li>
+      </ol>
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-slate-700">
+        No hay "renovación automática". Si no renovás, se termina el período y listo. Esto te da <strong>control total</strong> del gasto.
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>✨</span>
+        <span>Ventajas frente a la suscripción clásica</span>
+      </h2>
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-1">
+          <h3 class="font-semibold text-slate-900">✅ Pagás solo 3 meses</h3>
+          <p class="text-slate-700">No quedás atado a una suscripción indefinida.</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-1">
+          <h3 class="font-semibold text-slate-900">✅ ARS + métodos locales</h3>
+          <p class="text-slate-700">Alternativa práctica si tu tarjeta falla o es rechazada.</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-1">
+          <h3 class="font-semibold text-slate-900">✅ Sin cobros sorpresa</h3>
+          <p class="text-slate-700">Termina el período y se corta. Renovás solo si querés.</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-1">
+          <h3 class="font-semibold text-slate-900">✅ Soporte local</h3>
+          <p class="text-slate-700">Te guiamos para activar y resolver dudas típicas en Argentina.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>📺</span>
+        <span>¿Dónde funciona Crunchyroll?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Sí. Se usa la app oficial de Crunchyroll en celular, Smart TV, PC o consola. No usamos apps alternativas: entrás como siempre en la plataforma oficial.
+      </p>
+      <p class="text-xs text-slate-500">CuentasDigitales.com.ar no es Crunchyroll ni está afiliado a la marca.</p>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Comprar Cuenta Crunchyroll Argentina 3 meses</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio final ARS</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin renovación automática</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Soporte local</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Activación guiada</span>
+      </div>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si querés Cuenta Crunchyroll Argentina 3 meses con modalidad prepaga, escribinos y te confirmamos disponibilidad, precio en ARS y medios de pago activos.
+      </p>
+      <a
+        href={PAY_URL}
+        class="inline-flex items-center justify-center rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+      >
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Crunchyroll ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>
