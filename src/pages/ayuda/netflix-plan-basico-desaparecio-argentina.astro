@@ -1,0 +1,274 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "El plan básico de Netflix desapareció en Argentina (2026): qué pasó y qué hacer";
+
+const description =
+  "Netflix eliminó el plan Básico en Argentina a fines de 2025 y migró a los usuarios automáticamente. Te contamos qué opciones quedan hoy, cuánto sale cada plan con impuestos y cómo acceder a Netflix sin pagar el precio inflado.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-plan-basico-desaparecio-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-plan-basico-desaparecio-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-01-20",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Por qué desapareció el plan Básico de Netflix en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix discontinuó el plan Básico a fines de 2025 a nivel global. En Argentina, los usuarios que tenían ese plan fueron migrados automáticamente al plan Estándar con anuncios.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuáles son los planes de Netflix disponibles en Argentina en 2026?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "En 2026, Netflix Argentina ofrece tres planes: Estándar con anuncios, Estándar (sin anuncios) y Premium. El plan Básico fue eliminado definitivamente.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Hay forma de acceder a Netflix más barato después de que eliminaron el plan Básico?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. Una alternativa es acceder a través de servicios locales que ofrecen cuentas de Netflix con precio en pesos sin los impuestos adicionales del 51% que se aplican al pagar directamente.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-slate-700 via-zinc-700 to-stone-600 text-slate-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>🚨</span>
+            <span>Plan Básico eliminado · Novedades 2026</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            El plan Básico de Netflix ya no existe en Argentina
+          </h1>
+
+          <p class="text-sm md:text-base text-slate-200/90">
+            Sí, lo eliminaron. Si tenías el plan más barato y te cambiaron de plan sin avisarte bien, acá te explicamos qué pasó y cuáles son tus opciones reales hoy 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Resumen ejecutivo</p>
+      <p>
+        Netflix eliminó el plan Básico a fines de 2025 en Argentina. Si lo tenías, te migraron automáticamente al plan Estándar con anuncios. Hoy quedan tres planes: Estándar con anuncios (~$10.900/mes base), Estándar (~$21.000/mes) y Premium. A esos valores hay que sumarles el 51% de impuestos si pagás con tarjeta.
+      </p>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    {/* BLOQUE 1 */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        📋 ¿Qué pasó exactamente con el plan Básico?
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Netflix venía anunciando desde 2024 que iba a discontinuar el plan Básico (sin publicidad, una pantalla) a nivel global. En Argentina, eso se concretó en el último trimestre de 2025. La plataforma envió mails de aviso a los usuarios afectados y, si no hacían nada, los migró automáticamente al <strong>plan Estándar con anuncios</strong>.
+      </p>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La movida tiene una lógica comercial clara: Netflix quiere que quienes buscan el precio más bajo vean publicidad (y generen ingresos publicitarios), mientras que quienes no quieren anuncios tengan que pagar bastante más.
+      </p>
+
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">📬 ¿Te cambiaron el plan y no te diste cuenta?</p>
+        <p>Revisá tu resumen de tarjeta o el historial de pagos en Netflix. Si antes pagabas el Básico y ahora el monto cambió, probablemente ya estás en otro plan.</p>
+      </div>
+    </section>
+
+    {/* BLOQUE 2 */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        💸 Los planes que quedan en 2026 y lo que cuestan de verdad
+      </h2>
+
+      <p class="text-slate-700 text-[15px]">
+        Netflix muestra los precios base en su sitio, pero esos valores no incluyen los impuestos que se aplican en Argentina. El precio final que ves en tu tarjeta incluye <strong>21% de IVA + 30% de percepción de Ganancias</strong>, lo que eleva el costo final un 51%.
+      </p>
+
+      <div class="space-y-3">
+        <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4">
+          <div class="flex items-center justify-between mb-1">
+            <p class="font-semibold text-slate-800">📺 Estándar con anuncios</p>
+            <span class="text-xs bg-green-100 text-green-700 rounded-full px-2 py-0.5">El más barato</span>
+          </div>
+          <p class="text-sm text-slate-600">Base ~$10.900 · Con impuestos ~$16.460 · 2 pantallas · Full HD · Incluye publicidad</p>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4">
+          <div class="flex items-center justify-between mb-1">
+            <p class="font-semibold text-slate-800">📺 Estándar</p>
+            <span class="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5">Sin publicidad</span>
+          </div>
+          <p class="text-sm text-slate-600">Base ~$21.000 · Con impuestos ~$31.710 · 2 pantallas · Full HD · Sin publicidad</p>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4">
+          <div class="flex items-center justify-between mb-1">
+            <p class="font-semibold text-slate-800">🏆 Premium</p>
+            <span class="text-xs bg-purple-100 text-purple-700 rounded-full px-2 py-0.5">El más completo</span>
+          </div>
+          <p class="text-sm text-slate-600">Base ~$26.000+ · Con impuestos ~$39.000+ · 4 pantallas · Ultra HD · Sin publicidad</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-500">* Los valores varían según el tipo de cambio y actualizaciones de Netflix. Estos son valores aproximados a abril 2026.</p>
+    </section>
+
+    {/* BLOQUE 3 - CTA */}
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>¿Cómo acceder a Netflix sin pagar el precio inflado?</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        El plan Básico desapareció, los planes que quedan son más caros, y encima con impuestos el precio se va a las nubes. Muchos argentinos están buscando alternativas y la que más tracción tiene hoy son las <strong>cuentas con precio fijo en pesos</strong>.
+      </p>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La diferencia clave es que con esta modalidad no pagás los impuestos del 51% por encima del precio base. Pagás un valor en pesos por el período que querés y listo. Sin renovación automática, sin sorpresas en el resumen de la tarjeta.
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">😤 Con Netflix directo</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Precio base + 51% de impuestos.</li>
+            <li>Renovación automática mensual.</li>
+            <li>Precio sube con cada actualización.</li>
+            <li>Necesitás tarjeta habilitada.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">✅ Con cuenta gestionada</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Precio fijo en pesos, sin impuestos variables.</li>
+            <li>Sin renovación automática sorpresa.</li>
+            <li>Pagás por el período que querés.</li>
+            <li>Sin tarjeta de crédito necesaria.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> ofrecemos acceso a Netflix con precio en pesos, pensado para quienes buscan una alternativa al plan Básico que ya no existe.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        ❓ Preguntas frecuentes sobre el plan Básico eliminado
+      </h2>
+
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Netflix va a volver a tener un plan Básico sin publicidad?</p>
+          <p class="mt-1">No hay indicios de eso. La estrategia de la empresa apunta a empujar a los usuarios que buscan precio bajo hacia el plan con anuncios, mientras que el tier sin publicidad queda para planes más caros.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿Me cambiaron el plan sin pedirme permiso?</p>
+          <p class="mt-1">Netflix envió notificaciones por mail antes de hacer el cambio. Si no lo viste, es posible que hayas sido migrado automáticamente. Podés verificarlo en la sección "Plan" dentro de tu cuenta de Netflix.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿Puedo volver al plan Básico si ya me cambiaron?</p>
+          <p class="mt-1">No. El plan Básico fue eliminado definitivamente. Ya no aparece como opción dentro de la plataforma.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿El plan con anuncios tiene el mismo contenido que los demás?</p>
+          <p class="mt-1">En su mayoría sí, aunque hay algunos contenidos que no están disponibles por derechos de licencia en el plan con anuncios. Es una pequeña porción del catálogo, pero existe.</p>
+        </div>
+      </div>
+    </section>
+
+    {/* HERO FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">
+        🎬 Netflix en Argentina sin pagar el precio inflado
+      </h2>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        El plan Básico se fue, pero las opciones para acceder a Netflix sin pagar más de lo necesario siguen existiendo. Mirá qué tenemos disponible con precio en pesos.
+      </p>
+
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

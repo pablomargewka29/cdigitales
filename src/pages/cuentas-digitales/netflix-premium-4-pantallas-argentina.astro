@@ -1,0 +1,252 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Netflix Premium 4 pantallas Argentina — Precio en pesos 2026";
+const description = "Accedé al plan Netflix Premium con 4 pantallas simultáneas en Argentina. Ultra HD, Dolby Atmos, hasta 2 miembros extra. Precio en pesos sin el 51% de impuestos, sin tarjeta internacional.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/netflix-premium-4-pantallas-argentina";
+
+const priceARS = 28000;
+const priceCurrency = "ARS";
+const PRODUCT_NAME = "Netflix Premium 4 pantallas Argentina";
+const PRODUCT_AMOUNT = 28000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/netflix-premium-4-pantallas-argentina"
+  ogImage="/images/netflix-prepago-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Netflix Premium 4 pantallas Argentina",
+      description,
+      brand: { "@type": "Organization", name: "Netflix" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/netflix-prepago-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "18",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Hernán G." },
+          reviewBody: "Lo uso en la tele 4K y se nota la diferencia con Ultra HD. Vale la pena el Premium para quienes tienen pantalla grande.",
+          datePublished: "2026-02-20",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Sofía M." },
+          reviewBody: "En casa somos 4 y con el plan Premium todos podemos ver al mismo tiempo sin problemas. Excelente.",
+          datePublished: "2026-03-01",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Cuántas pantallas tiene el plan Netflix Premium en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "El plan Premium permite 4 pantallas simultáneas. Es el plan más completo de Netflix, con Ultra HD (4K), Dolby Atmos y posibilidad de agregar hasta 2 miembros extra." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Vale la pena el Netflix Premium en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Vale la pena si tenés un televisor 4K y/o si en casa son varias personas que ven Netflix al mismo tiempo. Es el único plan que permite reproducción en Ultra HD." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuánto cuesta Netflix Premium 4 pantallas en Argentina con impuestos?",
+          acceptedAnswer: { "@type": "Answer", text: "El plan Premium cuesta ~$26.000 base, pero con el 51% de impuestos (IVA + Ganancias) que se aplican en Argentina, el precio real supera los $39.000 por mes al contratar directamente." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-purple-900 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-purple-400/60 rounded-full px-3 py-1 w-fit">
+            <span>🏆</span>
+            <span>Netflix Premium · 4 pantallas · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix Premium 4 pantallas en Argentina
+          </h1>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 El plan más completo de Netflix</p>
+            <p>Ultra HD · 4 pantallas simultáneas · Dolby Atmos · Hasta 2 miembros extra · Precio en pesos sin impuestos del 51%.</p>
+          </div>
+
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ 4 pantallas simultáneas — ideal para familias o grupos.</li>
+            <li>✅ Ultra HD (4K) + HDR en dispositivos compatibles.</li>
+            <li>✅ Dolby Atmos en contenido seleccionado.</li>
+            <li>✅ Precio en pesos sin el recargo del 51%.</li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Consultar / Comprar →
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-400 pt-1">
+            Precio de referencia: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🎬</span>
+        <span>¿Qué incluye el plan Netflix Premium?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        El Premium es el plan tope de gama de Netflix. Tiene todo lo del Estándar más calidad de imagen superior y mayor cantidad de pantallas simultáneas. Ideal para hogares con televisores 4K o grupos donde varias personas usan Netflix al mismo tiempo.
+      </p>
+      <div class="grid gap-3 md:grid-cols-2 text-sm">
+        <div class="rounded-xl bg-purple-50 border border-purple-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">🖥️ Calidad de imagen</p>
+          <p class="text-slate-600">Ultra HD (4K) + HDR. La mejor calidad disponible en Netflix. Notás la diferencia en cualquier televisor 4K.</p>
+        </div>
+        <div class="rounded-xl bg-purple-50 border border-purple-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">👥 Pantallas simultáneas</p>
+          <p class="text-slate-600">Hasta 4 dispositivos reproduciendo al mismo tiempo. Ideal para familias numerosas.</p>
+        </div>
+        <div class="rounded-xl bg-purple-50 border border-purple-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">🔊 Audio</p>
+          <p class="text-slate-600">Dolby Atmos en el contenido que lo soporta. Diferencia notable si tenés barra de sonido o equipo home theater.</p>
+        </div>
+        <div class="rounded-xl bg-purple-50 border border-purple-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">👤 Miembros extra</p>
+          <p class="text-slate-600">Podés agregar hasta 2 miembros de otros hogares con su propio perfil y contraseña.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>💰</span>
+        <span>¿Cuánto ahorrás respecto al precio oficial?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px]">
+        Al contratar el Premium directamente en Netflix, el precio base (~$26.000) se convierte en más de $39.000 con todos los impuestos. La diferencia es significativa:
+      </p>
+      <div class="rounded-2xl border border-slate-200 overflow-hidden text-sm">
+        <div class="grid grid-cols-2 divide-x divide-slate-200">
+          <div class="px-4 py-4 bg-red-50">
+            <p class="font-semibold text-slate-800 mb-2">😤 Netflix Premium directo</p>
+            <p class="text-2xl font-bold text-red-600">~$39.000+</p>
+            <p class="text-slate-500 text-xs mt-1">por mes con impuestos incluidos</p>
+          </div>
+          <div class="px-4 py-4 bg-green-50">
+            <p class="font-semibold text-slate-800 mb-2">✅ Con CuentasDigitales</p>
+            <p class="text-2xl font-bold text-green-600">${priceARS.toLocaleString("es-AR")}</p>
+            <p class="text-slate-500 text-xs mt-1">precio de referencia en pesos</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-400">* Precios de referencia aproximados. El precio oficial de Netflix varía con el tipo de cambio.</p>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona paso a paso</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li><strong>Consultás disponibilidad</strong> desde el botón de esta página.</li>
+        <li>Te confirmamos precio en pesos y métodos de pago disponibles.</li>
+        <li>Pagás en ARS — transferencia, Mercado Pago u otros medios locales.</li>
+        <li>Activamos el acceso y te guiamos para entrar a Netflix.</li>
+        <li>Usás Netflix Premium por el período elegido. Sin renovación automática.</li>
+      </ol>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🤔</span>
+        <span>¿Para quién tiene sentido el plan Premium?</span>
+      </h2>
+      <div class="space-y-2 text-[15px] text-slate-700">
+        <div class="flex items-start gap-2">
+          <span class="text-purple-500 mt-0.5">✓</span>
+          <p>Hogares con <strong>televisor 4K</strong> que quieren aprovechar la calidad Ultra HD.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-purple-500 mt-0.5">✓</span>
+          <p>Familias donde <strong>cuatro personas</strong> ven Netflix en simultáneo.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-purple-500 mt-0.5">✓</span>
+          <p>Los que tienen <strong>equipo de sonido</strong> y quieren aprovechar Dolby Atmos.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-purple-500 mt-0.5">✓</span>
+          <p>Los que quieren <strong>lo mejor disponible</strong> sin pagar más de $39.000 por mes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Netflix Premium 4 pantallas · Argentina</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Ultra HD 4K</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ 4 pantallas</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Dolby Atmos</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio en pesos</span>
+      </div>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Consultanos disponibilidad y te confirmamos precio en pesos y medios de pago activos.
+      </p>
+      <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>

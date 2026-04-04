@@ -1,0 +1,260 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Comprar cuenta Netflix Argentina — Precio en pesos, sin tarjeta";
+const description = "Comprá una cuenta de Netflix en Argentina con precio en pesos. Sin tarjeta de crédito internacional, sin impuestos del 51%, sin renovación automática. Activación guiada y soporte local.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/comprar-cuenta-netflix-argentina";
+
+const priceARS = 20000;
+const priceCurrency = "ARS";
+const PRODUCT_NAME = "Cuenta Netflix Argentina";
+const PRODUCT_AMOUNT = 20000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/comprar-cuenta-netflix-argentina"
+  ogImage="/images/netflix-prepago-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Comprar cuenta Netflix Argentina",
+      description,
+      brand: { "@type": "Organization", name: "Netflix" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/netflix-prepago-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "34",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Valentina R." },
+          reviewBody: "Llevaba meses intentando pagar Netflix con mi tarjeta y siempre me la rechazaba. Acá compré directo en pesos y en 10 minutos estaba viendo.",
+          datePublished: "2026-02-10",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Matías C." },
+          reviewBody: "Clarísimo el proceso. Pagué por transferencia, me llegaron los datos y listo. Sin sorpresas de impuestos en el resumen de la tarjeta.",
+          datePublished: "2026-01-28",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4", bestRating: "5" },
+          author: { "@type": "Person", name: "Luciana F." },
+          reviewBody: "Muy práctica la modalidad. No me gusta comprometerme con suscripciones automáticas y acá elegís vos cuándo renovar.",
+          datePublished: "2026-03-05",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Cómo se compra una cuenta de Netflix en Argentina con precio en pesos?",
+          acceptedAnswer: { "@type": "Answer", text: "Consultás disponibilidad, te confirmamos precio en pesos y medios de pago (transferencia, Mercado Pago, etc.), pagás y activamos el acceso. Todo sin necesidad de tarjeta internacional." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué conviene comprar Netflix en pesos en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Porque evitás el 51% de impuestos que se aplica cuando pagás directamente en Netflix con tarjeta, y no dependés de que tu tarjeta esté habilitada para pagos internacionales recurrentes." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuánto tarda la activación?",
+          acceptedAnswer: { "@type": "Answer", text: "La activación es rápida, generalmente en pocos minutos luego de confirmado el pago." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-red-900 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-red-400/60 rounded-full px-3 py-1 w-fit">
+            <span>🎬</span>
+            <span>Comprar Netflix · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Comprar cuenta Netflix Argentina
+          </h1>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Resumen rápido</p>
+            <p>Precio en pesos, sin tarjeta internacional, sin el 51% de impuestos. Pagás lo que acordamos y Netflix funciona.</p>
+          </div>
+
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ Precio fijo en ARS · sin variación por tipo de cambio.</li>
+            <li>✅ Sin tarjeta de crédito internacional necesaria.</li>
+            <li>✅ Sin renovación automática · vos decidís cuándo seguir.</li>
+            <li>✅ Activación rápida con soporte local.</li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Consultar / Comprar →
+            </a>
+            <a href="/ayuda/como-pagar-netflix-mas-barato-argentina" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              ¿Por qué comprar así?
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-400 pt-1">
+            Precio de referencia: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🤔</span>
+        <span>¿Por qué comprar Netflix así y no directo en la plataforma?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Cuando pagás Netflix directamente con tu tarjeta en Argentina, el sistema aplica automáticamente <strong>IVA (21%) + percepción de Ganancias (30%)</strong>, lo que suma un 51% encima del precio base. Además, necesitás que tu tarjeta esté habilitada para pagos internacionales recurrentes, lo que muchas veces falla.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Al comprar a través de CuentasDigitales.com.ar, pagás un precio en pesos ya definido, sin que ningún impuesto variable se agregue encima. Simple, predecible y sin depender del banco.
+      </p>
+      <div class="grid gap-3 md:grid-cols-2 text-sm">
+        <div class="rounded-xl bg-red-50 border border-red-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">😤 Netflix directo</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Precio base + 51% de impuestos.</li>
+            <li>Necesitás tarjeta habilitada.</li>
+            <li>Renovación automática mensual.</li>
+            <li>Precio varía con el tipo de cambio.</li>
+          </ul>
+        </div>
+        <div class="rounded-xl bg-green-50 border border-green-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">✅ Con nosotros</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Precio fijo en pesos, todo incluido.</li>
+            <li>Sin tarjeta internacional.</li>
+            <li>Sin renovación automática.</li>
+            <li>Precio definido de antemano.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona el proceso de compra</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li><strong>Consultás disponibilidad</strong> desde el botón de esta página.</li>
+        <li>Te confirmamos <strong>precio en pesos</strong> y métodos de pago disponibles.</li>
+        <li><strong>Pagás en ARS</strong> — transferencia bancaria, Mercado Pago u otros medios locales.</li>
+        <li><strong>Activamos el acceso</strong> y te acompañamos para entrar a Netflix.</li>
+        <li>Usás Netflix durante el período elegido. Renovás solo si querés.</li>
+      </ol>
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-slate-700">
+        💬 Si tenés dudas durante el proceso, tenés soporte local para resolverlas. Sin chatbots de Netflix en inglés ni esperas eternas.
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>👥</span>
+        <span>¿Para quién es ideal comprar Netflix así?</span>
+      </h2>
+      <div class="space-y-3 text-[15px] text-slate-700">
+        <div class="flex items-start gap-2">
+          <span class="text-green-500 mt-0.5">✓</span>
+          <p><strong>Los que tienen tarjeta rechazada en Netflix</strong> — Cabal, prepagas, débito sin habilitación internacional.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-green-500 mt-0.5">✓</span>
+          <p><strong>Los que no quieren pagar el 51% de impuestos</strong> — Con precio en pesos definido eso no aplica.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-green-500 mt-0.5">✓</span>
+          <p><strong>Los que quieren presupuesto fijo</strong> — Sin que el precio cambie por el dólar o por aumentos de Netflix.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-green-500 mt-0.5">✓</span>
+          <p><strong>Los que quedaron sin cuenta compartida</strong> — Después de que Netflix bloqueó el uso entre hogares.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-green-500 mt-0.5">✓</span>
+          <p><strong>Los que no quieren compromisos mensuales automáticos</strong> — Pagás por el período que querés y decidís vos si seguís.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>📺</span>
+        <span>¿Netflix funciona igual que siempre?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Sí. Accedés desde la app oficial de Netflix en tu Smart TV, celular, tablet, PC o consola. No hay apps alternativas ni versiones modificadas: es el mismo Netflix de siempre, con el mismo catálogo.
+      </p>
+      <p class="text-xs text-slate-500">CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.</p>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Comprar Netflix Argentina con precio en pesos</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio fijo en ARS</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin tarjeta internacional</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin renovación automática</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Soporte local</span>
+      </div>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Consultanos disponibilidad y te confirmamos precio en pesos y medios de pago activos.
+      </p>
+      <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>

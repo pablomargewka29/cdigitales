@@ -1,0 +1,262 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix está muy caro en Argentina (2026): el porqué y qué alternativas existen";
+
+const description =
+  "Netflix se convirtió en el servicio de streaming más caro de Argentina. Con impuestos incluidos, el plan Estándar supera los $31.000 por mes. Te explicamos por qué es tan caro y qué hacen los argentinos para seguir accediendo sin pagar de más.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-plan-muy-caro-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-plan-muy-caro-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-03-15",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Por qué Netflix es tan caro en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix es caro en Argentina por la combinación de aumentos frecuentes de la plataforma, la devaluación del peso y el 51% de impuestos (IVA + percepción de Ganancias) que se aplica sobre el precio base.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Es Netflix más caro que otras plataformas de streaming en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. En 2026, Netflix encabeza el ranking de plataformas más caras en Argentina. Disney+, Max y Amazon Prime tienen planes más económicos.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cómo acceder a Netflix más barato en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Las opciones incluyen elegir el plan Estándar con anuncios (el más barato disponible), o acceder a través de servicios locales con precio fijo en pesos que no incluyen el recargo impositivo del 51%.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-slate-800 via-slate-700 to-zinc-700 text-slate-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>💸</span>
+            <span>Netflix el más caro del streaming · Argentina 2026</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix está carísimo en Argentina y tiene razones concretas
+          </h1>
+          <p class="text-sm md:text-base text-slate-200/90">
+            No es sensación: Netflix se convirtió en la plataforma de streaming más cara del país. Acá analizamos por qué pasó y qué opciones tienen los argentinos que no quieren resignar el servicio 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Contexto rápido</p>
+      <p>
+        El plan más barato de Netflix en Argentina (Estándar con anuncios) cuesta ~$16.460 por mes con impuestos. El Estándar sin publicidad llega a ~$31.710. Netflix lidera el ranking de plataformas más caras del país, superando a Disney+, Max y Amazon Prime.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🤔 ¿Por qué Netflix es tan caro en Argentina?
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        No es un solo factor, son varios que se combinan y se potencian entre sí. Entender cada uno ayuda a tomar mejores decisiones sobre cómo acceder al servicio.
+      </p>
+      <div class="space-y-3">
+        <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-4">
+          <p class="font-semibold text-slate-800">📌 Factor 1 — Aumentos frecuentes de la plataforma</p>
+          <p class="text-sm text-slate-600 mt-1">Netflix aplicó cuatro aumentos en Argentina entre 2025 y 2026. Cada uno va sumándose al anterior. En términos acumulados, el precio base subió más del 80% en poco más de un año.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-4">
+          <p class="font-semibold text-slate-800">📌 Factor 2 — El peso se devalúa constantemente</p>
+          <p class="text-sm text-slate-600 mt-1">Aunque Netflix tiene precios en pesos, el servicio está atado al dólar en la práctica. Cada vez que el tipo de cambio sube, el precio real en pesos también sube, aunque Netflix no haya anunciado ningún aumento formal.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-4">
+          <p class="font-semibold text-slate-800">📌 Factor 3 — El 51% de impuestos</p>
+          <p class="text-sm text-slate-600 mt-1">El IVA (21%) y la percepción de Ganancias (30%) suman un 51% adicional sobre el precio base. Este recargo es obligatorio para todos los servicios digitales del exterior en Argentina.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-4">
+          <p class="font-semibold text-slate-800">📌 Factor 4 — Eliminaron el plan más barato</p>
+          <p class="text-sm text-slate-600 mt-1">El plan Básico (sin publicidad, sin costo de miembro extra) fue discontinuado en 2025. La opción más económica ahora incluye publicidad y sigue siendo más cara que lo que era el Básico.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🏆 Netflix vs otras plataformas: comparativa de precios 2026
+      </h2>
+      <p class="text-slate-700 text-[15px]">¿Tan caro es Netflix comparado con las otras opciones? Acá el panorama:</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 text-left">
+              <th class="px-3 py-2 rounded-tl-xl">Plataforma</th>
+              <th class="px-3 py-2">Plan más barato</th>
+              <th class="px-3 py-2 rounded-tr-xl">Con impuestos aprox.</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="bg-red-50">
+              <td class="px-3 py-3 font-semibold">🔴 Netflix</td>
+              <td class="px-3 py-3">Est. con anuncios ~$10.900</td>
+              <td class="px-3 py-3 font-bold text-red-600">~$16.460/mes</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-3">🔵 Disney+</td>
+              <td class="px-3 py-3">Básico ~$8.999</td>
+              <td class="px-3 py-3">~$13.590/mes</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-3">🟣 Max (HBO)</td>
+              <td class="px-3 py-3">Básico ~$7.999</td>
+              <td class="px-3 py-3">~$12.080/mes</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-3 rounded-bl-xl">🟠 Amazon Prime</td>
+              <td class="px-3 py-3">Plan único ~$4.999</td>
+              <td class="px-3 py-3 rounded-br-xl">~$7.550/mes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-400">* Valores aproximados a abril 2026. Netflix es el más caro en todas las categorías.</p>
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">🤔 ¿Por qué la gente sigue pagando Netflix siendo el más caro?</p>
+        <p>Catálogo, series originales exclusivas, mayor cantidad de contenido en español latino y la inercia del servicio que "siempre se tuvo". Pero cada aumento hace que más usuarios evalúen alternativas.</p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>Cómo acceder a Netflix sin pagar el precio más caro</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Dentro de Netflix oficial, la única forma de bajar el costo es elegir el plan Estándar con anuncios y bancarse las interrupciones publicitarias. Para quienes quieren evitar eso, la alternativa más popular en Argentina son las <strong>cuentas con precio fijo en pesos</strong>.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La diferencia clave es que no pagás el 51% de impuestos encima del precio base. El valor en pesos ya está definido de antemano y no varía con el tipo de cambio ni con los aumentos de Netflix.
+      </p>
+      <div class="grid gap-4 md:grid-cols-3 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4 text-center">
+          <p class="text-2xl mb-2">📺</p>
+          <p class="font-semibold text-slate-800">Netflix Estándar oficial</p>
+          <p class="text-slate-500 mt-1 text-xs">~$31.710/mes con impuestos</p>
+        </div>
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4 text-center">
+          <p class="text-2xl mb-2">📢</p>
+          <p class="font-semibold text-slate-800">Netflix con anuncios oficial</p>
+          <p class="text-slate-500 mt-1 text-xs">~$16.460/mes + publicidad</p>
+        </div>
+        <div class="rounded-2xl bg-indigo-100 border border-indigo-200 px-4 py-4 text-center">
+          <p class="text-2xl mb-2">✅</p>
+          <p class="font-semibold text-slate-800">Cuenta en pesos</p>
+          <p class="text-slate-500 mt-1 text-xs">Precio fijo, sin impuestos variables</p>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> podés acceder a Netflix con precio en pesos, sin el recargo impositivo del 51% que hace que el servicio oficial sea tan caro en Argentina.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">❓ Preguntas frecuentes</h2>
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Netflix va a bajar los precios en Argentina?</p>
+          <p class="mt-1">No hay señales de eso. La tendencia histórica de Netflix en todos los mercados es subir precios gradualmente. En Argentina, la combinación con la devaluación del peso hace que el impacto sea especialmente fuerte.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Vale la pena Netflix siendo el más caro?</p>
+          <p class="mt-1">Depende del uso que le des. Si lo usás mucho y valoriás el catálogo, puede valer la pena. Si lo usás esporádicamente, probablemente no tenga sentido pagar una suscripción mensual fija.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Hay alguna promo o descuento oficial de Netflix en Argentina?</p>
+          <p class="mt-1">A diferencia de Disney+, Max o Amazon Prime, Netflix no tiene acuerdos de descuento con Mercado Pago ni con servicios de telecomunicaciones en Argentina. No hay forma oficial de acceder a un precio reducido.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Es mejor cancelar Netflix y volver cuando hay promo?</p>
+          <p class="mt-1">Netflix eliminó el período de prueba gratuito en Argentina hace tiempo. Cancelar y volver no te da ningún beneficio de precio, solo interrumpís el servicio hasta que volvés a pagar el precio vigente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎬 Netflix al precio que tiene sentido pagar</h2>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        No tenés que elegir entre pagar $31.000 o quedarte sin Netflix. Mirá las opciones con precio en pesos disponibles para Argentina.
+      </p>
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

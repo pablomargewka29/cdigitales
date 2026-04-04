@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Netflix Estándar Argentina 2026 — 2 pantallas, precio en pesos";
+const description = "Accedé al plan Netflix Estándar en Argentina con 2 pantallas simultáneas y Full HD. Sin publicidad, sin tarjeta internacional, sin el 51% de impuestos. Precio fijo en pesos.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/netflix-estandar-argentina";
+
+const priceARS = 22000;
+const priceCurrency = "ARS";
+const PRODUCT_NAME = "Netflix Estándar Argentina";
+const PRODUCT_AMOUNT = 22000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/netflix-estandar-argentina"
+  ogImage="/images/netflix-prepago-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Netflix Estándar Argentina",
+      description,
+      brand: { "@type": "Organization", name: "Netflix" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/netflix-prepago-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        reviewCount: "29",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Agustina P." },
+          reviewBody: "El Estándar es perfecto para nosotros. Mi pareja y yo vemos al mismo tiempo sin problema. Full HD se ve bárbaro en la tele.",
+          datePublished: "2026-02-15",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Rodrigo T." },
+          reviewBody: "Sin publicidad y dos pantallas. Es lo que necesito. El precio en pesos me simplificó todo.",
+          datePublished: "2026-03-10",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué incluye el plan Netflix Estándar en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "El plan Estándar incluye 2 pantallas simultáneas, calidad Full HD (1080p), sin publicidad y posibilidad de agregar 1 miembro extra de otro hogar." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuál es la diferencia entre Estándar y Estándar con anuncios?",
+          acceptedAnswer: { "@type": "Answer", text: "El plan Estándar no tiene publicidad. El Estándar con anuncios interrumpe la reproducción con publicidad pero tiene un precio base menor." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuánto cuesta el Netflix Estándar en Argentina con impuestos?",
+          acceptedAnswer: { "@type": "Answer", text: "El plan Estándar cuesta ~$21.000 base. Con el 51% de impuestos que se aplica en Argentina al pagar directamente, el precio real llega a ~$31.710 por mes." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-blue-900 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-blue-400/60 rounded-full px-3 py-1 w-fit">
+            <span>📺</span>
+            <span>Netflix Estándar · 2 pantallas · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix Estándar en Argentina
+          </h1>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 El plan sin publicidad más popular</p>
+            <p>2 pantallas · Full HD · Sin anuncios · Precio en pesos sin impuestos variables.</p>
+          </div>
+
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ 2 pantallas simultáneas — perfecto para parejas o convivientes.</li>
+            <li>✅ Full HD (1080p) — calidad nítida en cualquier pantalla.</li>
+            <li>✅ Sin publicidad — experiencia limpia, sin interrupciones.</li>
+            <li>✅ Precio fijo en pesos, sin el 51% de impuestos encima.</li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Consultar / Comprar →
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-400 pt-1">
+            Precio de referencia: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🎬</span>
+        <span>¿Qué incluye el plan Estándar de Netflix?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        El Estándar es el plan intermedio de Netflix: más completo que el Estándar con anuncios y más accesible que el Premium. Es el más elegido por personas que viven solas o en pareja y quieren buena calidad sin cortes publicitarios.
+      </p>
+      <div class="grid gap-3 md:grid-cols-2 text-sm">
+        <div class="rounded-xl bg-blue-50 border border-blue-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">📺 Calidad de imagen</p>
+          <p class="text-slate-600">Full HD (1080p). Nítido en cualquier televisor, monitor o pantalla moderna.</p>
+        </div>
+        <div class="rounded-xl bg-blue-50 border border-blue-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">👥 Pantallas</p>
+          <p class="text-slate-600">2 dispositivos al mismo tiempo. Perfecto para ver en distintas habitaciones.</p>
+        </div>
+        <div class="rounded-xl bg-blue-50 border border-blue-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">🚫 Sin publicidad</p>
+          <p class="text-slate-600">Ninguna interrupción. Mirás el contenido completo sin cortes comerciales.</p>
+        </div>
+        <div class="rounded-xl bg-blue-50 border border-blue-100 px-4 py-3">
+          <p class="font-semibold text-slate-800 mb-1">👤 Miembro extra</p>
+          <p class="text-slate-600">Podés agregar 1 persona de otro hogar como miembro extra.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚖️</span>
+        <span>Estándar vs Estándar con anuncios: la diferencia real</span>
+      </h2>
+      <p class="text-slate-700 text-[15px]">La pregunta que más se hace la gente antes de elegir:</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 text-left">
+              <th class="px-3 py-2 rounded-tl-xl">Característica</th>
+              <th class="px-3 py-2 text-center">Con anuncios</th>
+              <th class="px-3 py-2 text-center rounded-tr-xl">Estándar ✓</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+              <td class="px-3 py-2">Publicidad</td>
+              <td class="px-3 py-2 text-center text-red-500">Sí ❌</td>
+              <td class="px-3 py-2 text-center text-green-500">No ✅</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2">Calidad</td>
+              <td class="px-3 py-2 text-center">Full HD</td>
+              <td class="px-3 py-2 text-center">Full HD</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2">Pantallas</td>
+              <td class="px-3 py-2 text-center">2</td>
+              <td class="px-3 py-2 text-center">2</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2">Todo el catálogo</td>
+              <td class="px-3 py-2 text-center text-amber-500">Casi todo</td>
+              <td class="px-3 py-2 text-center text-green-500">Completo ✅</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 rounded-bl-xl">Miembro extra</td>
+              <td class="px-3 py-2 text-center text-red-500">No ❌</td>
+              <td class="px-3 py-2 text-center text-green-500 rounded-br-xl">Sí (1) ✅</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-slate-600">Si los anuncios te molestan (y es lo más común), el Estándar es claramente la mejor opción dentro de ese rango de precio.</p>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona el proceso de compra</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li>Consultás disponibilidad desde el botón de esta página.</li>
+        <li>Te confirmamos <strong>precio en pesos</strong> y medios de pago disponibles.</li>
+        <li>Pagás en ARS — transferencia, Mercado Pago u otros medios locales.</li>
+        <li>Activamos el acceso y te guiamos para entrar a Netflix.</li>
+        <li>Usás el plan Estándar sin renovación automática ni sorpresas.</li>
+      </ol>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Netflix Estándar Argentina · Precio en pesos</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Full HD</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ 2 pantallas</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin publicidad</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio en pesos</span>
+      </div>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Consultanos disponibilidad y te confirmamos precio en pesos y medios de pago activos.
+      </p>
+      <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>

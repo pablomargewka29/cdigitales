@@ -1,0 +1,283 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Cómo pagar Netflix más barato en Argentina (2026): guía completa";
+
+const description =
+  "Netflix no tiene descuentos oficiales en Argentina y cobra hasta un 51% extra en impuestos. Pero hay formas reales de acceder al servicio pagando menos. Te explicamos todas las opciones disponibles hoy.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/como-pagar-netflix-mas-barato-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/como-pagar-netflix-mas-barato-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-04-01",
+      dateModified: "2026-04-03",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Cómo pagar Netflix más barato en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Las opciones para pagar menos por Netflix en Argentina incluyen: elegir el plan Estándar con anuncios, evitar pagar con tarjeta de crédito para esquivar impuestos variables, o acceder a través de servicios locales con precio fijo en pesos sin el 51% de recargo impositivo.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Netflix tiene descuentos en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "No. Netflix no tiene acuerdos de descuento con Mercado Pago, telefonías ni ningún otro servicio en Argentina, a diferencia de Disney+, Max y Amazon Prime que sí los tienen.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuál es el plan más barato de Netflix en Argentina en 2026?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "El plan Estándar con anuncios es el más económico disponible desde que Netflix eliminó el plan Básico en 2025. Cuesta ~$10.900 base, pero con el 51% de impuestos llega a ~$16.460 por mes.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-green-700 via-emerald-600 to-teal-500 text-green-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>💰</span>
+            <span>Guía de ahorro Netflix Argentina · Actualizada 2026</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Cómo pagar Netflix más barato en Argentina en 2026
+          </h1>
+          <p class="text-sm md:text-base text-green-100/90">
+            Netflix no regala descuentos en Argentina, pero hay formas reales de pagar menos. Desde elegir bien el plan hasta acceder por caminos alternativos: acá está todo lo que funciona hoy 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Resumen de opciones</p>
+      <p>
+        Dentro de Netflix: bajá al plan con anuncios (~$16.460/mes). Por fuera: accedé con precio fijo en pesos a través de servicios locales que no aplican el 51% de impuestos. No existe un descuento oficial de Netflix en Argentina.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🔍 Por qué Netflix sale tan caro en Argentina (antes de las soluciones)
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Para entender cómo pagar menos, primero hay que entender por qué se paga tanto. El precio final de Netflix en Argentina es el resultado de tres capas que se acumulan:
+      </p>
+      <div class="grid gap-3 md:grid-cols-3 text-sm text-center">
+        <div class="rounded-2xl bg-slate-50 border border-slate-100 px-4 py-4">
+          <p class="text-2xl mb-2">💵</p>
+          <p class="font-semibold text-slate-800">Precio base en dólares</p>
+          <p class="text-slate-500 mt-1 text-xs">El costo del plan según la tabla de Netflix, atado al tipo de cambio.</p>
+        </div>
+        <div class="rounded-2xl bg-red-50 border border-red-100 px-4 py-4">
+          <p class="text-2xl mb-2">🧾</p>
+          <p class="font-semibold text-slate-800">+51% de impuestos</p>
+          <p class="text-slate-500 mt-1 text-xs">IVA (21%) + percepción de Ganancias (30%). Obligatorio en servicios digitales del exterior.</p>
+        </div>
+        <div class="rounded-2xl bg-amber-50 border border-amber-100 px-4 py-4">
+          <p class="text-2xl mb-2">📈</p>
+          <p class="font-semibold text-slate-800">Aumentos frecuentes</p>
+          <p class="text-slate-500 mt-1 text-xs">4 aumentos entre 2025 y 2026. El precio base sube regularmente.</p>
+        </div>
+      </div>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        El resultado: el plan Estándar (sin anuncios) llega a <strong>~$31.710 por mes</strong> con todo incluido. El más caro entre todas las plataformas de streaming en Argentina.
+      </p>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🛒 Opciones dentro de Netflix oficial para pagar menos
+      </h2>
+
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-green-200 bg-green-50 px-5 py-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-green-600 font-bold text-lg">✅</span>
+            <p class="font-semibold text-slate-800">Usar el plan Estándar con anuncios</p>
+          </div>
+          <p class="text-sm text-slate-600">Es el plan más barato disponible desde que eliminaron el Básico. Cuesta ~$16.460/mes con impuestos. La contra: incluye publicidad entre episodios. Para quienes no les molesta, es la opción más económica dentro de la plataforma.</p>
+        </div>
+
+        <div class="rounded-2xl border border-yellow-200 bg-yellow-50 px-5 py-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-yellow-600 font-bold text-lg">⚠️</span>
+            <p class="font-semibold text-slate-800">Rotar entre plataformas</p>
+          </div>
+          <p class="text-sm text-slate-600">Ver Netflix un mes, Disney+ el siguiente, Max el otro. Nunca pagás dos a la vez. Requiere disciplina pero puede reducir bastante el gasto mensual en streaming.</p>
+        </div>
+
+        <div class="rounded-2xl border border-red-200 bg-red-50 px-5 py-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-red-500 font-bold text-lg">❌</span>
+            <p class="font-semibold text-slate-800">Buscar un período de prueba gratuito</p>
+          </div>
+          <p class="text-sm text-slate-600">Netflix eliminó el período de prueba gratuito en Argentina. No existe forma de acceder gratis para "probar". Cualquier sitio que lo prometa es engañoso.</p>
+        </div>
+
+        <div class="rounded-2xl border border-red-200 bg-red-50 px-5 py-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-red-500 font-bold text-lg">❌</span>
+            <p class="font-semibold text-slate-800">Esperar un descuento oficial de Netflix</p>
+          </div>
+          <p class="text-sm text-slate-600">A diferencia de Disney+ (que tiene promo con Mercado Pago) o Max (con acuerdos de cableoperadoras), Netflix no tiene descuentos oficiales en Argentina. No hay cupones ni promociones que esperar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>💡</span>
+        <span>La opción más elegida para pagar Netflix menos en Argentina</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Cada vez más argentinos están accediendo a Netflix a través de <strong>cuentas con precio fijo en pesos</strong>. La lógica es simple: si el costo alto viene principalmente de los impuestos del 51%, la forma de evitarlo es no procesar el pago como una transacción internacional directa.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Con una cuenta gestionada, el pago internacional ya fue resuelto por el servicio. Vos pagás en pesos un valor definido de antemano, sin IVA adicional, sin percepción de Ganancias, sin variación por tipo de cambio.
+      </p>
+
+      <div class="rounded-2xl bg-white/80 border border-indigo-100 px-5 py-5 space-y-3 text-sm">
+        <p class="font-semibold text-base text-slate-800">🧮 La diferencia en números</p>
+        <div class="space-y-2 text-slate-700">
+          <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+            <span>Netflix Estándar oficial (con impuestos)</span>
+            <span class="font-bold text-red-600">~$31.710/mes</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+            <span>Netflix con anuncios oficial (con impuestos)</span>
+            <span class="font-bold text-orange-500">~$16.460/mes</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span>Cuenta gestionada con precio en pesos</span>
+            <span class="font-bold text-green-600">Precio fijo sin recargos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">✅ Qué ganás</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Precio definido de antemano en pesos.</li>
+            <li>Sin IVA ni percepción encima.</li>
+            <li>Sin variación por tipo de cambio.</li>
+            <li>Sin tarjeta de crédito ni débito necesaria.</li>
+            <li>Sin renovación automática sorpresa.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">🎯 Para quién tiene sentido</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Los que pagaron el plan oficial y se cansaron de los aumentos.</li>
+            <li>Quienes no tienen tarjeta habilitada para pagos internacionales.</li>
+            <li>Los que buscan presupuesto fijo mensual.</li>
+            <li>Los que quedaron sin cuenta compartida.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> podés acceder a Netflix con precio en pesos desde Argentina. Sin el 51% de impuestos variables y sin sorpresas en el resumen de tu tarjeta.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">❓ Preguntas frecuentes</h2>
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Hay algún truco para pagar Netflix en dólares y que salga más barato?</p>
+          <p class="mt-1">Técnicamente si pagás desde una cuenta en dólares no se aplica la percepción del 30%, lo que baja el recargo. Pero igual tiene el IVA del 21% y necesitás tener dólares disponibles en tu cuenta bancaria.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Funciona usar VPN para pagar Netflix de otro país más barato?</p>
+          <p class="mt-1">Netflix detecta activamente el uso de VPNs y puede suspender la cuenta si detecta inconsistencias entre la ubicación del pago y la del uso. No es una opción confiable ni recomendable.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Puedo pagar Netflix con puntos o cashback de mi tarjeta?</p>
+          <p class="mt-1">Depende de tu banco y programa de puntos. Algunos bancos permiten canjear puntos para pagar servicios de suscripción. Consultá con tu banco si esa opción está disponible para Netflix.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Netflix va a tener descuentos con Mercado Pago como Disney+?</p>
+          <p class="mt-1">Por ahora no hay acuerdos de ese tipo. Netflix históricamente no ha tenido alianzas de descuento en Argentina, a diferencia de sus competidores.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎬 Netflix al precio que tiene sentido, no al que impone la plataforma</h2>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Podés acceder a Netflix con precio fijo en pesos desde Argentina, sin el recargo del 51% de impuestos y sin esperar un descuento oficial que nunca llega.
+      </p>
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

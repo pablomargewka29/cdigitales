@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "El miembro extra de Netflix es muy caro en Argentina (2026): alternativas";
+
+const description =
+  "¿Te parece caro pagar el miembro extra de Netflix en Argentina? Con impuestos incluidos el costo se dispara. Te explicamos cuánto sale realmente y por qué muchos prefieren tener su propia cuenta en lugar de pagar el extra.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-miembro-extra-muy-caro-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-miembro-extra-muy-caro-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-03-05",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Cuánto sale el miembro extra de Netflix en Argentina en 2026?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "El miembro extra de Netflix cuesta alrededor de $5.399 por mes en precio base. Con el 51% de impuestos que se aplican en Argentina, el precio final ronda los $8.150 mensuales.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Conviene pagar el miembro extra o mejor tener una cuenta propia?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Depende del contexto, pero en muchos casos una cuenta individual gestionada con precio en pesos puede ser más conveniente que pagar el miembro extra de Netflix con todos los impuestos incluidos.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-emerald-700 via-teal-600 to-cyan-600 text-emerald-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>👤</span>
+            <span>Miembro extra Netflix Argentina · Actualizado 2026</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            El miembro extra de Netflix sale carísimo en Argentina
+          </h1>
+          <p class="text-sm md:text-base text-emerald-100/90">
+            Netflix lo presenta como "una forma económica de incluir a alguien más", pero con los impuestos argentinos el precio del miembro extra puede sorprenderte. Acá hacemos los números reales 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        El miembro extra de Netflix cuesta ~$5.399/mes base. Con el 51% de impuestos que se aplican en Argentina, el precio real que pagás ronda los <strong>$8.150 por mes</strong>. Y eso se suma al costo del plan principal que ya estás pagando.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        💰 El precio real del miembro extra con impuestos
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Cuando Netflix anuncia el costo del miembro extra, muestra el precio base sin impuestos. Pero en Argentina, como en todos los servicios digitales del exterior, se aplica el 51% adicional (IVA + percepción de Ganancias).
+      </p>
+
+      <div class="rounded-2xl border border-slate-200 px-5 py-5 space-y-3">
+        <p class="font-semibold text-slate-800 text-[15px]">🧮 Desglose del costo del miembro extra</p>
+        <div class="grid grid-cols-3 gap-3 text-sm text-center">
+          <div class="bg-slate-50 rounded-xl px-3 py-3">
+            <p class="text-xs text-slate-500 mb-1">Precio base</p>
+            <p class="font-bold text-slate-700 text-base">~$5.399</p>
+          </div>
+          <div class="bg-red-50 rounded-xl px-3 py-3">
+            <p class="text-xs text-red-500 mb-1">+51% impuestos</p>
+            <p class="font-bold text-red-600 text-base">+$2.753</p>
+          </div>
+          <div class="bg-orange-50 rounded-xl px-3 py-3">
+            <p class="text-xs text-orange-500 mb-1">Total real/mes</p>
+            <p class="font-bold text-orange-700 text-base">~$8.152</p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400">* Valor aproximado a abril 2026. Puede variar con actualizaciones de precios.</p>
+      </div>
+
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">😮 Lo que esto significa en el contexto del plan</p>
+        <p>Si tenés el plan Estándar (~$31.710/mes con impuestos) y agregás un miembro extra (~$8.152), el costo total del hogar es <strong>casi $40.000 por mes</strong>. Por ese precio, el miembro extra podría tener su propia cuenta sin depender de nadie.</p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        ⚖️ ¿Qué planes permiten agregar miembro extra?
+      </h2>
+      <p class="text-slate-700 text-[15px]">No todos los planes de Netflix en Argentina permiten esta opción:</p>
+      <div class="space-y-3 text-[15px]">
+        <div class="flex items-center gap-3 rounded-xl bg-slate-50 border border-slate-100 px-4 py-3">
+          <span class="text-2xl">❌</span>
+          <div>
+            <p class="font-semibold text-slate-800">Estándar con anuncios</p>
+            <p class="text-sm text-slate-500">No permite agregar miembros extra. Si querés incluir a alguien, necesitás cambiar de plan.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 rounded-xl bg-green-50 border border-green-100 px-4 py-3">
+          <span class="text-2xl">✅</span>
+          <div>
+            <p class="font-semibold text-slate-800">Estándar</p>
+            <p class="text-sm text-slate-500">Permite 1 miembro extra. El costo del plan ya es ~$31.710 con impuestos, más ~$8.152 del extra.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 rounded-xl bg-green-50 border border-green-100 px-4 py-3">
+          <span class="text-2xl">✅✅</span>
+          <div>
+            <p class="font-semibold text-slate-800">Premium</p>
+            <p class="text-sm text-slate-500">Permite hasta 2 miembros extra. El plan base ya está por encima de $39.000 con impuestos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>¿Por qué muchos prefieren una cuenta propia en lugar del miembro extra?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Cuando hacés los números, el miembro extra no siempre es la opción más conveniente. Estás pagando ~$8.152 por mes para depender de la cuenta de otra persona, sin control propio sobre el plan y sin independencia.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Muchos argentinos están optando por una <strong>cuenta individual con precio en pesos</strong>, donde no dependen de nadie, tienen su propio acceso y pagan un precio fijo sin el recargo impositivo del 51%.
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">😕 Miembro extra en Netflix oficial</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>~$8.152/mes con impuestos.</li>
+            <li>Dependés de que el titular mantenga el plan.</li>
+            <li>Sin control sobre cambios de plan o cancelación.</li>
+            <li>Requiere que el titular tenga plan Estándar o Premium.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">✅ Cuenta individual gestionada</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Precio fijo en pesos, sin impuestos variables.</li>
+            <li>Independencia total, no dependés de nadie.</li>
+            <li>Sin renovación automática sorpresa.</li>
+            <li>Podés elegir el período que más te conviene.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> podés acceder a Netflix con precio en pesos, de forma independiente, sin necesitar que nadie te agregue como miembro extra.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">❓ Preguntas frecuentes sobre el miembro extra</h2>
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿El miembro extra tiene las mismas funciones que una cuenta normal?</p>
+          <p class="mt-1">Tiene su propio perfil, historial y contraseña diferente. Puede ver contenido en los dispositivos habilitados para su hogar. Pero el plan y la suscripción los controla el titular de la cuenta principal.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Qué pasa si el titular cancela la cuenta?</p>
+          <p class="mt-1">Si el titular cancela el plan, el miembro extra pierde el acceso inmediatamente. Dependés completamente de que la otra persona mantenga la suscripción activa.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿El miembro extra puede ver Netflix en 4K?</p>
+          <p class="mt-1">Depende del plan que tenga el titular. Si tiene el plan Premium, el miembro extra puede acceder en Ultra HD. Con el plan Estándar, el límite es Full HD.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Hay descuento si pagás el miembro extra por varios meses?</p>
+          <p class="mt-1">No. Netflix cobra el miembro extra de forma mensual sin opción de descuento por período extendido.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎬 Tu propio Netflix, sin depender de nadie ni pagar impuestos de más</h2>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si el miembro extra te parece caro (y con razón), podés tener acceso independiente a Netflix con precio en pesos desde Argentina.
+      </p>
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

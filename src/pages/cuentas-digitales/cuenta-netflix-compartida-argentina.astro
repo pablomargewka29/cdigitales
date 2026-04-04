@@ -1,0 +1,204 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Cuenta Netflix compartida Argentina 2026 — Acceso propio en pesos";
+const description = "Netflix bloqueó las cuentas compartidas entre hogares en Argentina. Si quedaste sin acceso, podés tener tu propia cuenta individual con precio en pesos, sin depender de nadie y sin pagar el plan completo con impuestos.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/cuenta-netflix-compartida-argentina";
+
+const priceARS = 20000;
+const priceCurrency = "ARS";
+const PRODUCT_NAME = "Cuenta Netflix compartida Argentina";
+const PRODUCT_AMOUNT = 20000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/cuenta-netflix-compartida-argentina"
+  ogImage="/images/netflix-prepago-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Cuenta Netflix compartida Argentina",
+      description,
+      brand: { "@type": "Organization", name: "Netflix" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/netflix-prepago-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        reviewCount: "44",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Florencia A." },
+          reviewBody: "Netflix me sacó de la cuenta de mi hermana y no quería pagar $31.000 por mes. Acá encontré una opción mucho más accesible. Perfecto.",
+          datePublished: "2026-02-25",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Ramiro C." },
+          reviewBody: "Me independicé del plan de mi amigo. Tengo mi propio acceso, mis propias listas y no molesto a nadie. Mucho mejor.",
+          datePublished: "2026-03-08",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Se puede seguir compartir Netflix en Argentina en 2026?",
+          acceptedAnswer: { "@type": "Answer", text: "Netflix bloqueó el uso compartido entre hogares distintos. Para acceder desde un domicilio diferente al titular, hay que pagar miembro extra o tener una suscripción independiente." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué alternativa hay para quienes quedaron sin cuenta compartida?",
+          acceptedAnswer: { "@type": "Answer", text: "La opción más accesible es conseguir acceso individual a Netflix con precio en pesos, sin pagar el plan oficial completo con el 51% de impuestos." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-rose-900 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-rose-400/60 rounded-full px-3 py-1 w-fit">
+            <span>👤</span>
+            <span>Tu propio acceso · Sin cuenta compartida · Argentina 🇦🇷</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            ¿Netflix te sacó de la cuenta compartida?
+          </h1>
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Tenés una mejor opción que pagar $31.000/mes</p>
+            <p>Accedé a Netflix de forma independiente con precio en pesos. Sin depender de nadie, sin el plan completo con impuestos, sin complicaciones.</p>
+          </div>
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ Tu propio acceso, independiente de cualquier otro usuario.</li>
+            <li>✅ Precio en pesos sin el 51% de impuestos encima.</li>
+            <li>✅ Sin tarjeta de crédito necesaria.</li>
+            <li>✅ Mucho más barato que el miembro extra oficial (~$8.150/mes).</li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Consultar / Comprar →
+            </a>
+            <a href="/ayuda/netflix-no-me-deja-compartir-cuenta-argentina" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Entender el bloqueo
+            </a>
+          </div>
+          <p class="text-xs text-slate-400 pt-1">Precio de referencia: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🏠</span>
+        <span>¿Qué pasó con las cuentas compartidas en Argentina?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Netflix implementó la restricción "un hogar por cuenta". Si antes usabas la cuenta de tu hermana, tu pareja que vive en otro lugar o un amigo, eso ya no funciona. El sistema detecta que el acceso viene de una IP diferente y eventualmente bloquea el dispositivo.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Las opciones que Netflix ofrece para seguir: pagar un <strong>miembro extra</strong> (~$8.152/mes con impuestos) o que el "expulsado" pague un <strong>plan nuevo completo</strong> (~$31.710/mes el Estándar). Ninguna es barata.
+      </p>
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-3 text-sm text-slate-700">
+        <p class="font-semibold mb-1">💡 El dato que cambia la ecuación</p>
+        <p>El miembro extra oficial cuesta ~$8.152/mes. Una cuenta individual gestionada con precio en pesos puede ser más conveniente Y te da independencia total.</p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚖️</span>
+        <span>Comparativa: tus opciones reales hoy</span>
+      </h2>
+      <div class="space-y-3 text-sm">
+        <div class="rounded-xl border border-red-200 bg-red-50 px-4 py-3">
+          <p class="font-semibold text-slate-800">❌ Quedarte sin Netflix</p>
+          <p class="text-slate-600 mt-1">La opción más incómoda. Perdés acceso al contenido que seguías.</p>
+        </div>
+        <div class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+          <p class="font-semibold text-slate-800">⚠️ Pagar el miembro extra oficial</p>
+          <p class="text-slate-600 mt-1">~$8.152/mes con impuestos. Seguís dependiendo del titular. Si cancela, perdés el acceso.</p>
+        </div>
+        <div class="rounded-xl border border-red-200 bg-red-50 px-4 py-3">
+          <p class="font-semibold text-slate-800">❌ Plan oficial propio</p>
+          <p class="text-slate-600 mt-1">~$31.710/mes el Estándar con impuestos. El más caro de todos.</p>
+        </div>
+        <div class="rounded-xl border border-green-200 bg-green-50 px-4 py-3">
+          <p class="font-semibold text-slate-800">✅ Cuenta individual gestionada (nosotros)</p>
+          <p class="text-slate-600 mt-1">Precio fijo en pesos. Independencia total. Sin impuestos variables. Sin depender de nadie.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona el proceso</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li>Consultás disponibilidad desde el botón de esta página.</li>
+        <li>Te confirmamos precio en pesos y medios de pago disponibles.</li>
+        <li>Pagás en ARS — transferencia, Mercado Pago u otro medio local.</li>
+        <li>Activamos el acceso y te guiamos para entrar a Netflix.</li>
+        <li>Tu acceso es tuyo. Independiente. Sin depender de ningún otro usuario.</li>
+      </ol>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Tu propio acceso a Netflix · Argentina · Precio en pesos</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Acceso independiente</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio en pesos</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin depender de nadie</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin tarjeta internacional</span>
+      </div>
+      <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>

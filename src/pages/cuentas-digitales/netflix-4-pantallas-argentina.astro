@@ -1,0 +1,235 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Netflix 4 pantallas Argentina 2026 — Ultra HD, precio en pesos";
+const description = "Netflix con 4 pantallas simultáneas en Argentina. Calidad Ultra HD, ideal para hogares grandes o quienes quieren lo mejor. Precio en pesos sin el 51% de impuestos. Sin tarjeta internacional.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/netflix-4-pantallas-argentina";
+
+const priceARS = 28000;
+const priceCurrency = "ARS";
+const PRODUCT_NAME = "Netflix 4 pantallas Argentina";
+const PRODUCT_AMOUNT = 28000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/netflix-4-pantallas-argentina"
+  ogImage="/images/netflix-prepago-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Netflix 4 pantallas Argentina",
+      description,
+      brand: { "@type": "Organization", name: "Netflix" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/netflix-prepago-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "23",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Roberto A." },
+          reviewBody: "En casa somos 4 y todos queremos ver cosas distintas. Con las 4 pantallas ya no hay más peleas. Y Ultra HD en el televisor se ve increíble.",
+          datePublished: "2026-03-14",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Paola M." },
+          reviewBody: "Tengo Smart TV 4K y hasta que no probé Ultra HD no sabía lo que me perdía. Vale totalmente la pena el Premium.",
+          datePublished: "2026-02-22",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué plan de Netflix tiene 4 pantallas en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Solo el plan Premium permite 4 pantallas simultáneas en Netflix. Es el único plan con Ultra HD (4K) y Dolby Atmos." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Vale la pena Netflix 4 pantallas si tenemos Smart TV 4K?",
+          acceptedAnswer: { "@type": "Answer", text: "Sí, sin duda. El plan Premium es el único que transmite en Ultra HD (4K), por lo que es el único que aprovecha al máximo un televisor 4K. Los planes Estándar solo llegan a Full HD (1080p)." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-amber-900 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-amber-400/60 rounded-full px-3 py-1 w-fit">
+            <span>📺</span>
+            <span>Netflix 4 pantallas · Ultra HD · Argentina 🇦🇷</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix 4 pantallas simultáneas en Argentina
+          </h1>
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Para hogares grandes y amantes del 4K</p>
+            <p>El único plan de Netflix con Ultra HD real y 4 pantallas al mismo tiempo. Precio en pesos sin impuestos variables.</p>
+          </div>
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ 4 pantallas simultáneas — todos miran lo que quieren.</li>
+            <li>✅ Ultra HD (4K) + HDR — la mejor calidad de imagen disponible.</li>
+            <li>✅ Dolby Atmos en contenido seleccionado.</li>
+            <li>✅ Precio en pesos sin el recargo del 51%.</li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Consultar / Comprar →
+            </a>
+            <a href="/cuentas-digitales/netflix-estandar-argentina" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Ver plan 2 pantallas
+            </a>
+          </div>
+          <p class="text-xs text-slate-400 pt-1">Precio de referencia: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🖥️</span>
+        <span>¿Cuándo realmente vale la pena Netflix 4 pantallas?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Las 4 pantallas simultáneas tienen sentido en contextos específicos. No todo el mundo las necesita, pero cuando las necesitás, no hay alternativa:
+      </p>
+      <div class="space-y-2 text-[15px] text-slate-700">
+        <div class="flex items-start gap-2">
+          <span class="text-amber-500 mt-0.5">✓</span>
+          <p><strong>Familia de 4 o más personas</strong> donde cada uno quiere ver algo distinto al mismo tiempo.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-amber-500 mt-0.5">✓</span>
+          <p><strong>Smart TV 4K</strong> — el Ultra HD solo está disponible en el plan Premium. Con Estándar solo llegás a 1080p.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-amber-500 mt-0.5">✓</span>
+          <p><strong>Equipo de sonido</strong> — Dolby Atmos está disponible exclusivamente en el Premium.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-amber-500 mt-0.5">✓</span>
+          <p><strong>Querés agregar hasta 2 miembros extra</strong> de otros hogares (solo disponible en Premium).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚖️</span>
+        <span>2 pantallas vs 4 pantallas: ¿cuál elegir?</span>
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 text-left">
+              <th class="px-3 py-2 rounded-tl-xl">Característica</th>
+              <th class="px-3 py-2 text-center">Estándar (2 pant.)</th>
+              <th class="px-3 py-2 text-center rounded-tr-xl">Premium (4 pant.) ✓</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+              <td class="px-3 py-2">Pantallas simultáneas</td>
+              <td class="px-3 py-2 text-center">2</td>
+              <td class="px-3 py-2 text-center font-semibold text-amber-600">4 ✅</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2">Calidad máxima</td>
+              <td class="px-3 py-2 text-center">Full HD (1080p)</td>
+              <td class="px-3 py-2 text-center font-semibold text-amber-600">Ultra HD 4K ✅</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2">Dolby Atmos</td>
+              <td class="px-3 py-2 text-center text-red-500">No</td>
+              <td class="px-3 py-2 text-center text-green-500">Sí ✅</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2">Miembros extra</td>
+              <td class="px-3 py-2 text-center">1 máximo</td>
+              <td class="px-3 py-2 text-center font-semibold text-amber-600">2 máximo ✅</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-2 rounded-bl-xl">Publicidad</td>
+              <td class="px-3 py-2 text-center">No</td>
+              <td class="px-3 py-2 text-center rounded-br-xl">No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona el proceso</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li>Consultás disponibilidad desde el botón de esta página.</li>
+        <li>Te confirmamos precio en pesos y medios de pago disponibles.</li>
+        <li>Pagás en ARS — transferencia, Mercado Pago u otro medio local.</li>
+        <li>Activamos el acceso Premium con 4 pantallas y te guiamos para configurarlo.</li>
+        <li>Usás Netflix 4K por el período elegido. Sin renovación automática.</li>
+      </ol>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Netflix 4 pantallas · Ultra HD · Argentina</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Ultra HD 4K</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ 4 pantallas</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio en pesos</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Dolby Atmos</span>
+      </div>
+      <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>

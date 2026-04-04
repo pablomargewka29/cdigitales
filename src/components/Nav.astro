@@ -1,0 +1,26 @@
+---
+const nav = [
+  { label: "Inicio", href: "/" },
+  { label: "Ayuda", href: "/ayuda/" },
+  { label: "Cuentas Premium", href: "/cuentas-digitales/" },
+  { label: "Opiniones", href: "/opiniones" },
+  { label: "Acerca de", href: "/acerca" },
+  { label: "Contacto", href: "/contacto" },
+];
+---
+<header class="navbar sticky top-0 z-40 backdrop-blur bg-white/70 shadow-sm">
+  <div class="container h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1d4ed8"/>
+        <text x="32" y="44" font-family="system-ui,-apple-system,sans-serif" font-size="28" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-1">CD</text>
+      </svg>
+      <span class="font-bold text-slate-900">CuentasDigitales</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-slate-700">
+      {nav.map((i) => (
+        <a href={i.href} class="hover:text-brand-700">{i.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

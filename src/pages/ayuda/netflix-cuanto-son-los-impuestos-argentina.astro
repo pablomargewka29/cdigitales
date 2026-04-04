@@ -1,0 +1,278 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "¿Cuánto son los impuestos de Netflix en Argentina? (2026) Guía completa";
+
+const description =
+  "Netflix en Argentina tiene un recargo impositivo del 51% sobre el precio base. Te explicamos qué impuestos se aplican, cómo afectan el precio final y cómo muchos argentinos acceden a Netflix sin pagar ese extra.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-cuanto-son-los-impuestos-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-cuanto-son-los-impuestos-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-02-01",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué impuestos se cobran sobre Netflix en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "En Argentina se aplican dos impuestos principales sobre Netflix: 21% de IVA y 30% de percepción a cuenta de Ganancias y Bienes Personales. Esto suma un total del 51% adicional sobre el precio base.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cómo evitar pagar los impuestos del 51% en Netflix Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Una alternativa es acceder a Netflix a través de servicios locales que ofrecen cuentas con precio en pesos ya definido, evitando la aplicación de los impuestos variables sobre el precio base en dólares.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿El impuesto PAIS todavía se aplica a Netflix en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "El Impuesto PAIS fue eliminado en septiembre de 2024. Ya no se aplica sobre Netflix ni otros servicios digitales en Argentina desde esa fecha.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-500 text-orange-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>🧾</span>
+            <span>Impuestos sobre streaming · Actualizado abril 2026</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Los impuestos de Netflix en Argentina son más de lo que imaginás
+          </h1>
+
+          <p class="text-sm md:text-base text-orange-100/90">
+            El precio que muestra Netflix en su sitio es solo la mitad de la historia. Con todos los impuestos incluidos, el monto final puede ser un 51% mayor. Te desglosamos cada peso 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        Sobre Netflix en Argentina se aplica un <strong>51% adicional de impuestos</strong>: 21% de IVA + 30% de percepción de Ganancias. Si el plan Estándar cuesta $21.000 base, con impuestos te cobran cerca de $31.710. El Impuesto PAIS ya no existe desde septiembre 2024.
+      </p>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    {/* BLOQUE 1 */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🧾 ¿Qué impuestos se cobran sobre Netflix en Argentina?
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Netflix factura desde el exterior, por lo que el Estado argentino aplica impuestos sobre ese consumo en moneda extranjera. Hay dos cargos principales:
+      </p>
+
+      <div class="space-y-3">
+        <div class="rounded-xl bg-orange-50 border border-orange-200 px-4 py-4">
+          <p class="font-semibold text-slate-800">📌 IVA — 21%</p>
+          <p class="text-sm text-slate-600 mt-1">El Impuesto al Valor Agregado se aplica sobre todos los servicios digitales del exterior, incluyendo Netflix, Spotify, Disney+, etc. No importa el plan, siempre es el 21%.</p>
+        </div>
+
+        <div class="rounded-xl bg-orange-50 border border-orange-200 px-4 py-4">
+          <p class="font-semibold text-slate-800">📌 Percepción de Ganancias y Bienes Personales — 30%</p>
+          <p class="text-sm text-slate-600 mt-1">Este cargo se aplica como adelanto del impuesto a las ganancias. Sumado al IVA, eleva el total impositivo al 51% sobre el precio base.</p>
+        </div>
+
+        <div class="rounded-xl bg-green-50 border border-green-200 px-4 py-4">
+          <p class="font-semibold text-slate-800">✅ Impuesto PAIS — Ya no existe</p>
+          <p class="text-sm text-slate-600 mt-1">El Impuesto PAIS fue eliminado en septiembre de 2024 y ya no se aplica sobre Netflix ni ningún otro servicio digital. Esto bajó algo el costo, pero el 51% base sigue vigente.</p>
+        </div>
+      </div>
+    </section>
+
+    {/* BLOQUE 2 */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        💰 Precios reales de Netflix Argentina 2026 (con impuestos)
+      </h2>
+
+      <p class="text-slate-700 text-[15px]">
+        Así queda el precio final de cada plan con los impuestos incluidos, a abril 2026:
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700">
+              <th class="text-left px-3 py-2 rounded-tl-xl">Plan</th>
+              <th class="text-right px-3 py-2">Precio base</th>
+              <th class="text-right px-3 py-2">+51% imp.</th>
+              <th class="text-right px-3 py-2 rounded-tr-xl">Total aprox.</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="text-slate-700">
+              <td class="px-3 py-3">Est. con anuncios</td>
+              <td class="text-right px-3 py-3">$10.900</td>
+              <td class="text-right px-3 py-3 text-red-500">+$5.559</td>
+              <td class="text-right px-3 py-3 font-semibold">~$16.460</td>
+            </tr>
+            <tr class="text-slate-700">
+              <td class="px-3 py-3">Estándar</td>
+              <td class="text-right px-3 py-3">$21.000</td>
+              <td class="text-right px-3 py-3 text-red-500">+$10.710</td>
+              <td class="text-right px-3 py-3 font-semibold">~$31.710</td>
+            </tr>
+            <tr class="text-slate-700">
+              <td class="px-3 py-3 rounded-bl-xl">Premium</td>
+              <td class="text-right px-3 py-3">$26.000+</td>
+              <td class="text-right px-3 py-3 text-red-500">+$13.260+</td>
+              <td class="text-right px-3 py-3 font-semibold rounded-br-xl">~$39.000+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-slate-500">* Valores aproximados a abril 2026. Pueden variar según el tipo de cambio y actualizaciones de precios de Netflix.</p>
+
+      <div class="rounded-2xl bg-red-50 border border-red-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">😮 Lo que esto significa en términos anuales</p>
+        <p>Si tenés el plan Estándar, con los impuestos estás pagando cerca de <strong>$380.000 al año</strong> solo por Netflix. La carga impositiva representa casi la mitad de lo que pagás.</p>
+      </div>
+    </section>
+
+    {/* BLOQUE 3 - CTA */}
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>¿Cómo acceder a Netflix sin ese 51% de impuestos encima?</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Los impuestos se aplican cuando el cobro se procesa como una <strong>transacción internacional con tarjeta</strong>. Pero si accedés a Netflix a través de un servicio local que ya gestionó el pago, ese recargo no te llega a vos directamente.
+      </p>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La modalidad de <strong>cuentas gestionadas con precio en pesos</strong> funciona así: el servicio se encarga del pago internacional y vos pagás en pesos un precio ya definido. Sin conversiones de moneda, sin percepciones, sin variaciones según el dólar del día.
+      </p>
+
+      <div class="rounded-2xl bg-white/80 border border-indigo-100 px-5 py-5 text-sm text-slate-800 space-y-2">
+        <p class="font-semibold">🧮 El cálculo que cambia todo</p>
+        <p>Pagando directamente en Netflix: precio base + 51% de impuestos + variación por tipo de cambio = precio impredecible cada mes.</p>
+        <p>Con cuenta en pesos: precio fijo en pesos = sabés exactamente cuánto pagás desde el primer momento.</p>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> ofrecemos Netflix con precio en pesos, sin impuestos variables y sin sorpresas en el resumen de tu tarjeta.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        ❓ Preguntas frecuentes sobre impuestos en Netflix Argentina
+      </h2>
+
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Los impuestos son iguales para todos los planes?</p>
+          <p class="mt-1">Sí. El IVA del 21% y la percepción del 30% se aplican sobre el precio base de cualquier plan, sin distinción. Lo que varía es el monto en pesos porque los planes tienen diferentes precios base.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿Puedo recuperar lo que pagué en percepción de Ganancias?</p>
+          <p class="mt-1">La percepción es un pago a cuenta. Si hacés la declaración anual de Ganancias podés computarla. Si no estás alcanzado por Ganancias, podés pedirle a la AFIP que te la devuelva, aunque el proceso es burocrático.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿Las tarjetas de débito también tienen los impuestos?</p>
+          <p class="mt-1">Sí. Los impuestos se aplican sobre el consumo, independientemente de si pagás con débito o crédito. Lo que varía es el tipo de cambio aplicado según el instrumento.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿Por qué el monto que me cobran varía cada mes?</p>
+          <p class="mt-1">Porque los impuestos se calculan sobre el precio en dólares de Netflix, y ese precio en pesos depende del tipo de cambio del día del cobro. A medida que el dólar sube, el precio en pesos también sube.</p>
+        </div>
+      </div>
+    </section>
+
+    {/* HERO FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">
+        🎬 Netflix sin el 51% de impuestos encima
+      </h2>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Sabiendo lo que pagás de impuestos, tiene sentido buscar alternativas con precio fijo en pesos. Mirá las opciones disponibles para acceder a Netflix desde Argentina.
+      </p>
+
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

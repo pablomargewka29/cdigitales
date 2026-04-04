@@ -1,0 +1,269 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Apple TV+ 1 mes prepago en Argentina (2026) — Suscripción activa en pesos, sin renovación";
+const description = "Apple TV+ por 1 mes en Argentina con modalidad prepaga: pagás en pesos, sin renovación automática. Precio final en ARS, soporte local incluido.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/apple-tv-plus-argentina-1-mes";
+
+const priceARS = 20000;
+const priceCurrency = "ARS";
+
+const PRODUCT_NAME = "Apple TV+ 1 mes prepago en Argentina";
+const PRODUCT_AMOUNT = 20000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/apple-tv-plus-argentina-1-mes"
+  ogImage="/images/apple-tv-plus-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url,
+      inLanguage: "es-AR",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Apple TV+ 1 mes prepago en Argentina (suscripción activa)",
+      description,
+      brand: { "@type": "Organization", name: "Apple TV+" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/apple-tv-plus-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.7",
+        reviewCount: "8",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Nicolás A." },
+          reviewBody: "Activé Apple TV+ para ver Severance. Perfecto, precio en pesos y sin complicaciones.",
+          datePublished: "2025-12-27",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Marcela C." },
+          reviewBody: "Sin drama de ID de Apple en otro país. Activación guiada y clara. Muy recomendable.",
+          datePublished: "2026-01-16",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "4", bestRating: "5" },
+          author: { "@type": "Person", name: "Juan P." },
+          reviewBody: "Bien. El proceso requiere un paso más pero el soporte lo explicó bien.",
+          datePublished: "2025-11-24",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué es Apple TV+ 1 mes prepago en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Es una modalidad prepaga por tiempo fijo (1 mes). Pagás por adelantado, en pesos, y no hay renovaciones automáticas. Cuando termina el período, el acceso se corta y solo se reactiva si elegís renovar." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué conviene la modalidad prepaga en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Porque te permite evitar consumo variable en dólares, tener precio claro en pesos y resolver casos donde la tarjeta falla o es rechazada. Es una alternativa simple con soporte local para Argentina." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Apple TV+ funciona en la app oficial?",
+          acceptedAnswer: { "@type": "Answer", text: "Sí. Apple TV+ funciona en la app oficial en Smart TV, iPhone, iPad, Mac y PC vía web." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Se renueva automáticamente?",
+          acceptedAnswer: { "@type": "Answer", text: "No. La modalidad prepaga por 1 mes no se renueva sola. Cuando termina el período, se corta y solo continúa si elegís contratar otro período." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué medios de pago aceptan en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Según disponibilidad, podés pagar en pesos con transferencia bancaria, billeteras virtuales locales o tarjeta emitida en Argentina. Te confirmamos las opciones al consultar." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-slate-400/60 rounded-full px-3 py-1 w-fit">
+            <span>🍎</span>
+            <span>Apple TV+ prepago · Argentina 🇦🇷</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Apple TV+ 1 mes prepago en Argentina
+          </h1>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Resumen rápido</p>
+            <p>Suscripción activa por 1 mes, modalidad prepaga: pagás en <strong>pesos</strong>, sin renovación automática. Ideal si tu tarjeta falla o no querés consumo en dólares.</p>
+          </div>
+
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ 1 mes fijo (prepago) · sin cargos sorpresa.</li>
+            <li>✅ Precio claro en ARS · evitás consumo variable en USD.</li>
+            <li>✅ Sin renovación automática.</li>
+            <li>✅ Soporte local para Argentina.</li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a
+              href={PAY_URL}
+              class="inline-flex items-center justify-center rounded-xl bg-slate-600 hover:bg-slate-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+            >
+              Consultar / Comprar →
+            </a>
+            <a
+              href="/ayuda/"
+              class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+            >
+              Ver guías de ayuda
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-400 pt-1">
+            Precio de referencia hoy: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🎟️</span>
+        <span>¿Qué es Apple TV+ 1 mes prepago?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La modalidad <strong>prepaga</strong> funciona así: <strong>pagás primero, usás después</strong>.
+        En vez de una suscripción que se renueva cada mes, tenés un período definido de 1 mes,
+        precio claro en pesos y la libertad de renovar o cortar cuando termina.
+      </p>
+      <ul class="list-disc list-inside text-slate-700 text-sm space-y-1">
+        <li>Período fijo de 1 mes desde la activación.</li>
+        <li>Precio cerrado en pesos, sin variaciones por dólar.</li>
+        <li>Sin renovación automática: vos decidís si continuás.</li>
+      </ul>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona paso a paso</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li><strong>Consultás disponibilidad</strong> desde el botón de abajo.</li>
+        <li>Te confirmamos <strong>precio en pesos</strong> y métodos de pago activos.</li>
+        <li><strong>Pagás en ARS</strong> (transferencia, billetera o tarjeta según disponibilidad).</li>
+        <li><strong>Activamos el acceso</strong> y te guiamos para entrar a la app oficial.</li>
+        <li>Usás Apple TV+ por 1 mes. Si querés seguir, renovás manualmente.</li>
+      </ol>
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-slate-700">
+        No hay "renovación automática". Si no renovás, se termina el período y listo. Esto te da <strong>control total</strong> del gasto.
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>✨</span>
+        <span>Ventajas frente a la suscripción clásica</span>
+      </h2>
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-1">
+          <h3 class="font-semibold text-slate-900">✅ Pagás solo 1 mes</h3>
+          <p class="text-slate-700">No quedás atado a una suscripción indefinida.</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-1">
+          <h3 class="font-semibold text-slate-900">✅ ARS + métodos locales</h3>
+          <p class="text-slate-700">Alternativa práctica si tu tarjeta falla o es rechazada.</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-1">
+          <h3 class="font-semibold text-slate-900">✅ Sin cobros sorpresa</h3>
+          <p class="text-slate-700">Termina el período y se corta. Renovás solo si querés.</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-1">
+          <h3 class="font-semibold text-slate-900">✅ Soporte local</h3>
+          <p class="text-slate-700">Te guiamos para activar y resolver dudas típicas en Argentina.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>📺</span>
+        <span>¿Dónde funciona Apple TV+?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Sí. Apple TV+ funciona en la app oficial en Smart TV, iPhone, iPad, Mac y PC vía web. No usamos apps alternativas: entrás como siempre en la plataforma oficial.
+      </p>
+      <p class="text-xs text-slate-500">CuentasDigitales.com.ar no es Apple ni está afiliado a la marca.</p>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Comprar Apple TV+ 1 mes prepago en Argentina</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio final ARS</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin renovación automática</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Soporte local</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Activación guiada</span>
+      </div>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si querés Apple TV+ por 1 mes con modalidad prepaga, escribinos y te confirmamos disponibilidad, precio en ARS y medios de pago activos.
+      </p>
+      <a
+        href={PAY_URL}
+        class="inline-flex items-center justify-center rounded-xl bg-slate-600 hover:bg-slate-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors"
+      >
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Apple ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>

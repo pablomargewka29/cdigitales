@@ -1,0 +1,285 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix me subió el precio solo en Argentina (2026): qué pasó y qué hacer";
+
+const description =
+  "¿Te diste cuenta que Netflix te cobró más que el mes pasado sin haberte avisado? Te explicamos por qué sube el precio automáticamente en Argentina, cuántas veces subió en 2025 y qué opciones tenés para no seguir pagando más de la cuenta.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-me-subio-el-precio-solo-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-me-subio-el-precio-solo-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-02-10",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Por qué Netflix sube el precio solo en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix aplica aumentos periódicos a sus planes en Argentina. Además, como el cobro se hace en dólares, el precio en pesos sube automáticamente con cada devaluación del peso, incluso sin que Netflix anuncie un aumento formal.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuántas veces subió Netflix en Argentina en 2025?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix aplicó tres aumentos de precios en Argentina durante 2025: en enero, en agosto y en noviembre. El último representó un incremento del 25% sobre el precio base.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Puedo congelar el precio de Netflix en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "No es posible congelar el precio dentro de la plataforma oficial. Una alternativa es acceder a Netflix a través de servicios locales con precio fijo en pesos, que no varía con el tipo de cambio.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-red-700 via-rose-600 to-pink-600 text-red-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>📈</span>
+            <span>Aumentos de Netflix Argentina · Actualizado 2026</span>
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix me subió el precio solo en Argentina
+          </h1>
+
+          <p class="text-sm md:text-base text-red-100/90">
+            Revisás el resumen de tu tarjeta y Netflix cobró más que el mes anterior. Sin aviso, sin que hayas cambiado nada. Acá te explicamos por qué pasa esto y qué podés hacer al respecto 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        Netflix puede subir el precio de dos maneras: anunciando un aumento formal de planes, o de forma silenciosa cuando el dólar sube (porque el cobro se hace en dólares y se convierte a pesos al tipo de cambio del día). Ambas cosas pasaron múltiples veces en 2025 y 2026.
+      </p>
+    </div>
+  </section>
+
+  {/* CONTENIDO */}
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    {/* BLOQUE 1 */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        📊 Los dos motivos por los que Netflix te cobra más cada mes
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Hay una distinción importante que mucha gente no conoce. Netflix puede subir tu precio de dos maneras distintas:
+      </p>
+
+      <div class="space-y-3">
+        <div class="rounded-xl bg-slate-50 border border-slate-200 px-4 py-4">
+          <p class="font-semibold text-slate-800">1️⃣ Aumento oficial de precios</p>
+          <p class="text-sm text-slate-600 mt-1">Netflix anuncia formalmente que sube el valor de los planes. En 2025 esto pasó tres veces en Argentina: en enero, agosto y noviembre. El aumento de noviembre fue del 25%. En cada caso, Netflix manda un mail de aviso.</p>
+        </div>
+
+        <div class="rounded-xl bg-slate-50 border border-slate-200 px-4 py-4">
+          <p class="font-semibold text-slate-800">2️⃣ El efecto del tipo de cambio</p>
+          <p class="text-sm text-slate-600 mt-1">Aunque Netflix tiene precios en pesos para Argentina, el cobro en muchos casos se procesa como una transacción en dólares que se convierte al tipo de cambio del día. Si el dólar subió, tu precio en pesos también subió, aunque Netflix no haya anunciado ningún aumento.</p>
+        </div>
+      </div>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Muchos usuarios que ven variaciones mes a mes sin que haya habido un aumento oficial están experimentando el efecto del punto 2.
+      </p>
+    </section>
+
+    {/* BLOQUE 2 */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        📅 Historial de aumentos de Netflix en Argentina (2025-2026)
+      </h2>
+
+      <div class="space-y-2 text-[15px]">
+        <div class="flex items-start gap-3 text-slate-700">
+          <span class="text-red-500 mt-0.5">▲</span>
+          <div>
+            <p class="font-semibold">Enero 2025</p>
+            <p class="text-sm text-slate-500">Primer aumento del año, aproximadamente 20% sobre el precio base.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 text-slate-700">
+          <span class="text-red-500 mt-0.5">▲</span>
+          <div>
+            <p class="font-semibold">Agosto 2025</p>
+            <p class="text-sm text-slate-500">Segundo aumento, alrededor del 20%. El plan Premium superó los $25.000 con impuestos.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 text-slate-700">
+          <span class="text-red-500 mt-0.5">▲</span>
+          <div>
+            <p class="font-semibold">Noviembre 2025</p>
+            <p class="text-sm text-slate-500">Tercer aumento del año: 25% sobre precio base. Fue el más alto del año.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 text-slate-700">
+          <span class="text-red-500 mt-0.5">▲</span>
+          <div>
+            <p class="font-semibold">Abril 2026</p>
+            <p class="text-sm text-slate-500">Nuevo aumento. El plan Estándar con anuncios pasó a ~$10.900 base. El plan Básico fue eliminado definitivamente.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">📬 ¿Netflix avisa antes de subir el precio?</p>
+        <p>Sí, Netflix manda un mail antes de los aumentos oficiales. Si no lo recibiste, revisá la carpeta de spam o la casilla vinculada a tu cuenta. Pero muchas veces el mail llega y no se le da importancia hasta que ya te cobraron más.</p>
+      </div>
+    </section>
+
+    {/* BLOQUE 3 - CTA */}
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🔒</span>
+        <span>La única forma de tener precio fijo con Netflix en Argentina</span>
+      </h2>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Con Netflix directo, el precio siempre va a estar atado al dólar y a los aumentos periódicos de la plataforma. No podés congelar eso. Pero sí podés elegir acceder de una forma diferente.
+      </p>
+
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Las <strong>cuentas con precio fijo en pesos</strong> te permiten saber exactamente cuánto vas a pagar antes de confirmar. No hay renovación automática, no hay variación por tipo de cambio, no hay sorpresa en el resumen de la tarjeta. Pagás lo que acordaste y eso es todo.
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">😤 Netflix directo</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Precio varía con el dólar.</li>
+            <li>Aumentos formales 3+ veces al año.</li>
+            <li>51% de impuestos por encima.</li>
+            <li>Renovación automática sin avisarte.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">✅ Cuenta gestionada</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Precio fijo en pesos.</li>
+            <li>Sin impuestos variables adicionales.</li>
+            <li>Sin variación por tipo de cambio.</li>
+            <li>Sabés cuánto pagás desde el principio.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> el precio está en pesos y no cambia solo. Sin sorpresas en el resumen de tu tarjeta.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        ❓ Preguntas frecuentes sobre los aumentos de Netflix
+      </h2>
+
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Puedo reclamar un aumento que no me avisaron?</p>
+          <p class="mt-1">Si hubo un aumento oficial, Netflix lo notifica por mail. Si el cambio se debe al tipo de cambio, no hay reclamo posible porque técnicamente el precio en dólares no cambió. Podés cancelar la suscripción si no estás de acuerdo.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿Qué pasa si no pago el aumento?</p>
+          <p class="mt-1">Si tu tarjeta no alcanza para cubrir el nuevo monto, Netflix intentará cobrar y si no puede, suspenderá tu acceso al servicio hasta que actualices el método de pago.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿Hay un plan que no suba de precio?</p>
+          <p class="mt-1">No dentro de Netflix. Todos los planes están sujetos a los aumentos de la plataforma y a la variación del tipo de cambio. La única manera de tener precio fijo es usando una alternativa externa.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">¿Vale la pena cancelar y volver a suscribirse para aprovechar promos?</p>
+          <p class="mt-1">Netflix ya no ofrece período de prueba gratuito en Argentina. Cancelar y volver no te da ningún beneficio de precio, solo cortás el servicio hasta que vuelvas a pagar.</p>
+        </div>
+      </div>
+    </section>
+
+    {/* HERO FINAL */}
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">
+        🎬 Cansado de los aumentos sorpresa de Netflix
+      </h2>
+
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si los aumentos constantes te tienen harto, hay una alternativa con precio en pesos que no cambia solo. Mirá las opciones disponibles para acceder a Netflix desde Argentina sin sorpresas.
+      </p>
+
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

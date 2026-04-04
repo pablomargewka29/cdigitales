@@ -1,0 +1,231 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix rechaza tarjeta Cabal en Argentina (2026): causas y soluciones";
+
+const description =
+  "¿Netflix no acepta tu tarjeta Cabal en Argentina? Es un problema más común de lo que creés. Te explicamos por qué Cabal falla con Netflix y cuál es la alternativa más simple para seguir viendo contenido sin depender de la tarjeta.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-rechaza-tarjeta-cabal-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-rechaza-tarjeta-cabal-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-03-10",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Por qué Netflix no acepta la tarjeta Cabal en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix no acepta Cabal porque es una red de pagos con cobertura principalmente regional (Argentina, Brasil, Uruguay) y no está incluida entre los procesadores internacionales que Netflix utiliza para sus cobros recurrentes.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué tarjetas acepta Netflix en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix acepta tarjetas de las redes Visa y Mastercard habilitadas para pagos internacionales recurrentes. No acepta Cabal, American Express ni la mayoría de tarjetas prepagas.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cómo acceder a Netflix si solo tengo Cabal?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Una opción es usar servicios locales que ofrecen acceso a Netflix con precio en pesos, aceptando medios de pago alternativos como transferencia bancaria o Mercado Pago.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-indigo-700 via-blue-600 to-violet-600 text-indigo-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>💳</span>
+            <span>Cabal + Netflix · Problema conocido Argentina 2026</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix rechaza la tarjeta Cabal en Argentina
+          </h1>
+          <p class="text-sm md:text-base text-indigo-100/90">
+            Millones de argentinos tienen Cabal como tarjeta principal, pero Netflix no la acepta. No es un error tuyo ni de la tarjeta: es una limitación estructural. Acá te explicamos qué pasa y qué podés hacer 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        Netflix no acepta Cabal porque opera con redes de pago internacionales (Visa y Mastercard globales) y Cabal no está integrada a ese sistema para cobros recurrentes. No importa cuánto saldo tengas ni si la tarjeta funciona en otros lados: con Netflix específicamente no va a funcionar.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🌐 ¿Por qué Cabal no funciona con Netflix?
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Cabal es una red de tarjetas creada en Argentina y con fuerte presencia en el Mercosur (Argentina, Brasil, Uruguay, Paraguay). Funciona muy bien para compras en comercios locales, débitos automáticos de servicios argentinos y hasta pagos en algunos países de la región.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        El problema es que Netflix procesa sus pagos a través de <strong>procesadores internacionales globales</strong> que trabajan con las redes Visa y Mastercard mundiales. Cabal no forma parte de esa infraestructura de cobros recurrentes internacionales, y por eso Netflix la rechaza sistemáticamente.
+      </p>
+      <div class="space-y-3">
+        <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-sm">
+          <p class="font-semibold text-slate-800">✅ Para qué funciona Cabal</p>
+          <p class="text-slate-600 mt-1">Comercios argentinos, supermercados, cuotas en tiendas nacionales, débitos automáticos de servicios locales, compras en Uruguay y Brasil.</p>
+        </div>
+        <div class="rounded-xl bg-red-50 border border-red-100 px-4 py-3 text-sm">
+          <p class="font-semibold text-red-700">❌ Para qué no funciona Cabal</p>
+          <p class="text-slate-600 mt-1">Netflix, Spotify, Disney+, servicios digitales del exterior con cobros recurrentes internacionales, compras en tiendas de EE.UU. o Europa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🔎 Lo que Netflix sí acepta en Argentina
+      </h2>
+      <p class="text-slate-700 text-[15px]">Para que Netflix acepte una tarjeta en Argentina, necesita cumplir estas condiciones:</p>
+      <ul class="space-y-2 text-[15px] text-slate-700">
+        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Ser de la red <strong>Visa o Mastercard internacional</strong> (no solo local).</li>
+        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Estar habilitada para <strong>compras en el exterior</strong>.</li>
+        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Soportar <strong>cargos recurrentes automáticos</strong>.</li>
+        <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">✗</span> <strong>Cabal</strong> — no cumple estos requisitos para servicios del exterior.</li>
+        <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">✗</span> <strong>American Express Argentina</strong> — tampoco está incluida.</li>
+        <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">✗</span> <strong>Tarjetas prepagas</strong> — la mayoría tampoco funciona.</li>
+      </ul>
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">⚠️ Ojo con esto</p>
+        <p>Tener una Visa o Mastercard no garantiza que funcione. La tarjeta tiene que estar específicamente habilitada para pagos internacionales recurrentes. Algunas tarjetas de débito de bancos locales tampoco pasan el filtro aunque sean Visa o Mastercard.</p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>Si solo tenés Cabal, igual podés ver Netflix</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Que Netflix no acepte Cabal no significa que estés fuera del juego. La alternativa más práctica para quienes tienen Cabal como tarjeta principal es acceder a Netflix a través de una <strong>cuenta con precio en pesos</strong>, donde el pago se hace por transferencia bancaria o Mercado Pago, no con tarjeta directamente en Netflix.
+      </p>
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">🎯 Cómo funciona</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Elegís el período de acceso (1 o 3 meses).</li>
+            <li>Pagás en pesos con transferencia o Mercado Pago.</li>
+            <li>El acceso queda activo sin cargar ninguna tarjeta en Netflix.</li>
+            <li>Sin conversión de moneda ni impuestos variables.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">✅ Por qué tiene sentido</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>No necesitás Visa ni Mastercard.</li>
+            <li>Cabal o cualquier otro medio local sirve para pagar.</li>
+            <li>Precio fijo en pesos desde el principio.</li>
+            <li>Sin sorpresas de impuestos en el resumen.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> podés acceder a Netflix con precio en pesos sin necesitar Visa ni Mastercard. Si tenés Cabal, podés pagar igual a través de los medios que aceptamos.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">❓ Preguntas frecuentes</h2>
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Netflix va a aceptar Cabal en el futuro?</p>
+          <p class="mt-1">No hay indicios de que eso vaya a pasar. Para que Cabal funcionara con Netflix, necesitaría un acuerdo específico de integración con los procesadores internacionales de la plataforma, algo que no está en el horizonte.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Puedo abrir una cuenta Visa o Mastercard solo para Netflix?</p>
+          <p class="mt-1">Podés intentar con una cuenta bancaria que incluya Visa o Mastercard debito, pero no todas están habilitadas para pagos internacionales. También podés explorar alternativas sin necesidad de otra tarjeta.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Naranja Visa funciona con Netflix?</p>
+          <p class="mt-1">Aunque tiene el logo de Visa, las tarjetas Naranja tienen reportes mixtos con Netflix. Algunos usuarios logran registrarla, otros no. Depende de si está habilitada para pagos internacionales recurrentes.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Mi Cabal funciona con Spotify o Disney+?</p>
+          <p class="mt-1">Tampoco. Es el mismo problema: Spotify, Disney+, Max y la mayoría de servicios de streaming internacionales tampoco aceptan Cabal por las mismas razones técnicas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎬 Netflix aunque no tengas Visa ni Mastercard</h2>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Que tu tarjeta principal sea Cabal no tiene que ser un obstáculo para ver Netflix. Con precio en pesos y medios de pago locales, accedés sin problema.
+      </p>
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

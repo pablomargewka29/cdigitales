@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// ====== TUS DATOS — EDITÁ ESTOS VALORES ======
+const ALIAS        = "VIENTO.PELOTA.PAGINA";
+const CBU          = "1430001713006206750019";
+const WHATSAPP_NUMBER_E164 = "5491165064455"; // ej: 5491123456789
+// =============================================
+---
+
+<BaseLayout
+  title="Pago por transferencia — CuentasDigitales.com.ar"
+  description="Instrucciones de pago por transferencia bancaria para completar tu compra en CuentasDigitales.com.ar."
+>
+  <meta name="robots" content="noindex, nofollow" slot="head" />
+
+  <section class="mx-auto max-w-3xl px-4 py-10">
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm space-y-6">
+
+      <div>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900">
+          Pago por transferencia bancaria
+        </h1>
+        <p class="mt-2 text-slate-600">
+          Transferí al CBU o alias de abajo y, cuando tengas el comprobante, escribinos por WhatsApp para confirmar.
+        </p>
+      </div>
+
+      {/* Resumen del pedido */}
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="rounded-xl border border-slate-200 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-500">Producto</p>
+          <p class="mt-1 font-semibold text-slate-900">
+            <span id="pay-item">—</span>
+          </p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4">
+          <p class="text-xs uppercase tracking-wide text-slate-500">Monto a transferir</p>
+          <p class="mt-1 text-xl font-extrabold text-slate-900">
+            <span id="pay-money">—</span>
+          </p>
+        </div>
+      </div>
+
+      {/* Datos bancarios */}
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5 space-y-3">
+        <h2 class="text-lg font-bold text-slate-900">Datos para transferir</h2>
+
+        <div class="flex items-center justify-between gap-3 rounded-xl bg-white border border-slate-200 p-4">
+          <div class="min-w-0">
+            <p class="text-xs uppercase tracking-wide text-slate-500">ALIAS</p>
+            <p class="mt-1 font-mono font-semibold text-slate-900 break-all">{ALIAS}</p>
+          </div>
+          <button class="copy-btn shrink-0 rounded-lg border border-slate-300 bg-slate-50 hover:bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors"
+            data-copy={ALIAS}>Copiar</button>
+        </div>
+
+        <div class="flex items-center justify-between gap-3 rounded-xl bg-white border border-slate-200 p-4">
+          <div class="min-w-0">
+            <p class="text-xs uppercase tracking-wide text-slate-500">CBU</p>
+            <p class="mt-1 font-mono font-semibold text-slate-900 break-all">{CBU}</p>
+          </div>
+          <button class="copy-btn shrink-0 rounded-lg border border-slate-300 bg-slate-50 hover:bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors"
+            data-copy={CBU}>Copiar</button>
+        </div>
+      </div>
+
+      {/* Acciones */}
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a
+          id="pay-wa"
+          data-wa={WHATSAPP_NUMBER_E164}
+          href={"https://wa.me/" + WHATSAPP_NUMBER_E164}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center justify-center rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-3 transition-colors"
+        >
+          Enviar comprobante por WhatsApp
+        </a>
+        <a
+          href="/"
+          class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-900 font-semibold px-5 py-3 transition-colors"
+        >
+          Volver al inicio
+        </a>
+      </div>
+
+      <p class="text-sm text-slate-500">
+        La acreditación puede demorar unos minutos. Si necesitás ayuda, escribinos por WhatsApp con tu comprobante.
+      </p>
+
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      try {
+        const u = new URL(window.location.href);
+        const sp = u.searchParams;
+        const item = sp.get("item") || sp.get("name") || sp.get("title") || "Producto";
+        const currency = sp.get("currency") || "ARS";
+        const amountRaw = sp.get("amount") || sp.get("price") || "";
+        const normalizeAmount = (raw) => {
+          if (!raw) return null;
+          const cleaned = String(raw).replace(/[^\d,.\-]/g, "").replace(/\.(?=\d{3}(\D|$))/g, "");
+          const dec = cleaned.includes(",") && !cleaned.includes(".") ? cleaned.replace(",", ".") : cleaned.replace(/,/g, "");
+          const num = Number(dec);
+          return Number.isFinite(num) ? num : null;
+        };
+        const amount = normalizeAmount(amountRaw);
+        const money = amount !== null && !Number.isNaN(amount)
+          ? new Intl.NumberFormat("es-AR", { style: "currency", currency }).format(amount)
+          : null;
+
+        const elItem = document.getElementById("pay-item");
+        const elMoney = document.getElementById("pay-money");
+        if (elItem) elItem.textContent = item;
+        if (elMoney) elMoney.textContent = money || "Consultar por WhatsApp";
+
+        const wa = document.getElementById("pay-wa");
+        if (wa) {
+          const defaultText = "Hola! Hice la transferencia por " + (money || "...") + " para: " + item + ". Te paso el comprobante.";
+          const num = wa.getAttribute("data-wa") || "";
+          if (num) wa.href = "https://wa.me/" + num + "?text=" + encodeURIComponent(defaultText);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <script is:inline>
+    document.querySelectorAll(".copy-btn").forEach(function(btn) {
+      btn.addEventListener("click", async function() {
+        const val = btn.getAttribute("data-copy") || "";
+        try {
+          await navigator.clipboard.writeText(val);
+        } catch (e) {
+          const ta = document.createElement("textarea");
+          ta.value = val;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          ta.remove();
+        }
+        const old = btn.textContent;
+        btn.textContent = "¡Copiado!";
+        setTimeout(function() { btn.textContent = old; }, 1400);
+      });
+    });
+  </script>
+</BaseLayout>

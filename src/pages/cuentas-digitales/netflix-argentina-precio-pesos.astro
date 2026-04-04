@@ -1,0 +1,200 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Netflix Argentina precio en pesos 2026 — Sin impuestos del 51%";
+const description = "¿Cuánto cuesta Netflix en pesos en Argentina realmente? Con impuestos el precio se dispara. Accedé a Netflix con precio fijo en pesos, sin el recargo del 51% y sin variaciones por tipo de cambio.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/netflix-argentina-precio-pesos";
+
+const priceARS = 20000;
+const priceCurrency = "ARS";
+const PRODUCT_NAME = "Netflix Argentina precio pesos";
+const PRODUCT_AMOUNT = 20000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/netflix-argentina-precio-pesos"
+  ogImage="/images/netflix-prepago-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Netflix Argentina precio en pesos",
+      description,
+      brand: { "@type": "Organization", name: "Netflix" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/netflix-prepago-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "37",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Ignacio S." },
+          reviewBody: "Estaba harto de ver cómo el precio de Netflix cambiaba mes a mes en mi resumen. Acá pagué un precio fijo y no hay más sorpresas.",
+          datePublished: "2026-03-20",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Jimena O." },
+          reviewBody: "Por fin Netflix a un precio que sé de antemano. Transferí y en 10 minutos estaba viendo.",
+          datePublished: "2026-02-14",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Cuánto cuesta Netflix en pesos en Argentina en 2026?",
+          acceptedAnswer: { "@type": "Answer", text: "El plan Estándar con anuncios cuesta ~$16.460 con impuestos. El Estándar sin anuncios llega a ~$31.710 y el Premium supera los $39.000. Estos valores varían con el tipo de cambio." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué el precio de Netflix en pesos cambia cada mes?",
+          acceptedAnswer: { "@type": "Answer", text: "Porque Netflix aplica impuestos sobre el precio en dólares, y ese valor en pesos varía con el tipo de cambio. Además, Netflix aplica aumentos formales varias veces al año." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-orange-900 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-orange-400/60 rounded-full px-3 py-1 w-fit">
+            <span>💰</span>
+            <span>Precio en pesos · Netflix Argentina 🇦🇷 2026</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix en Argentina: precio real en pesos y cómo pagar menos
+          </h1>
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 El precio que muestra Netflix no es el final</p>
+            <p>Con impuestos, el Estándar llega a ~$31.710/mes. Con nosotros pagás un precio fijo en pesos definido de antemano, sin variaciones ni recargos.</p>
+          </div>
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ Precio fijo en pesos, no varía con el dólar.</li>
+            <li>✅ Sin IVA ni percepción de Ganancias encima.</li>
+            <li>✅ Sin renovación automática ni cobros sorpresa.</li>
+            <li>✅ Activación rápida con soporte local.</li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Consultar / Comprar →
+            </a>
+            <a href="/ayuda/netflix-cuanto-son-los-impuestos-argentina" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Ver guía de impuestos
+            </a>
+          </div>
+          <p class="text-xs text-slate-400 pt-1">Precio de referencia: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> (puede variar según disponibilidad).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>📊</span>
+        <span>El precio real de Netflix en pesos en Argentina (abril 2026)</span>
+      </h2>
+      <p class="text-slate-700 text-[15px]">Lo que muestra Netflix vs lo que realmente te cobran con el 51% de impuestos:</p>
+      <div class="space-y-3">
+        {[
+          { plan: "Estándar con anuncios", base: "$10.900", total: "~$16.460", color: "green" },
+          { plan: "Estándar (sin anuncios)", base: "$21.000", total: "~$31.710", color: "blue" },
+          { plan: "Premium (4 pantallas)", base: "$26.000+", total: "~$39.000+", color: "purple" },
+        ].map(({ plan, base, total, color }) => (
+          <div class={`rounded-xl border border-${color}-100 bg-${color}-50 px-4 py-3 flex justify-between items-center text-sm`}>
+            <div>
+              <p class="font-semibold text-slate-800">{plan}</p>
+              <p class="text-slate-500 text-xs">Base: {base} → con 51% impuestos</p>
+            </div>
+            <p class="font-bold text-red-600 text-base">{total}/mes</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-xs text-slate-400">* Valores aproximados a abril 2026. Varían según tipo de cambio y actualizaciones de Netflix.</p>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🔄</span>
+        <span>¿Por qué el precio cambia mes a mes?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Aunque Netflix Argentina cobra en pesos, el precio está atado al dólar. Cada vez que el tipo de cambio sube, el monto en pesos sube también, aunque Netflix no haya anunciado ningún aumento formal. Sumado a los tres o cuatro aumentos anuales que aplica la plataforma, el resultado es un precio que nunca es el mismo dos meses seguidos.
+      </p>
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-3 text-sm text-slate-700">
+        <p class="font-semibold mb-1">📅 En 2025-2026 hubo cuatro aumentos formales</p>
+        <p>Enero 2025 · Agosto 2025 · Noviembre 2025 · Abril 2026. Más todas las variaciones silenciosas por tipo de cambio entre medio.</p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona el proceso</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li>Consultás disponibilidad desde el botón de esta página.</li>
+        <li>Te confirmamos <strong>precio fijo en pesos</strong> y medios de pago disponibles.</li>
+        <li>Pagás en ARS con transferencia, Mercado Pago u otro medio local.</li>
+        <li>Activamos el acceso y te guiamos para entrar a Netflix.</li>
+        <li>Usás Netflix por el período elegido. Sin variaciones de precio, sin renovación automática.</li>
+      </ol>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Netflix con precio fijo en pesos · Argentina</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio fijo en ARS</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin impuestos variables</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin renovación automática</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Soporte local</span>
+      </div>
+      <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>

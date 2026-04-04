@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Página no encontrada — CuentasDigitales.com.ar"
+  description="La página que buscás no existe. Volvé al inicio de CuentasDigitales.com.ar."
+>
+  <meta name="robots" content="noindex, nofollow" slot="head" />
+  <div class="text-center py-20">
+    <h1 class="text-5xl font-extrabold text-slate-900">404</h1>
+    <p class="mt-4 text-xl text-slate-600">Página no encontrada</p>
+    <p class="mt-2 text-slate-500">La URL que ingresaste no existe en este sitio.</p>
+    <div class="mt-8 flex flex-wrap gap-3 justify-center">
+      <a href="/" class="rounded-xl bg-brand-700 text-white font-semibold px-6 py-3 hover:bg-brand-800 transition-colors">Ir al inicio</a>
+      <a href="/ayuda/" class="rounded-xl border border-slate-300 text-slate-700 font-semibold px-6 py-3 hover:bg-slate-50 transition-colors">Ver ayuda</a>
+    </div>
+  </div>
+</BaseLayout>

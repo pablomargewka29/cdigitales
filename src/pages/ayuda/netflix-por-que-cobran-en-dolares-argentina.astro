@@ -1,0 +1,199 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "¿Por qué Netflix cobra en dólares en Argentina? (2026) Todo explicado";
+
+const description =
+  "¿Tu resumen de tarjeta muestra un cargo de Netflix en dólares y no entendés por qué? Te explicamos cómo funciona el cobro de Netflix en Argentina, por qué aparece en USD y cómo evitar la conversión cambiaria.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-por-que-cobran-en-dolares-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-por-que-cobran-en-dolares-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-02-15",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Netflix cobra en dólares o en pesos en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Netflix factura en pesos para usuarios argentinos, pero como es un servicio del exterior, algunos bancos procesan el cargo como una transacción internacional y lo convierten a dólares en el resumen. El monto real que pagás es en pesos.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Por qué el cargo de Netflix varía cada mes en mi tarjeta?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Aunque Netflix tiene precio en pesos, el tipo de cambio aplicado por el banco puede variar mes a mes. Además, Netflix aplica aumentos periódicos en Argentina, lo que también hace que el monto cambie.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-blue-700 via-sky-600 to-cyan-500 text-blue-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>💵</span>
+            <span>Cobros en dólares · Aclaración 2026</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            ¿Por qué Netflix te cobra en dólares si estás en Argentina?
+          </h1>
+          <p class="text-sm md:text-base text-blue-100/90">
+            Abrís el resumen de tu tarjeta y ves un cargo en USD de Netflix. ¿No se suponía que cobraban en pesos? Te explicamos qué está pasando y por qué el monto cambia cada mes 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        Netflix Argentina factura en pesos, pero como es un servicio del exterior, algunos bancos procesan el cobro como una transacción internacional y lo muestran en dólares en el resumen. La conversión la hace el banco, no Netflix. El monto final en pesos puede variar según el tipo de cambio del día del cobro.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🌐 Netflix es un servicio del exterior: eso cambia todo
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Netflix Inc. es una empresa estadounidense. Aunque tiene precios en pesos argentinos para sus usuarios locales, el cobro técnicamente sale de un servidor en el exterior. Esto hace que los bancos argentinos lo clasifiquen como una <strong>transacción internacional</strong>.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Lo que ves en el resumen de tu tarjeta depende de cómo tu banco muestra ese tipo de transacciones. Algunos bancos muestran el monto en pesos directamente. Otros lo convierten a dólares para el resumen y aplican el tipo de cambio correspondiente.
+      </p>
+      <div class="rounded-2xl bg-blue-50 border border-blue-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">🏦 Por eso el monto varía según el banco</p>
+        <p>No todos los usuarios ven lo mismo en el resumen. Depende completamente de cómo tu banco procesa transacciones internacionales. En todos los casos, lo que Netflix "cobra" en Argentina está definido en pesos según su tabla de precios local.</p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        💱 ¿Por qué el monto cambia mes a mes sin que Netflix anuncie aumento?
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Aunque Netflix tiene precios en pesos, el procesamiento del cobro implica una conversión de moneda en algún punto de la cadena. Eso hace que el monto final en pesos que ves en tu resumen pueda variar aunque Netflix no haya anunciado ningún aumento formal.
+      </p>
+      <div class="space-y-3 text-[15px] text-slate-700">
+        <div class="flex items-start gap-3">
+          <span class="text-blue-500 font-bold mt-0.5">1.</span>
+          <p><strong>Variación del tipo de cambio:</strong> Si Netflix usa el dólar tarjeta para la conversión y ese tipo de cambio subió, tu precio en pesos sube aunque el precio "oficial" de Netflix no haya cambiado.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-blue-500 font-bold mt-0.5">2.</span>
+          <p><strong>Impuestos variables:</strong> El 21% de IVA y el 30% de percepción se calculan sobre el precio en dólares. Si el dólar sube, la base de cálculo sube y los impuestos en pesos también.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-blue-500 font-bold mt-0.5">3.</span>
+          <p><strong>Aumentos formales:</strong> Netflix actualiza sus tarifas periódicamente. En 2025 lo hizo tres veces en Argentina.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🔒</span>
+        <span>Cómo pagar Netflix con precio fijo, sin variaciones cambiarias</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Si el precio variable te genera incertidumbre o querés saber exactamente cuánto vas a pagar cada vez, la solución es acceder a Netflix a través de una <strong>cuenta con precio fijo en pesos</strong>.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Con esta modalidad, el precio no está atado al tipo de cambio del día ni a las variaciones impositivas. Pagás lo que acordaste en pesos, punto.
+      </p>
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> el precio está en pesos desde el primer momento. Sin conversión, sin impuestos sorpresa, sin variación mensual.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">❓ Preguntas frecuentes</h2>
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Puedo pedir al banco que no aplique la conversión a dólares?</p>
+          <p class="mt-1">No directamente. La forma en que el banco clasifica la transacción de Netflix depende de su sistema interno. Podés consultar con tu banco, pero en general no hay opción de modificarlo.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Se aplica el dólar tarjeta o el dólar oficial?</p>
+          <p class="mt-1">Depende del banco y del tipo de tarjeta. En la mayoría de los casos se aplica el tipo de cambio del dólar tarjeta (dólar oficial + impuestos), aunque puede variar.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Esto también pasa con Spotify, Disney+ y otras plataformas?</p>
+          <p class="mt-1">Sí, es el mismo mecanismo. Todos los servicios digitales del exterior están sujetos a este tipo de procesamiento. La diferencia es que algunas plataformas tienen acuerdos específicos con medios de pago locales que simplifican el proceso.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎬 Netflix sin cargos en dólares ni variaciones</h2>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si los cargos en dólares o las variaciones mensuales te molestan, podés acceder a Netflix con precio fijo en pesos desde Argentina.
+      </p>
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

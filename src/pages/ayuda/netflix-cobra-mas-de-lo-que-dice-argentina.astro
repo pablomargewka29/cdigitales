@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix cobra más de lo que dice en Argentina (2026): el precio real con impuestos";
+
+const description =
+  "El precio que muestra Netflix en su sitio no es lo que terminás pagando. En Argentina, los impuestos suman hasta un 51% más. Te explicamos por qué hay esa diferencia y cómo acceder a Netflix sabiendo de antemano cuánto vas a pagar.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-cobra-mas-de-lo-que-dice-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-cobra-mas-de-lo-que-dice-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-02-20",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Por qué Netflix cobra más de lo que anuncia en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Porque los precios que muestra Netflix en su sitio son los valores base sin impuestos. En Argentina se aplica un 21% de IVA y un 30% de percepción de Ganancias, lo que eleva el precio final hasta un 51% por encima del precio anunciado.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cómo saber cuánto voy a pagar realmente por Netflix en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Tomá el precio base del plan que querés y multiplicalo por 1.51. Ese es el valor aproximado con impuestos incluidos. Por ejemplo, si el plan Estándar cuesta $21.000 base, con impuestos pagás alrededor de $31.710.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-yellow-600 via-orange-500 to-red-500 text-yellow-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>🧮</span>
+            <span>Precio real de Netflix Argentina · 2026</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix te cobra más de lo que anuncia en Argentina
+          </h1>
+          <p class="text-sm md:text-base text-yellow-100/90">
+            Ves el precio en el sitio de Netflix, lo comparás con lo que te debitaron y los números no cierran. No es un error, es el sistema impositivo argentino haciendo de las suyas 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        El precio que muestra Netflix es el valor base <strong>sin impuestos</strong>. En Argentina se aplica IVA (21%) + percepción de Ganancias (30%) = <strong>51% adicional</strong>. El precio real siempre es el precio anunciado multiplicado por 1.51.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🔍 ¿Por qué hay diferencia entre el precio anunciado y lo que te cobran?
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Netflix, como todos los servicios digitales del exterior que operan en Argentina, está obligado por ley a incluir impuestos en el cobro. El problema es que la plataforma <strong>muestra los precios base sin impuestos</strong> en su interfaz, y los impuestos se calculan y se suman en el momento del cobro.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        No es que Netflix te esté estafando ni cobrando de más. Es que el precio que ves en la pantalla no es el precio final que pagás en Argentina. Son dos cosas distintas.
+      </p>
+      <div class="rounded-2xl bg-yellow-50 border border-yellow-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">📌 La fórmula para calcular el precio real</p>
+        <p>Precio base × 1.21 (IVA) × 1.30 (percepción) ≈ precio base × 1.51</p>
+        <p class="mt-1 text-slate-500">Nota: los impuestos se aplican en cascada, no sumados directamente, por eso el resultado exacto puede variar levemente.</p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">
+        💸 Cuánto pagás realmente por cada plan en 2026
+      </h2>
+
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-slate-200 px-5 py-4">
+          <div class="flex justify-between items-center mb-2">
+            <p class="font-semibold text-slate-800">📺 Estándar con anuncios</p>
+            <span class="text-xs text-green-700 bg-green-100 rounded-full px-2 py-0.5">Más barato</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-sm text-center">
+            <div class="bg-slate-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-slate-500 mb-1">Precio base</p>
+              <p class="font-bold text-slate-700">~$10.900</p>
+            </div>
+            <div class="bg-red-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-red-500 mb-1">Impuestos</p>
+              <p class="font-bold text-red-600">+$5.559</p>
+            </div>
+            <div class="bg-orange-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-orange-500 mb-1">Total real</p>
+              <p class="font-bold text-orange-700">~$16.460</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 px-5 py-4">
+          <div class="flex justify-between items-center mb-2">
+            <p class="font-semibold text-slate-800">📺 Estándar</p>
+            <span class="text-xs text-blue-700 bg-blue-100 rounded-full px-2 py-0.5">Sin publicidad</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-sm text-center">
+            <div class="bg-slate-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-slate-500 mb-1">Precio base</p>
+              <p class="font-bold text-slate-700">~$21.000</p>
+            </div>
+            <div class="bg-red-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-red-500 mb-1">Impuestos</p>
+              <p class="font-bold text-red-600">+$10.710</p>
+            </div>
+            <div class="bg-orange-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-orange-500 mb-1">Total real</p>
+              <p class="font-bold text-orange-700">~$31.710</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 px-5 py-4">
+          <div class="flex justify-between items-center mb-2">
+            <p class="font-semibold text-slate-800">🏆 Premium</p>
+            <span class="text-xs text-purple-700 bg-purple-100 rounded-full px-2 py-0.5">4 pantallas</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-sm text-center">
+            <div class="bg-slate-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-slate-500 mb-1">Precio base</p>
+              <p class="font-bold text-slate-700">~$26.000+</p>
+            </div>
+            <div class="bg-red-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-red-500 mb-1">Impuestos</p>
+              <p class="font-bold text-red-600">+$13.260+</p>
+            </div>
+            <div class="bg-orange-50 rounded-xl px-2 py-2">
+              <p class="text-xs text-orange-500 mb-1">Total real</p>
+              <p class="font-bold text-orange-700">~$39.000+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-400">* Valores aproximados a abril 2026. Pueden variar con actualizaciones de precios y tipo de cambio.</p>
+    </section>
+
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🎯</span>
+        <span>La alternativa con precio transparente desde el primer momento</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        La forma de evitar la diferencia entre "precio anunciado" y "precio real" es usar una alternativa donde el precio ya incluya todo desde el principio. Sin cálculos, sin impuestos que se agregan al cobrar, sin sorpresas.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Eso es exactamente lo que ofrecen las <strong>cuentas de Netflix con precio en pesos</strong>: el precio que ves es el que pagás. Sin multiplicar por 1.51, sin revisar el resumen después para ver cuánto fue realmente.
+      </p>
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> el precio es en pesos y es el precio final. Sin IVA que se suma después, sin percepción de Ganancias encima.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">❓ Preguntas frecuentes</h2>
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Netflix está obligado a mostrar el precio con impuestos?</p>
+          <p class="mt-1">Hay un debate sobre esto. Organizaciones de consumidores han señalado que debería mostrarse el precio final. Por ahora Netflix muestra el precio base y los impuestos aparecen al momento del cobro.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Puedo reclamar la diferencia entre lo que vi y lo que me cobraron?</p>
+          <p class="mt-1">No, porque los impuestos son legales y están establecidos por ley argentina. No es un cobro incorrecto, aunque sí es poco transparente en la forma de comunicarlo.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿El precio con impuestos aparece en algún lado antes de pagar?</p>
+          <p class="mt-1">En algunos dispositivos, Netflix muestra un desglose de impuestos antes de confirmar el pago. En otros casos esa información solo está disponible en el historial de pagos después de haber cobrado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎬 Netflix con precio transparente desde el principio</h2>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Sin precio base que después se infla con impuestos. Con precio en pesos ya definido, mirá las opciones disponibles para acceder a Netflix desde Argentina.
+      </p>
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>

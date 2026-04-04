@@ -1,0 +1,202 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Netflix 3 meses Argentina — Cuenta trimestral precio en pesos";
+const description = "Accedé a Netflix por 3 meses en Argentina con precio fijo en pesos. Sin renovación automática, sin tarjeta internacional, sin impuestos del 51%. La opción más conveniente si sabés que lo vas a usar seguido.";
+const url = "https://cuentasdigitales.com.ar/cuentas-digitales/cuenta-netflix-trimestral-argentina";
+
+const priceARS = 55000;
+const priceCurrency = "ARS";
+const PRODUCT_NAME = "Netflix trimestral Argentina 3 meses";
+const PRODUCT_AMOUNT = 55000;
+const PAY_URL = `/pago?item=${encodeURIComponent(PRODUCT_NAME)}&amount=${PRODUCT_AMOUNT}&currency=ARS`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical="/cuentas-digitales/cuenta-netflix-trimestral-argentina"
+  ogImage="/images/netflix-prepago-argentina.jpg"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Netflix 3 meses Argentina trimestral",
+      description,
+      brand: { "@type": "Organization", name: "Netflix" },
+      url,
+      category: "Suscripciones digitales",
+      image: ["https://cuentasdigitales.com.ar/images/netflix-prepago-argentina.jpg"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "27",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Daniela H." },
+          reviewBody: "Tomé el de 3 meses porque sé que lo uso siempre. Más cómodo que pagar mes a mes y el precio por mes sale mejor.",
+          datePublished: "2026-03-22",
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Marcos V." },
+          reviewBody: "Lo regalo para cumpleaños. 3 meses de Netflix en pesos es el mejor regalo digital que existe.",
+          datePublished: "2026-02-18",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        url,
+        priceCurrency,
+        price: String(priceARS),
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "CuentasDigitales.com.ar" },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Conviene tomar 3 meses de Netflix en lugar de 1 mes?",
+          acceptedAnswer: { "@type": "Answer", text: "Si sabés que vas a usar Netflix regularmente, el período de 3 meses suele tener un mejor precio por mes que el período de 1 mes. Además te evitás tener que renovar cada mes." },
+        },
+        {
+          "@type": "Question",
+          name: "¿Puedo regalar 3 meses de Netflix en Argentina?",
+          acceptedAnswer: { "@type": "Answer", text: "Sí. Es una opción muy popular como regalo. Podés comprarlo para otra persona y coordinar la activación cuando quieras." },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Cuentas Premium", item: "https://cuentasdigitales.com.ar/cuentas-digitales/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 to-indigo-900 text-slate-50 shadow-xl overflow-hidden">
+        <div class="p-7 md:p-10 space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-slate-800/70 border border-indigo-400/60 rounded-full px-3 py-1 w-fit">
+            <span>📅</span>
+            <span>Netflix 3 meses · Trimestral · Argentina 🇦🇷</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix por 3 meses en Argentina
+          </h1>
+          <div class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-sm text-slate-200/90">
+            <p class="font-semibold text-slate-100">👉 Pagás una vez, usás tres meses</p>
+            <p>Sin renovar cada mes, sin preocuparte por el precio el mes que viene. Precio fijo en pesos por todo el trimestre.</p>
+          </div>
+          <ul class="text-xs md:text-sm text-slate-200/90 space-y-1 pt-1">
+            <li>✅ 3 meses fijos desde la activación.</li>
+            <li>✅ Precio conveniente por mes vs la opción mensual.</li>
+            <li>✅ Sin renovación automática al finalizar.</li>
+            <li>✅ Ideal como regalo para cumpleaños o fechas especiales.</li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Consultar / Comprar →
+            </a>
+            <a href="/cuentas-digitales/cuenta-netflix-argentina-1-mes" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+              Ver opción 1 mes
+            </a>
+          </div>
+          <p class="text-xs text-slate-400 pt-1">Precio de referencia: <strong>${priceARS.toLocaleString("es-AR")} ARS</strong> por 3 meses (puede variar según disponibilidad).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-9">
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧮</span>
+        <span>¿Cuánto conviene 3 meses vs 1 mes?</span>
+      </h2>
+      <p class="text-slate-700 text-[15px]">La ventaja de tomar el período trimestral es que el costo por mes resulta más conveniente y no tenés que acordarte de renovar cada mes:</p>
+      <div class="grid gap-3 md:grid-cols-2 text-sm">
+        <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4 text-center">
+          <p class="text-xs text-slate-500 mb-1">Opción mensual (×3)</p>
+          <p class="text-2xl font-bold text-slate-700">${(20000 * 3).toLocaleString("es-AR")}</p>
+          <p class="text-xs text-slate-400 mt-1">pagando mes a mes</p>
+        </div>
+        <div class="rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-4 text-center">
+          <p class="text-xs text-indigo-600 mb-1">Opción trimestral ✅</p>
+          <p class="text-2xl font-bold text-indigo-700">${priceARS.toLocaleString("es-AR")}</p>
+          <p class="text-xs text-slate-400 mt-1">pago único por 3 meses</p>
+        </div>
+      </div>
+      <p class="text-xs text-slate-400">* Precios de referencia. Consultar disponibilidad para valores exactos.</p>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🎁</span>
+        <span>Netflix 3 meses como regalo</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        El período trimestral es una de las opciones de regalo más elegidas. A diferencia de los regalos digitales clásicos, no requiere que el receptor tenga tarjeta de crédito ni que haga trámites. Vos pagás, coordinamos la activación para la persona que querés sorprender y listo.
+      </p>
+      <div class="rounded-2xl bg-indigo-50 border border-indigo-100 px-4 py-3 text-sm text-slate-700">
+        <p class="font-semibold mb-1">🎂 Momentos donde tiene sentido regalar Netflix 3 meses</p>
+        <ul class="list-disc list-inside mt-1 space-y-1 text-slate-600">
+          <li>Cumpleaños de alguien que ama las series.</li>
+          <li>Día del padre, madre, amigo.</li>
+          <li>Regalo de graduación o mudanza.</li>
+          <li>Sorpresa para alguien que no puede pagarlo este mes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white/95 shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>⚙️</span>
+        <span>Cómo funciona el proceso</span>
+      </h2>
+      <ol class="list-decimal list-inside text-slate-700 text-[15px] leading-relaxed space-y-2">
+        <li>Consultás disponibilidad desde el botón de esta página.</li>
+        <li>Te confirmamos precio en pesos por los 3 meses y medios de pago.</li>
+        <li>Pagás en ARS — transferencia, Mercado Pago u otro medio local.</li>
+        <li>Activamos el acceso y empieza el período de 3 meses desde ese momento.</li>
+        <li>Al finalizar los 3 meses, se corta sin renovación automática. Renovás si querés.</li>
+      </ol>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-7 space-y-4 shadow-sm">
+      <h2 class="text-xl md:text-2xl font-bold flex items-center gap-2">
+        <span>🚀</span>
+        <span>Netflix 3 meses · Argentina · Precio en pesos</span>
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ 3 meses fijos</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Precio conveniente</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Sin renovación automática</span>
+        <span class="text-[11px] bg-white/10 border border-white/10 rounded-full px-3 py-1">✅ Ideal como regalo</span>
+      </div>
+      <a href={PAY_URL} class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2.5 px-5 text-sm md:text-base transition-colors">
+        Consultar / Comprar →
+      </a>
+      <p class="text-[11px] text-slate-400 pt-1">CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca.</p>
+    </section>
+
+  </section>
+</BaseLayout>

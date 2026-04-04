@@ -1,0 +1,231 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title =
+  "Netflix no me deja compartir la cuenta en Argentina (2026): qué hacer";
+
+const description =
+  "Netflix bloqueó el uso compartido de cuentas entre hogares distintos en Argentina. Te explicamos cómo funciona la restricción, qué opciones quedan hoy y cómo cada persona puede tener su propio acceso sin pagar el precio completo de un plan nuevo.";
+
+const url =
+  "https://cuentasdigitales.com.ar/ayuda/netflix-no-me-deja-compartir-cuenta-argentina";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  canonical="/ayuda/netflix-no-me-deja-compartir-cuenta-argentina"
+  schema={[
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description,
+      author: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "CuentasDigitales.com.ar",
+      },
+      datePublished: "2026-03-01",
+      dateModified: "2026-04-01",
+      mainEntityOfPage: url,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Netflix prohibió compartir cuentas en Argentina?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Sí. Netflix implementó la restricción de uso por hogar en Argentina. Las cuentas solo pueden usarse en dispositivos del mismo hogar. Para acceder desde otro domicilio hay que pagar un miembro extra o tener una suscripción propia.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué alternativa hay para seguir viendo Netflix sin pagar el plan completo?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Una opción es acceder a través de servicios locales que ofrecen cuentas individuales con precio en pesos, que puede resultar más económico que contratar un plan completo con todos los impuestos.",
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://cuentasdigitales.com.ar/" },
+        { "@type": "ListItem", position: 2, name: "Ayuda", item: "https://cuentasdigitales.com.ar/ayuda/" },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+  ]}
+>
+  {/* HERO */}
+  <section class="mb-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-r from-rose-700 via-pink-600 to-fuchsia-600 text-rose-50 px-6 py-8 md:px-10 md:py-10 shadow-xl">
+        <div class="space-y-4 max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-black/20 border border-white/30 rounded-full px-3 py-1">
+            <span>🚫</span>
+            <span>Cuentas compartidas bloqueadas · Argentina 2026</span>
+          </p>
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+            Netflix ya no te deja compartir la cuenta entre hogares
+          </h1>
+          <p class="text-sm md:text-base text-rose-100/90">
+            Si antes compartías Netflix con tu familia en otra casa o con amigos, eso ya no funciona igual. Te contamos qué cambió, cómo detecta Netflix que usás la cuenta desde otra dirección y qué opciones tenés ahora 🇦🇷.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* RESPUESTA RÁPIDA */}
+  <section class="max-w-3xl mx-auto mb-10">
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 px-5 py-4 text-sm text-slate-700">
+      <p class="font-semibold mb-1">👉 Respuesta rápida</p>
+      <p>
+        Netflix implementó la restricción "un hogar por cuenta" en Argentina. Si la cuenta se usa desde dos domicilios distintos, el sistema lo detecta por dirección IP y puede bloquear el dispositivo externo. Las opciones que quedan son: pagar un miembro extra, transferir el perfil a una cuenta propia, o acceder a Netflix de forma independiente con precio en pesos.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto pb-16 space-y-10">
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🏠 ¿Cómo funciona exactamente la restricción de hogar?
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Netflix definió que cada cuenta está asociada a un <strong>"hogar principal"</strong>, que es la red de WiFi donde se conecta con mayor frecuencia. Todos los dispositivos que se conectan desde esa red quedan dentro del hogar y pueden usar la cuenta sin problema.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        El problema surge cuando alguien intenta usar la cuenta desde otra red (otra casa, el trabajo, el departamento de un familiar). Netflix detecta la IP diferente y eventualmente bloquea ese dispositivo o pide verificación.
+      </p>
+      <div class="space-y-3 text-[15px] text-slate-700">
+        <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3">
+          <p class="font-semibold">📡 ¿Cómo detecta Netflix el hogar?</p>
+          <p class="text-sm mt-1 text-slate-600">Usa la dirección IP del router, el identificador del dispositivo y los patrones de uso. Si un dispositivo se conecta regularmente desde dos IPs distintas, el sistema marca inconsistencia.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3">
+          <p class="font-semibold">📱 ¿Funciona en celular si estoy fuera del hogar?</p>
+          <p class="text-sm mt-1 text-slate-600">Sí, podés ver Netflix en tu celular, tablet o laptop fuera del hogar usando datos móviles. La restricción aplica principalmente a televisores en otro domicilio fijo.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3">
+          <p class="font-semibold">🏖️ ¿Y si estoy de vacaciones o viaje?</p>
+          <p class="text-sm mt-1 text-slate-600">Netflix permite el uso durante viajes. Si el sistema detecta que estás temporalmente en otro lugar, generalmente no hay problema. Las restricciones están pensadas para evitar el uso permanente desde otro hogar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">
+        🛤️ Las opciones que Netflix ofrece oficialmente
+      </h2>
+      <p class="text-slate-700 text-[15px]">Netflix plantea dos caminos cuando alguien quiere seguir compartiendo la cuenta:</p>
+      <div class="space-y-3">
+        <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4">
+          <p class="font-semibold text-slate-800">Opción 1 — Agregar un miembro extra 💸</p>
+          <p class="text-sm text-slate-600 mt-1">El titular de la cuenta paga un monto adicional para agregar a alguien de otro hogar como "miembro extra". Disponible en los planes Estándar (1 extra) y Premium (hasta 2 extras). El miembro extra tiene su propio perfil y contraseña.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4">
+          <p class="font-semibold text-slate-800">Opción 2 — Transferir el perfil a una cuenta nueva 👤</p>
+          <p class="text-sm text-slate-600 mt-1">La persona que compartía la cuenta puede transferir su perfil (historial, listas, preferencias) a una suscripción propia. Así conserva su información pero paga su propia suscripción.</p>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-4 text-sm text-slate-700">
+        <p class="font-semibold mb-1">💡 El problema con estas opciones</p>
+        <p>El miembro extra tiene un costo mensual adicional sobre el plan que ya pagás. La cuenta nueva implica pagar un plan completo con todos sus impuestos. En ambos casos, el gasto total sube bastante.</p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-indigo-50 border border-indigo-100 px-6 py-8 space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <span>🧩</span>
+        <span>Una opción que muchos están eligiendo en Argentina</span>
+      </h2>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        Si te quedaste sin acceso porque te sacaron de una cuenta compartida y no querés pagar un plan completo con el 51% de impuestos encima, hay otra alternativa que cada vez más personas en Argentina usan: las <strong>cuentas de Netflix con precio en pesos</strong>.
+      </p>
+      <p class="text-slate-700 text-[15px] leading-relaxed">
+        En lugar de contratar Netflix directamente y bancarte los impuestos y la burocracia, pagás un valor en pesos por 1 o 3 meses y tenés el acceso disponible. Sin tarjeta de crédito, sin conversión de moneda, sin el 51% encima.
+      </p>
+      <div class="grid gap-4 md:grid-cols-2 text-sm">
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">🎯 Para quién tiene más sentido</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Los que quedaron sin cuenta cuando bloquearon el compartido.</li>
+            <li>Quienes no tienen tarjeta de crédito propia.</li>
+            <li>Los que no quieren atarse a una suscripción mensual automática.</li>
+            <li>Quienes buscan precio fijo sin sorpresas de impuestos.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white/70 border border-indigo-100 px-4 py-4">
+          <h3 class="font-semibold text-slate-800 mb-2">✅ Lo que incluye</h3>
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
+            <li>Acceso a Netflix durante el período elegido.</li>
+            <li>Precio fijo en pesos, sin impuestos variables.</li>
+            <li>Sin necesidad de tarjeta de crédito.</li>
+            <li>Sin renovación automática sorpresa.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-white border border-indigo-200 px-5 py-4 text-sm text-slate-800">
+        <p class="flex items-start gap-2">
+          <span>💡</span>
+          <span>
+            En <strong>CuentasDigitales.com.ar</strong> podés acceder a Netflix individualmente, con precio en pesos y sin los costos adicionales del plan oficial. Ideal para quienes quedaron afuera del sistema de cuentas compartidas.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 px-6 py-7 space-y-5">
+      <h2 class="text-2xl font-bold text-slate-900">❓ Preguntas frecuentes sobre el bloqueo de cuentas compartidas</h2>
+      <div class="space-y-4 text-[15px] text-slate-700">
+        <div>
+          <p class="font-semibold">¿Puedo seguir compartiendo la cuenta si vivimos en la misma casa?</p>
+          <p class="mt-1">Sí, sin problema. La restricción aplica a personas de hogares distintos. Si todos se conectan desde el mismo WiFi, el sistema los reconoce como parte del mismo hogar.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Netflix puede bloquear mi TV de un día para el otro?</p>
+          <p class="mt-1">El sistema generalmente da un período de verificación antes de bloquear. Te llega una notificación o un código por mail para confirmar si el dispositivo pertenece al hogar principal. Si no confirmás, eventualmente pierde acceso.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Qué pasa con mis listas y el historial si me separan de la cuenta?</p>
+          <p class="mt-1">Si transferís tu perfil a una cuenta nueva antes de que te quiten el acceso, podés conservar tus listas, historial y preferencias. Si simplemente te bloquean, esa información se pierde.</p>
+        </div>
+        <div>
+          <p class="font-semibold">¿Usar VPN soluciona el problema?</p>
+          <p class="mt-1">Las VPNs pueden camuflar la IP temporalmente, pero Netflix detecta el uso de VPNs y puede bloquear esas conexiones también. No es una solución confiable a largo plazo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl bg-slate-900 text-slate-50 px-6 py-8 space-y-4">
+      <h2 class="text-2xl font-bold">🎬 Tu propio acceso a Netflix, sin depender de nadie</h2>
+      <p class="text-sm md:text-[15px] text-slate-100/90">
+        Si te quedaste sin Netflix porque bloquearon el compartido, podés tener tu propio acceso con precio en pesos y sin complicaciones. Sin pagar el plan oficial con todos sus impuestos.
+      </p>
+      <a
+        href="/cuentas-digitales/cuenta-netflix-argentina-1-mes"
+        class="inline-flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 text-sm font-semibold text-white"
+      >
+        Ver opciones de Netflix disponibles
+      </a>
+      <p class="text-[11px] text-slate-400 pt-2">
+        CuentasDigitales.com.ar no es Netflix ni está afiliado a la marca. Ofrece soluciones de pago gestionadas para facilitar el acceso a servicios digitales.
+      </p>
+    </section>
+
+  </section>
+</BaseLayout>
